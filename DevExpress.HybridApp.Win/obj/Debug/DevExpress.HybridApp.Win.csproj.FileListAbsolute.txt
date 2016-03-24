@@ -1,0 +1,154 @@
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Icons\DevExpress.ico
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Icons\Universal.ico
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Icons\Win.ico
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Dll\System.Data.SQLite.dll
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Dll\System.Data.SQLite.EF6.dll
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Dll\EntityFramework.dll
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\DevExpress.HybridApp.Win.exe.config
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\DevExpress.HybridApp.Win.exe
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\DevExpress.HybridApp.Win.pdb
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Common.CommonResources.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.BaseModuleControl.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.BottomPanelBase.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Preview.ReportExportSettingsControl.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.ReportPreviewControl.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.ReportPrintSettingsControl.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Customers.AddressUserControl.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomerMapView.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomersModule.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomerEditableView.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomersFilterModule.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EmployeeMailMerge.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EmployeeEdit.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EmployeesPrint.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EditNotes.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.OpportunitiesMapView.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.PrintSettings.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.ProductCustomFilterModule.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.OrderView.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.ProductsEditableView.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.SalesPrint.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.SettingsUC.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Customers.StateUC.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EditTask.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Opportunities.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Products.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Sales.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.TaskPrint.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.MainForm.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Properties.Resources.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Resources.SkinInfoBlob.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeDirectory.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeProfile.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeSummary.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeTaskList.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.csproj.GenerateResource.Cache
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.exe
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.pdb
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.exe.licenses
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Messages.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Teams.resources
+C:\Users\Public\Documents\DevExpress Demos 15.2\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Todos.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\bin\Icons\DevExpress.ico
+D:\InnoC\DevExpress.HybridApp.Win\CS\bin\Icons\Universal.ico
+D:\InnoC\DevExpress.HybridApp.Win\CS\bin\Icons\Win.ico
+D:\InnoC\DevExpress.HybridApp.Win\CS\bin\Dll\System.Data.SQLite.dll
+D:\InnoC\DevExpress.HybridApp.Win\CS\bin\Dll\System.Data.SQLite.EF6.dll
+D:\InnoC\DevExpress.HybridApp.Win\CS\bin\Dll\EntityFramework.dll
+D:\InnoC\DevExpress.HybridApp.Win\CS\bin\DevExpress.HybridApp.Win.exe.config
+D:\InnoC\DevExpress.HybridApp.Win\CS\bin\DevExpress.HybridApp.Win.exe
+D:\InnoC\DevExpress.HybridApp.Win\CS\bin\DevExpress.HybridApp.Win.pdb
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Common.CommonResources.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.BaseModuleControl.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.BottomPanelBase.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Preview.ReportExportSettingsControl.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.ReportPreviewControl.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.ReportPrintSettingsControl.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Customers.AddressUserControl.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomerMapView.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomersModule.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomerEditableView.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomersFilterModule.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Messages.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EmployeeMailMerge.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Teams.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EmployeeEdit.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EmployeesPrint.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EditNotes.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.OpportunitiesMapView.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.PrintSettings.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.ProductCustomFilterModule.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.OrderView.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.ProductsEditableView.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.SalesPrint.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.SettingsUC.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Customers.StateUC.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EditTask.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Opportunities.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Products.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Sales.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.TaskPrint.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Todos.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.MainForm.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Properties.Resources.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Resources.SkinInfoBlob.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeDirectory.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeProfile.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeSummary.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeTaskList.resources
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.csproj.GenerateResource.Cache
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.exe.licenses
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.exe
+D:\InnoC\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.pdb
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Icons\DevExpress.ico
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Icons\Universal.ico
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Icons\Win.ico
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Dll\System.Data.SQLite.dll
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Dll\System.Data.SQLite.EF6.dll
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\Dll\EntityFramework.dll
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\DevExpress.HybridApp.Win.exe.config
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\DevExpress.HybridApp.Win.exe
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\bin\DevExpress.HybridApp.Win.pdb
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.csprojResolveAssemblyReference.cache
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Common.CommonResources.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.BaseModuleControl.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.BottomPanelBase.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Preview.ReportExportSettingsControl.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.ReportPreviewControl.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.ReportPrintSettingsControl.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Customers.AddressUserControl.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomerMapView.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomersModule.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomerEditableView.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.CustomersFilterModule.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Messages.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EmployeeMailMerge.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Teams.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EmployeeEdit.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EmployeesPrint.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EditNotes.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.OpportunitiesMapView.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.PrintSettings.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.ProductCustomFilterModule.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.OrderView.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.ProductsEditableView.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.SalesPrint.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.SettingsUC.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Customers.StateUC.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.EditTask.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Opportunities.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Products.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Sales.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.TaskPrint.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Modules.Todos.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.MainForm.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Properties.Resources.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Resources.SkinInfoBlob.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeDirectory.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeProfile.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeSummary.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.DevAV.Reports.EmployeeTaskList.resources
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.csproj.GenerateResource.Cache
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.exe.licenses
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.exe
+D:\InnoC\DemoSourceCode\Components\WinForms\DevExpress.HybridApp.Win\CS\DevExpress.HybridApp.Win\obj\Debug\DevExpress.HybridApp.Win.pdb
