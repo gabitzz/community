@@ -57,7 +57,10 @@
     <ApplicationIcon>Resources\AppIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.DevAV.v15.2.Data, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DevAV.v15.2.Data, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DevExpress.DevAV.v15.2.Data.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraCharts.v15.2.Extensions">
       <HintPath>
       </HintPath>
