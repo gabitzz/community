@@ -19,14 +19,14 @@ namespace DevExpress.DevAV {
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
@@ -45,9 +45,6 @@ namespace DevExpress.DevAV {
             this.navButtonClose = new DevExpress.XtraBars.Navigation.NavButton();
             this.mainTileBar = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.messagesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.todosTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.teamsTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.portalTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.productsTileBarDropDownContainter = new DevExpress.XtraBars.Navigation.TileBarDropDownContainer();
             this.productTileBar = new DevExpress.XtraBars.Navigation.TileBar();
@@ -56,6 +53,9 @@ namespace DevExpress.DevAV {
             this.plasmaTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.monitorTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.remouteControlTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.messagesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.todosTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.teamsTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.oldportalTileBar = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarGroup3 = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.customersTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
@@ -142,6 +142,7 @@ namespace DevExpress.DevAV {
             this.navButtonHome.Enabled = false;
             this.navButtonHome.Glyph = ((System.Drawing.Image)(resources.GetObject("navButtonHome.Glyph")));
             this.navButtonHome.Name = "navButtonHome";
+            this.navButtonHome.Visible = false;
             // 
             // navButtonHelp
             // 
@@ -198,43 +199,6 @@ namespace DevExpress.DevAV {
             this.tileBarGroup2.Items.Add(this.oldportalTileBar);
             this.tileBarGroup2.Name = "tileBarGroup2";
             this.tileBarGroup2.Text = "COMMUNITY";
-            // 
-            // messagesTileBarItem
-            // 
-            this.messagesTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.messagesTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
-            this.messagesTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.messagesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
-            tileItemElement6.Text = "Messages";
-            this.messagesTileBarItem.Elements.Add(tileItemElement6);
-            this.messagesTileBarItem.Id = 0;
-            this.messagesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.messagesTileBarItem.Name = "messagesTileBarItem";
-            // 
-            // todosTileBarItem
-            // 
-            this.todosTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.todosTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement7.Image")));
-            tileItemElement7.Text = "TODOs";
-            this.todosTileBarItem.Elements.Add(tileItemElement7);
-            this.todosTileBarItem.Id = 1;
-            this.todosTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.todosTileBarItem.Name = "todosTileBarItem";
-            // 
-            // teamsTileBarItem
-            // 
-            this.teamsTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.teamsTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(109)))), ((int)(((byte)(0)))));
-            this.teamsTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.teamsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
-            tileItemElement8.Text = "Teams";
-            this.teamsTileBarItem.Elements.Add(tileItemElement8);
-            this.teamsTileBarItem.Id = 2;
-            this.teamsTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.teamsTileBarItem.Name = "teamsTileBarItem";
             // 
             // portalTileBarItem
             // 
@@ -352,6 +316,43 @@ namespace DevExpress.DevAV {
             this.remouteControlTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.remouteControlTBI.Name = "remouteControlTBI";
             this.remouteControlTBI.Tag = DevExpress.DevAV.Modules.ProductCustomFilter.RemoteControl;
+            // 
+            // messagesTileBarItem
+            // 
+            this.messagesTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.messagesTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.messagesTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
+            this.messagesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
+            tileItemElement6.Text = "Messages";
+            this.messagesTileBarItem.Elements.Add(tileItemElement6);
+            this.messagesTileBarItem.Id = 0;
+            this.messagesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.messagesTileBarItem.Name = "messagesTileBarItem";
+            // 
+            // todosTileBarItem
+            // 
+            this.todosTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.todosTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement7.Image")));
+            tileItemElement7.Text = "TODOs";
+            this.todosTileBarItem.Elements.Add(tileItemElement7);
+            this.todosTileBarItem.Id = 1;
+            this.todosTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.todosTileBarItem.Name = "todosTileBarItem";
+            // 
+            // teamsTileBarItem
+            // 
+            this.teamsTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.teamsTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(109)))), ((int)(((byte)(0)))));
+            this.teamsTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
+            this.teamsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
+            tileItemElement8.Text = "Teams";
+            this.teamsTileBarItem.Elements.Add(tileItemElement8);
+            this.teamsTileBarItem.Id = 2;
+            this.teamsTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.teamsTileBarItem.Name = "teamsTileBarItem";
             // 
             // oldportalTileBar
             // 
@@ -617,7 +618,8 @@ namespace DevExpress.DevAV {
             this.Controls.Add(this.barDockControlTop);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DevAV";
+            this.Text = "Community";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productsTileBarDropDownContainter)).EndInit();
             this.productsTileBarDropDownContainter.ResumeLayout(false);

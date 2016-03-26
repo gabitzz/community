@@ -22,7 +22,8 @@ namespace DevExpress.DevAV {
         public MainForm() {
             TaskbarHelper.InitDemoJumpList(TaskbarAssistant.Default, this);
             Program.MainForm = this;
-            Icon = Program.AppIcon;
+            Icon = new Icon("communityntr.ico");
+            //Icon = Program.AppIcon;
             ShowSplashScreen();
             InitializeComponent();
             PrepareUI();

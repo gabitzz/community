@@ -54,7 +54,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\AppIcon.ico</ApplicationIcon>
+    <ApplicationIcon>communityntr.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.DevAV.v15.2.Data, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
@@ -754,6 +754,10 @@
     <None Include="Resources\pin.PNG" />
     <None Include="Resources\Refresh.png" />
     <None Include="Resources\browseropen.png" />
+    <None Include="Resources\communityntr.ico" />
+    <None Include="communityntr.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Resources\Toolbar\Back.png" />
     <Content Include="Resources\Toolbar\Forward.png" />
     <EmbeddedResource Include="Resources\Toolbar\SortAZ.png" />
@@ -886,6 +890,9 @@
   <PropertyGroup>
     <PreBuildEvent>if not exist $(TargetDir)Data mkdir $(TargetDir)Data
 copy $(SolutionDir)devav.sqlite3 $(TargetDir)Data
+
+copy $(ProjectDir)communityntr.ico $(TargetDir)
+
 </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
