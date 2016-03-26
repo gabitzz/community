@@ -22,8 +22,7 @@ namespace DevExpress.DevAV.Controls.Messages
     public partial class ucMailTree : DevExpress.DevAV.Controls.Messages.BaseControl
     {
         public event DataSourceChangedEventHandler DataSourceChanged;
-        public event MouseEventHandler ShowMenu;
-        bool allowDataSourceChanged = false;
+        public event MouseEventHandler ShowMenu;bool allowDataSourceChanged = false;
         public ucMailTree() {
             InitializeComponent();
             InitData();

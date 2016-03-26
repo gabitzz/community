@@ -339,6 +339,9 @@
     <Compile Include="Common\ViewModel\SingleObjectViewModel.cs" />
     <Compile Include="Common\ViewModel\SingleObjectViewModel.partial.cs" />
     <Compile Include="Controls\ButtonsPanel.cs" />
+    <Compile Include="Controls\Messages\BaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\Messages\Common.cs" />
     <Compile Include="Controls\Messages\Helpers\ColorHelper.cs" />
     <Compile Include="Controls\Messages\Helpers\Contact.cs" />
@@ -355,7 +358,9 @@
     <Compile Include="Controls\Messages\MyTreeList.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\Messages\ucMailTree.cs" />
+    <Compile Include="Controls\Messages\ucMailTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\Messages\ucMailTree.Designer.cs">
       <DependentUpon>ucMailTree.cs</DependentUpon>
     </Compile>
@@ -735,7 +740,6 @@
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
