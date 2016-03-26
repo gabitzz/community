@@ -443,11 +443,11 @@
     <Compile Include="Modules\PrintSettings\PrintSettings.Designer.cs">
       <DependentUpon>PrintSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Products\ProductCustomFilter.cs">
+    <Compile Include="Modules\Portal\PortalCustomFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Products\ProductCustomFilter.Designer.cs">
-      <DependentUpon>ProductCustomFilter.cs</DependentUpon>
+    <Compile Include="Modules\Portal\PortalCustomFilter.Designer.cs">
+      <DependentUpon>PortalCustomFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Sales\OrderView.cs">
       <SubType>UserControl</SubType>
@@ -455,11 +455,11 @@
     <Compile Include="Modules\Sales\OrderView.Designer.cs">
       <DependentUpon>OrderView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Products\EditProducts.cs">
+    <Compile Include="Modules\Portal\EditPortal.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Products\EditProducts.Designer.cs">
-      <DependentUpon>EditProducts.cs</DependentUpon>
+    <Compile Include="Modules\Portal\EditPortal.Designer.cs">
+      <DependentUpon>EditPortal.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Sales\SalesPrint.cs">
       <SubType>UserControl</SubType>
@@ -500,11 +500,11 @@
     <Compile Include="Modules\Opportunities\Opportunities.Designer.cs">
       <DependentUpon>Opportunities.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Products\Products.cs">
+    <Compile Include="Modules\Portal\Portal.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Products\Products.Designer.cs">
-      <DependentUpon>Products.cs</DependentUpon>
+    <Compile Include="Modules\Portal\Portal.Designer.cs">
+      <DependentUpon>Portal.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Sales\Sales.cs">
       <SubType>UserControl</SubType>
@@ -656,14 +656,14 @@
     <EmbeddedResource Include="Modules\PrintSettings\PrintSettings.resx">
       <DependentUpon>PrintSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Products\ProductCustomFilter.resx">
-      <DependentUpon>ProductCustomFilter.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Portal\PortalCustomFilter.resx">
+      <DependentUpon>PortalCustomFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Sales\OrderView.resx">
       <DependentUpon>OrderView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Products\EditProducts.resx">
-      <DependentUpon>EditProducts.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Portal\EditPortal.resx">
+      <DependentUpon>EditPortal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Sales\SalesPrint.resx">
       <DependentUpon>SalesPrint.cs</DependentUpon>
@@ -680,8 +680,8 @@
     <EmbeddedResource Include="Modules\Opportunities\Opportunities.resx">
       <DependentUpon>Opportunities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Products\Products.resx">
-      <DependentUpon>Products.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Portal\Portal.resx">
+      <DependentUpon>Portal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Sales\Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
@@ -749,6 +749,13 @@
     <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.snx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\unpin.png" />
+    <None Include="Resources\Back.bmp" />
+    <None Include="Resources\pin.PNG" />
+    <None Include="Resources\Refresh.png" />
+    <None Include="Resources\browseropen.png" />
+    <Content Include="Resources\Toolbar\Back.png" />
+    <Content Include="Resources\Toolbar\Forward.png" />
     <EmbeddedResource Include="Resources\Toolbar\SortAZ.png" />
     <EmbeddedResource Include="Resources\Toolbar\SortZA.png" />
     <EmbeddedResource Include="Resources\DateEditIcon.png" />
@@ -870,6 +877,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
   </PropertyGroup>

@@ -24,17 +24,18 @@ namespace DevExpress.DevAV.Modules {
         RemoteControl,
         CdPlayer
     }
-    public partial class Products : BaseModuleControl {
+    public partial class Portal : BaseModuleControl {
         BaseItemCollection hideItemCollection = new BaseItemCollection();
-        SearchControl searchControl;
         TileBar productTileBar;
-        public Products()
+        public Portal()
             : base(CreateViewModel<ProductCollectionViewModel>) {
             InitializeComponent();
             ((ITileControl)tileControl).Properties.LargeItemWidth = 200;
             LoadData();
             UpdateTileAndItems();
-            viewProducts.DataController.Refreshed += DataController_Refreshed;
+            //viewProducts.DataController.Refreshed += DataController_Refreshed;
+            ItemsHideHelper.Hide(hideItemCollection, hideButton);
+
 
         }
         bool lockRefreshed = false;
@@ -69,7 +70,7 @@ namespace DevExpress.DevAV.Modules {
                 SubscribeTileBarProductsFilter();
             } else {
                 if(productTileBar != null) productTileBar.ItemClick -= ProductTileBar_ItemClick;
-                if(searchControl != null)searchControl.QueryIsSearchColumn -= searchControl_AllowSearchColumn;
+                //if(searchControl != null)searchControl.QueryIsSearchColumn -= searchControl_AllowSearchColumn;
             }
         }
         protected internal override void OnTransitionCompleted() {
@@ -112,9 +113,9 @@ namespace DevExpress.DevAV.Modules {
         }
 
         bool SetFilterString(string filterString) {
-            viewProducts.ActiveFilter.Clear();
+            //viewProducts.ActiveFilter.Clear();
             try {
-                viewProducts.ActiveFilterCriteria = CriteriaOperator.TryParse(filterString);
+               // viewProducts.ActiveFilterCriteria = CriteriaOperator.TryParse(filterString);
                 return true;
             } catch {
                 return false;
@@ -122,9 +123,9 @@ namespace DevExpress.DevAV.Modules {
         }
 
         private void SetCustomFilter(string temp, ProductCategory category) {
-            viewProducts.ActiveFilter.Clear();
-            viewProducts.ActiveFilter.Add(viewProducts.Columns["Name"], new ColumnFilterInfo(CriteriaOperator.Parse(String.Format("Name like '%{0}%'", temp))));
-            viewProducts.ActiveFilter.Add(viewProducts.Columns["Category"], new ColumnFilterInfo(CriteriaOperator.Parse("Category == ?", category)));
+            //viewProducts.ActiveFilter.Clear();
+           // viewProducts.ActiveFilter.Add(viewProducts.Columns["Name"], new ColumnFilterInfo(CriteriaOperator.Parse(String.Format("Name like '%{0}%'", temp))));
+            //viewProducts.ActiveFilter.Add(viewProducts.Columns["Category"], new ColumnFilterInfo(CriteriaOperator.Parse("Category == ?", category)));
         }
         public ProductCollectionViewModel ViewModel {
             get {
@@ -133,7 +134,7 @@ namespace DevExpress.DevAV.Modules {
         }
         void LoadData() {
             productsSource.SetItemsSource(ViewModel.Entities);
-            viewProducts.BestFitColumns();
+           // viewProducts.BestFitColumns();
         }
 
         Hashtable cachedSales = new Hashtable();
@@ -156,20 +157,23 @@ namespace DevExpress.DevAV.Modules {
             }
         }
         void InitializeButtonPanel() {
+           
             var listBI = new List<ButtonInfo>();
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "New", Name = "2", Image = ImageHelper.GetImageFromToolbarResource("New"), mouseEventHandler = newProduct });
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Edit", Name = "3", Image = ImageHelper.GetImageFromToolbarResource("Edit"), mouseEventHandler = editProduct });
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Refresh", Name = "1", Image = Properties.Resources.Refresh, mouseEventHandler = refreshPage});
             listBI.Add(new ButtonInfo());
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Custom Filter", Name = "6", Image = ImageHelper.GetImageFromToolbarResource("CustomFilter"), mouseEventHandler = customFilterClick });
-            BottomPanel.InitializeButtons(listBI);
-            searchControl = BottomPanel.searchControl;
-            BottomPanel.searchControl.Client = gridProducts;
-            BottomPanel.searchControl.QueryIsSearchColumn += new QueryIsSearchColumnEventHandler(searchControl_AllowSearchColumn);
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Back", Name = "2", Image= Properties.Resources.ArrowLeft, mouseEventHandler = goToPreviousPage });         
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Next", Name = "3", Image = Properties.Resources.ArrowRight, mouseEventHandler = goToNextPage });
+            listBI.Add(new ButtonInfo());
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Pin", Name = "4", Image = Properties.Resources.pin, mouseEventHandler = goToPreviousPage });
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Unpin", Name = "5", Image = Properties.Resources.unpin, mouseEventHandler = goToPreviousPage });
+            listBI.Add(new ButtonInfo());
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Open in browser", Name = "6", Image = Properties.Resources.browseropen, mouseEventHandler = openInBrowser });
+            BottomPanel.InitializeButtons(listBI, false);
+            
         }
 
-
         private void customFilterClick(object sender, EventArgs e) {
-            ProductCustomFilterModule customFilter = new ProductCustomFilterModule(ViewModel.Entities.ToBindingList());
+            PortalCustomFilterModule customFilter = new PortalCustomFilterModule(ViewModel.Entities.ToBindingList());
             DialogResult result = FlyoutDialog.Show(FindForm(), customFilter);
             if(result == DialogResult.OK) {
                 if(customFilter.checkEdit.Checked) {
@@ -181,17 +185,28 @@ namespace DevExpress.DevAV.Modules {
 
             }
         }
-        void searchControl_AllowSearchColumn(object sender, QueryIsSearchColumnEventArgs e) {
-            var column = sender as DevExpress.XtraEditors.Filtering.FilterColumn;
-            if(column == null) {
-                return;
-            }
-            if(column.FieldName != string.Empty) {
-                e.IsSearchColumn = true;
-            } else {
-                e.IsSearchColumn = false;
-            }
+
+        void refreshPage(object sender, EventArgs e)
+        {
+            portalWebBrowser.Refresh(); 
         }
+
+        void goToNextPage(object sender, EventArgs e)
+        {
+            portalWebBrowser.GoForward();
+        }
+
+        void goToPreviousPage(object sender, EventArgs e)
+        {
+            portalWebBrowser.GoBack();
+        }
+
+
+        void openInBrowser(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(portalWebBrowser.Url.AbsoluteUri); 
+        }
+
         void editProduct(object sender, EventArgs e) {
             ShowEditModuleForFocusedRow();
         }
@@ -200,9 +215,9 @@ namespace DevExpress.DevAV.Modules {
             UpdateTileAndItems();
         }
         void ShowEditModuleForFocusedRow() {
-            var product = viewProducts.GetFocusedRow() as Product;
-            if(product == null) return;
-            ShowEditModule(product);
+            //var product = viewProducts.GetFocusedRow() as Product;
+           // if(product == null) return;
+           // ShowEditModule(product);
         }
         void viewProducts_RowClick(object sender, XtraGrid.Views.Grid.RowClickEventArgs e) {
             if(e.Clicks > 1 && e.RowHandle >= 0) {
@@ -212,7 +227,7 @@ namespace DevExpress.DevAV.Modules {
 
         void ShowEditModule(Product productToEdit) {
             var main = GetParentViewModel<MainViewModel>();
-            main.SelectModule(ModuleType.ProductsEditableView, (x) => {
+            main.SelectModule(ModuleType.PortalEditableView, (x) => {
                 if(productToEdit != null) {
                     ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, GetParentViewModel<MainViewModel>(), productToEdit.Id);
                 }
@@ -232,9 +247,9 @@ namespace DevExpress.DevAV.Modules {
             if(!Enum.TryParse<ProductCategory>(currentFilter, out category)) {
                 currentFilter = null;
             }
-            viewProducts.ActiveFilter.Clear();
-            if(currentFilter != null) viewProducts.ActiveFilter.Add(viewProducts.Columns["Category"], new ColumnFilterInfo(CriteriaOperator.Parse("Category == ?", category)));
-            tileItem.Text = viewProducts.RowCount.ToString();
+            //viewProducts.ActiveFilter.Clear();
+          //  if(currentFilter != null) viewProducts.ActiveFilter.Add(viewProducts.Columns["Category"], new ColumnFilterInfo(CriteriaOperator.Parse("Category == ?", category)));
+            //tileItem.Text = viewProducts.RowCount.ToString();
         }
         private void tileControl_ItemClick(object sender, TileItemEventArgs e) {
             UpdateTileFilter(e.Item);
@@ -244,13 +259,13 @@ namespace DevExpress.DevAV.Modules {
         void hideButton_Click(object sender, EventArgs e) {
             if(tileControlLCI.Visibility == XtraLayout.Utils.LayoutVisibility.Always) {
                 ItemsHideHelper.Hide(hideItemCollection, hideButton);
-                productsSLI.Padding = new XtraLayout.Utils.Padding(hideButton.Width, 2, 10, 10);
+                //productsSLI.Padding = new XtraLayout.Utils.Padding(hideButton.Width, 2, 10, 10);
 
                 return;
             }
             if(tileControlLCI.Visibility == XtraLayout.Utils.LayoutVisibility.Never) {
                 ItemsHideHelper.Expand(hideItemCollection, hideButton);
-                productsSLI.Padding = new XtraLayout.Utils.Padding(2, 2, 10, 10);
+                //productsSLI.Padding = new XtraLayout.Utils.Padding(2, 2, 10, 10);
                 return;
             }
         }
@@ -259,5 +274,10 @@ namespace DevExpress.DevAV.Modules {
             ViewModel.SelectedEntity = e.Row as Product;
         }
 
+        private void portalWebBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+            //BottomPanel.searchControl.Text = e.Url.ToString();
+        }
     }
 }

@@ -550,7 +550,7 @@
             this.todayCostSimpleButton.GroupIndex = 2;
             this.todayCostSimpleButton.Location = new System.Drawing.Point(96, 2);
             this.todayCostSimpleButton.Name = "todayCostSimpleButton";
-            this.todayCostSimpleButton.Size = new System.Drawing.Size(88, 42);
+            this.todayCostSimpleButton.Size = new System.Drawing.Size(86, 42);
             this.todayCostSimpleButton.StyleController = this.costLayoutControl;
             this.todayCostSimpleButton.TabIndex = 8;
             this.todayCostSimpleButton.TabStop = false;
@@ -561,9 +561,9 @@
             // 
             this.yearCostSimpleButton.Checked = true;
             this.yearCostSimpleButton.GroupIndex = 2;
-            this.yearCostSimpleButton.Location = new System.Drawing.Point(312, 2);
+            this.yearCostSimpleButton.Location = new System.Drawing.Point(308, 2);
             this.yearCostSimpleButton.Name = "yearCostSimpleButton";
-            this.yearCostSimpleButton.Size = new System.Drawing.Size(74, 42);
+            this.yearCostSimpleButton.Size = new System.Drawing.Size(72, 42);
             this.yearCostSimpleButton.StyleController = this.costLayoutControl;
             this.yearCostSimpleButton.TabIndex = 8;
             this.yearCostSimpleButton.Text = "YTD";
@@ -572,9 +572,9 @@
             // monthCostSimpleButton
             // 
             this.monthCostSimpleButton.GroupIndex = 2;
-            this.monthCostSimpleButton.Location = new System.Drawing.Point(188, 2);
+            this.monthCostSimpleButton.Location = new System.Drawing.Point(186, 2);
             this.monthCostSimpleButton.Name = "monthCostSimpleButton";
-            this.monthCostSimpleButton.Size = new System.Drawing.Size(120, 42);
+            this.monthCostSimpleButton.Size = new System.Drawing.Size(118, 42);
             this.monthCostSimpleButton.StyleController = this.costLayoutControl;
             this.monthCostSimpleButton.TabIndex = 8;
             this.monthCostSimpleButton.TabStop = false;
@@ -604,7 +604,7 @@
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(411, 46);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(405, 46);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // costLabelControlLCI
@@ -625,10 +625,10 @@
             this.monthCostSimpleButtonLCI.Control = this.monthCostSimpleButton;
             this.monthCostSimpleButtonLCI.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.monthCostSimpleButtonLCI.CustomizationFormText = "monthCostSimpleButtonLCI";
-            this.monthCostSimpleButtonLCI.Location = new System.Drawing.Point(186, 0);
+            this.monthCostSimpleButtonLCI.Location = new System.Drawing.Point(184, 0);
             this.monthCostSimpleButtonLCI.Name = "monthCostSimpleButtonLCI";
             this.monthCostSimpleButtonLCI.OptionsPrint.AllowPrint = false;
-            this.monthCostSimpleButtonLCI.Size = new System.Drawing.Size(124, 46);
+            this.monthCostSimpleButtonLCI.Size = new System.Drawing.Size(122, 46);
             this.monthCostSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.monthCostSimpleButtonLCI.TextVisible = false;
             this.monthCostSimpleButtonLCI.TrimClientAreaToControl = false;
@@ -638,11 +638,11 @@
             this.yearCostSimpleButtonLCI.Control = this.yearCostSimpleButton;
             this.yearCostSimpleButtonLCI.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.yearCostSimpleButtonLCI.CustomizationFormText = "yearCostSimpleButtonLCI";
-            this.yearCostSimpleButtonLCI.Location = new System.Drawing.Point(310, 0);
+            this.yearCostSimpleButtonLCI.Location = new System.Drawing.Point(306, 0);
             this.yearCostSimpleButtonLCI.Name = "yearCostSimpleButtonLCI";
             this.yearCostSimpleButtonLCI.OptionsPrint.AllowPrint = false;
             this.yearCostSimpleButtonLCI.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 25, 2, 2);
-            this.yearCostSimpleButtonLCI.Size = new System.Drawing.Size(101, 46);
+            this.yearCostSimpleButtonLCI.Size = new System.Drawing.Size(99, 46);
             this.yearCostSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.yearCostSimpleButtonLCI.TextVisible = false;
             this.yearCostSimpleButtonLCI.TrimClientAreaToControl = false;
@@ -655,7 +655,7 @@
             this.todayCostSimpleButtonLCI.Location = new System.Drawing.Point(94, 0);
             this.todayCostSimpleButtonLCI.Name = "todayCostSimpleButtonLCI";
             this.todayCostSimpleButtonLCI.OptionsPrint.AllowPrint = false;
-            this.todayCostSimpleButtonLCI.Size = new System.Drawing.Size(92, 46);
+            this.todayCostSimpleButtonLCI.Size = new System.Drawing.Size(90, 46);
             this.todayCostSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.todayCostSimpleButtonLCI.TextVisible = false;
             this.todayCostSimpleButtonLCI.TrimClientAreaToControl = false;
@@ -679,9 +679,9 @@
             // 
             this.yearRevenuesSimpleButton.Checked = true;
             this.yearRevenuesSimpleButton.GroupIndex = 1;
-            this.yearRevenuesSimpleButton.Location = new System.Drawing.Point(312, 2);
+            this.yearRevenuesSimpleButton.Location = new System.Drawing.Point(308, 2);
             this.yearRevenuesSimpleButton.Name = "yearRevenuesSimpleButton";
-            this.yearRevenuesSimpleButton.Size = new System.Drawing.Size(74, 42);
+            this.yearRevenuesSimpleButton.Size = new System.Drawing.Size(72, 42);
             this.yearRevenuesSimpleButton.StyleController = this.revenuesLayoutControl;
             this.yearRevenuesSimpleButton.TabIndex = 7;
             this.yearRevenuesSimpleButton.Text = "YTD";
@@ -690,9 +690,9 @@
             // monthRevenuesSimpleButton
             // 
             this.monthRevenuesSimpleButton.GroupIndex = 1;
-            this.monthRevenuesSimpleButton.Location = new System.Drawing.Point(188, 2);
+            this.monthRevenuesSimpleButton.Location = new System.Drawing.Point(186, 2);
             this.monthRevenuesSimpleButton.Name = "monthRevenuesSimpleButton";
-            this.monthRevenuesSimpleButton.Size = new System.Drawing.Size(120, 42);
+            this.monthRevenuesSimpleButton.Size = new System.Drawing.Size(118, 42);
             this.monthRevenuesSimpleButton.StyleController = this.revenuesLayoutControl;
             this.monthRevenuesSimpleButton.TabIndex = 6;
             this.monthRevenuesSimpleButton.TabStop = false;
@@ -704,7 +704,7 @@
             this.todayRevenuesSimpleButton.GroupIndex = 1;
             this.todayRevenuesSimpleButton.Location = new System.Drawing.Point(96, 2);
             this.todayRevenuesSimpleButton.Name = "todayRevenuesSimpleButton";
-            this.todayRevenuesSimpleButton.Size = new System.Drawing.Size(88, 42);
+            this.todayRevenuesSimpleButton.Size = new System.Drawing.Size(86, 42);
             this.todayRevenuesSimpleButton.StyleController = this.revenuesLayoutControl;
             this.todayRevenuesSimpleButton.TabIndex = 5;
             this.todayRevenuesSimpleButton.TabStop = false;
@@ -734,7 +734,7 @@
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(411, 46);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(405, 46);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // revenuesLabelLCI
@@ -758,7 +758,7 @@
             this.todayRevenuesSimpleButtonLCI.Location = new System.Drawing.Point(94, 0);
             this.todayRevenuesSimpleButtonLCI.Name = "todayRevenuesSimpleButtonLCI";
             this.todayRevenuesSimpleButtonLCI.OptionsPrint.AllowPrint = false;
-            this.todayRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(92, 46);
+            this.todayRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(90, 46);
             this.todayRevenuesSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.todayRevenuesSimpleButtonLCI.TextVisible = false;
             this.todayRevenuesSimpleButtonLCI.TrimClientAreaToControl = false;
@@ -768,10 +768,10 @@
             this.monthRevenuesSimpleButtonLCI.Control = this.monthRevenuesSimpleButton;
             this.monthRevenuesSimpleButtonLCI.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.monthRevenuesSimpleButtonLCI.CustomizationFormText = "monthRevenuesSimpleButtonLCI";
-            this.monthRevenuesSimpleButtonLCI.Location = new System.Drawing.Point(186, 0);
+            this.monthRevenuesSimpleButtonLCI.Location = new System.Drawing.Point(184, 0);
             this.monthRevenuesSimpleButtonLCI.Name = "monthRevenuesSimpleButtonLCI";
             this.monthRevenuesSimpleButtonLCI.OptionsPrint.AllowPrint = false;
-            this.monthRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(124, 46);
+            this.monthRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(122, 46);
             this.monthRevenuesSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.monthRevenuesSimpleButtonLCI.TextVisible = false;
             this.monthRevenuesSimpleButtonLCI.TrimClientAreaToControl = false;
@@ -781,11 +781,11 @@
             this.yearRevenuesSimpleButtonLCI.Control = this.yearRevenuesSimpleButton;
             this.yearRevenuesSimpleButtonLCI.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.yearRevenuesSimpleButtonLCI.CustomizationFormText = "yearRevenuesSimpleButtonLCI";
-            this.yearRevenuesSimpleButtonLCI.Location = new System.Drawing.Point(310, 0);
+            this.yearRevenuesSimpleButtonLCI.Location = new System.Drawing.Point(306, 0);
             this.yearRevenuesSimpleButtonLCI.Name = "yearRevenuesSimpleButtonLCI";
             this.yearRevenuesSimpleButtonLCI.OptionsPrint.AllowPrint = false;
             this.yearRevenuesSimpleButtonLCI.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 25, 2, 2);
-            this.yearRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(101, 46);
+            this.yearRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(99, 46);
             this.yearRevenuesSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.yearRevenuesSimpleButtonLCI.TextVisible = false;
             this.yearRevenuesSimpleButtonLCI.TrimClientAreaToControl = false;

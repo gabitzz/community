@@ -11,7 +11,7 @@ using DevExpress.Mvvm;
 
 namespace DevExpress.DevAV.ViewModels {
     /// <summary>
-    /// Represents the Products collection view model.
+    /// Represents the Portal collection view model.
     /// </summary>
     public partial class ProductCollectionViewModel : CollectionViewModel<Product, long, IDevAVDbUnitOfWork> {
 

@@ -22,8 +22,9 @@ namespace DevExpress.DevAV {
         EditTodo,
         TodoPrint,
 
-        Products,
-        ProductsEditableView,
+      
+        Portal,
+        PortalEditableView,
 
         Sales,
         SalesPrint,
