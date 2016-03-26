@@ -22,7 +22,8 @@ namespace DevExpress.DevAV {
         public MainForm() {
             TaskbarHelper.InitDemoJumpList(TaskbarAssistant.Default, this);
             Program.MainForm = this;
-            Icon = Program.AppIcon;
+            Icon = new Icon("communityntr.ico");
+            //Icon = Program.AppIcon;
             ShowSplashScreen();
             InitializeComponent();
             PrepareUI();
@@ -31,13 +32,13 @@ namespace DevExpress.DevAV {
         }
 
         void ShowSplashScreen() {
-            DevExpress.XtraSplashScreen.SplashScreenManager.ShowDefaultSplashScreen(this, true, true, "DevExpress WinForms Controls", "When Only the Best Will Do");
+            DevExpress.XtraSplashScreen.SplashScreenManager.ShowDefaultSplashScreen(this, true, true, "Silent Busters", "We are the community");
         }
         void MainForm_Load(object sender, EventArgs e) {
             InitTileBar();
             UpdateBottomPanelHeight();
-            mainTileBar.SelectedItem = teamsTileBarItem;
-            viewModel.SelectModule(ModuleType.Teams);
+            mainTileBar.SelectedItem = portalTileBarItem;
+            viewModel.SelectModule(ModuleType.Portal);
             DevExpress.XtraSplashScreen.SplashScreenManager.CloseDefaultSplashScreen();
         }
         void InitViewModel() {
@@ -55,10 +56,12 @@ namespace DevExpress.DevAV {
             if(System.Diagnostics.Debugger.IsAttached) return;
             viewModel.GetModule(ModuleType.Opportunities);
             viewModel.GetModule(ModuleType.Todos);
-            viewModel.GetModule(ModuleType.Products);
+            viewModel.GetModule(ModuleType.Portal);
             viewModel.GetModule(ModuleType.CustomersModule);
             viewModel.GetModule(ModuleType.Messages);
             viewModel.GetModule(ModuleType.Sales);
+            
+
         }
         void viewModel_ModuleAdded(object sender, EventArgs e) {
             var moduleControl = sender as Control;
@@ -127,7 +130,7 @@ namespace DevExpress.DevAV {
             teamsTileBarItem.Tag = ModuleType.Teams;
             customersTileBarItem.Tag = ModuleType.CustomersModule;
             todosTileBarItem.Tag = ModuleType.Todos;
-            productsTileBarItem.Tag = ModuleType.Products;
+            portalTileBarItem.Tag = ModuleType.Portal;
             messagesTileBarItem.Tag = ModuleType.Messages;
             salesTileBarItem.Tag = ModuleType.Sales;
             opportunitiesTileBarItem.Tag = ModuleType.Opportunities;

@@ -1,5 +1,5 @@
 ﻿namespace DevExpress.DevAV.Modules {
-    partial class ProductsEditableView {
+    partial class PortalEditableView {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsEditableView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortalEditableView));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -104,7 +104,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcPdfViewer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
+            // 
+            // productBindingSource
+            // 
             this.productBindingSource.DataSource = typeof(DevExpress.DevAV.Product);
+            // 
+            // layoutControl1
+            // 
             this.layoutControl1.AllowCustomization = false;
             this.layoutControl1.Controls.Add(this.labelControl2);
             this.layoutControl1.Controls.Add(this.labelControl1);
@@ -130,32 +136,44 @@
             this.layoutControl1.Size = new System.Drawing.Size(1065, 627);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // labelControl2
+            // 
             this.labelControl2.Appearance.FontSizeDelta = 3;
-            this.labelControl2.Location = new System.Drawing.Point(73, 22);
+            this.labelControl2.Location = new System.Drawing.Point(73, 23);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(84, 25);
             this.labelControl2.StyleController = this.layoutControl1;
             this.labelControl2.TabIndex = 58;
             this.labelControl2.Text = "PRODUCT";
+            // 
+            // labelControl1
+            // 
             this.labelControl1.Appearance.FontSizeDelta = 3;
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(82)))), ((int)(((byte)(163)))));
             this.labelControl1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Name", true));
-            this.labelControl1.Location = new System.Drawing.Point(161, 22);
+            this.labelControl1.Location = new System.Drawing.Point(161, 23);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(47, 25);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 57;
             this.labelControl1.Text = "name";
+            // 
+            // cbCategory
+            // 
             this.cbCategory.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "Category", true));
-            this.cbCategory.Location = new System.Drawing.Point(286, 242);
+            this.cbCategory.Location = new System.Drawing.Point(286, 256);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbCategory.Properties.NullValuePrompt = "Select Product Category";
             this.cbCategory.Properties.NullValuePromptShowForEmptyValue = true;
-            this.cbCategory.Size = new System.Drawing.Size(354, 40);
+            this.cbCategory.Size = new System.Drawing.Size(354, 42);
             this.cbCategory.StyleController = this.layoutControl1;
             this.cbCategory.TabIndex = 56;
+            // 
+            // teProductName
+            // 
             this.teProductName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "Name", true));
             this.teProductName.Location = new System.Drawing.Point(422, 15);
             this.teProductName.Name = "teProductName";
@@ -163,68 +181,89 @@
             this.teProductName.Properties.Appearance.Options.UseForeColor = true;
             this.teProductName.Properties.NullValuePrompt = "Enter Product Name";
             this.teProductName.Properties.NullValuePromptShowForEmptyValue = true;
-            this.teProductName.Size = new System.Drawing.Size(218, 40);
+            this.teProductName.Size = new System.Drawing.Size(218, 42);
             this.teProductName.StyleController = this.layoutControl1;
             this.teProductName.TabIndex = 55;
+            // 
+            // pdfViewer
+            // 
             this.pdfViewer.Appearance.BackColor = System.Drawing.Color.White;
             this.pdfViewer.Appearance.Options.UseBackColor = true;
             this.pdfViewer.Location = new System.Drawing.Point(696, 0);
             this.pdfViewer.Name = "pdfViewer";
-            this.pdfViewer.Size = new System.Drawing.Size(352, 685);
+            this.pdfViewer.Size = new System.Drawing.Size(352, 713);
             this.pdfViewer.TabIndex = 54;
             this.pdfViewer.ZoomMode = DevExpress.XtraPdfViewer.PdfZoomMode.FitToWidth;
+            // 
+            // lciBackPicture
+            // 
             this.lciBackPicture.Image = ((System.Drawing.Image)(resources.GetObject("lciBackPicture.Image")));
             this.lciBackPicture.Location = new System.Drawing.Point(20, 20);
             this.lciBackPicture.Name = "lciBackPicture";
-            this.lciBackPicture.Size = new System.Drawing.Size(40, 655);
+            this.lciBackPicture.Size = new System.Drawing.Size(40, 683);
             this.lciBackPicture.TabIndex = 53;
             this.lciBackPicture.TabStop = false;
             this.lciBackPicture.Click += new System.EventHandler(this.lciBackPicture_Click);
+            // 
+            // meDescription
+            // 
             this.meDescription.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "Description", true));
-            this.meDescription.Location = new System.Drawing.Point(74, 594);
+            this.meDescription.Location = new System.Drawing.Point(74, 620);
             this.meDescription.MinimumSize = new System.Drawing.Size(460, 0);
             this.meDescription.Name = "meDescription";
             this.meDescription.Properties.NullValuePrompt = "Enter Description";
             this.meDescription.Properties.NullValuePromptShowForEmptyValue = true;
-            this.meDescription.Size = new System.Drawing.Size(566, 36);
+            this.meDescription.Size = new System.Drawing.Size(566, 38);
             this.meDescription.StyleController = this.layoutControl1;
             this.meDescription.TabIndex = 30;
+            // 
+            // teRetailPrice
+            // 
             this.teRetailPrice.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "RetailPrice", true));
-            this.teRetailPrice.Location = new System.Drawing.Point(286, 489);
+            this.teRetailPrice.Location = new System.Drawing.Point(286, 513);
             this.teRetailPrice.Name = "teRetailPrice";
             this.teRetailPrice.Properties.Appearance.Options.UseTextOptions = true;
             this.teRetailPrice.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.teRetailPrice.Properties.Mask.EditMask = "c";
             this.teRetailPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.teRetailPrice.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.teRetailPrice.Size = new System.Drawing.Size(354, 40);
+            this.teRetailPrice.Size = new System.Drawing.Size(354, 42);
             this.teRetailPrice.StyleController = this.layoutControl1;
             this.teRetailPrice.TabIndex = 29;
+            // 
+            // teSalePrice
+            // 
             this.teSalePrice.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "SalePrice", true));
-            this.teSalePrice.Location = new System.Drawing.Point(286, 443);
+            this.teSalePrice.Location = new System.Drawing.Point(286, 465);
             this.teSalePrice.Name = "teSalePrice";
             this.teSalePrice.Properties.Appearance.Options.UseTextOptions = true;
             this.teSalePrice.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.teSalePrice.Properties.Mask.EditMask = "c";
             this.teSalePrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.teSalePrice.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.teSalePrice.Size = new System.Drawing.Size(354, 40);
+            this.teSalePrice.Size = new System.Drawing.Size(354, 42);
             this.teSalePrice.StyleController = this.layoutControl1;
             this.teSalePrice.TabIndex = 28;
+            // 
+            // teCost
+            // 
             this.teCost.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "Cost", true));
-            this.teCost.Location = new System.Drawing.Point(286, 397);
+            this.teCost.Location = new System.Drawing.Point(286, 417);
             this.teCost.Name = "teCost";
             this.teCost.Properties.Appearance.Options.UseTextOptions = true;
             this.teCost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.teCost.Properties.Mask.EditMask = "c";
             this.teCost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.teCost.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.teCost.Size = new System.Drawing.Size(354, 40);
+            this.teCost.Size = new System.Drawing.Size(354, 42);
             this.teCost.StyleController = this.layoutControl1;
             this.teCost.TabIndex = 27;
+            // 
+            // dateEdit1
+            // 
             this.dateEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "ProductionStart", true));
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(286, 61);
+            this.dateEdit1.Location = new System.Drawing.Point(286, 63);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::DevExpress.DevAV.Properties.Resources.DateEditIcon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
@@ -235,20 +274,26 @@
             this.dateEdit1.Properties.NullValuePrompt = "Enter Date";
             this.dateEdit1.Properties.NullValuePromptShowForEmptyValue = true;
             this.dateEdit1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit1.Size = new System.Drawing.Size(354, 40);
+            this.dateEdit1.Size = new System.Drawing.Size(354, 42);
             this.dateEdit1.StyleController = this.layoutControl1;
             this.dateEdit1.TabIndex = 21;
+            // 
+            // cbAvailable
+            // 
             this.cbAvailable.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "Available", true));
             this.cbAvailable.EditValue = null;
-            this.cbAvailable.Location = new System.Drawing.Point(286, 107);
+            this.cbAvailable.Location = new System.Drawing.Point(286, 111);
             this.cbAvailable.Name = "cbAvailable";
             this.cbAvailable.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
             this.cbAvailable.Properties.Caption = "";
-            this.cbAvailable.Size = new System.Drawing.Size(354, 38);
+            this.cbAvailable.Size = new System.Drawing.Size(354, 44);
             this.cbAvailable.StyleController = this.layoutControl1;
             this.cbAvailable.TabIndex = 22;
+            // 
+            // cbSupport
+            // 
             this.cbSupport.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "Support", true));
-            this.cbSupport.Location = new System.Drawing.Point(286, 151);
+            this.cbSupport.Location = new System.Drawing.Point(286, 161);
             this.cbSupport.Name = "cbSupport";
             this.cbSupport.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -259,11 +304,14 @@
             this.cbSupport.Properties.PopupSizeable = false;
             this.cbSupport.Properties.ShowHeader = false;
             this.cbSupport.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cbSupport.Size = new System.Drawing.Size(354, 40);
+            this.cbSupport.Size = new System.Drawing.Size(354, 42);
             this.cbSupport.StyleController = this.layoutControl1;
             this.cbSupport.TabIndex = 23;
+            // 
+            // cbProductEngineer
+            // 
             this.cbProductEngineer.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "Engineer", true));
-            this.cbProductEngineer.Location = new System.Drawing.Point(286, 197);
+            this.cbProductEngineer.Location = new System.Drawing.Point(286, 209);
             this.cbProductEngineer.Name = "cbProductEngineer";
             this.cbProductEngineer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -274,16 +322,19 @@
             this.cbProductEngineer.Properties.PopupSizeable = false;
             this.cbProductEngineer.Properties.ShowHeader = false;
             this.cbProductEngineer.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cbProductEngineer.Size = new System.Drawing.Size(354, 40);
+            this.cbProductEngineer.Size = new System.Drawing.Size(354, 42);
             this.cbProductEngineer.StyleController = this.layoutControl1;
             this.cbProductEngineer.TabIndex = 24;
+            // 
+            // teInventory
+            // 
             this.teInventory.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "CurrentInventory", true));
             this.teInventory.EditValue = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.teInventory.Location = new System.Drawing.Point(286, 305);
+            this.teInventory.Location = new System.Drawing.Point(286, 321);
             this.teInventory.Name = "teInventory";
             this.teInventory.Properties.Appearance.Options.UseTextOptions = true;
             this.teInventory.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -299,16 +350,19 @@
             0,
             0});
             this.teInventory.Properties.SpinStyle = DevExpress.XtraEditors.Controls.SpinStyles.Horizontal;
-            this.teInventory.Size = new System.Drawing.Size(354, 40);
+            this.teInventory.Size = new System.Drawing.Size(354, 42);
             this.teInventory.StyleController = this.layoutControl1;
             this.teInventory.TabIndex = 25;
+            // 
+            // teBackorders
+            // 
             this.teBackorders.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productBindingSource, "Backorder", true));
             this.teBackorders.EditValue = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.teBackorders.Location = new System.Drawing.Point(286, 351);
+            this.teBackorders.Location = new System.Drawing.Point(286, 369);
             this.teBackorders.Name = "teBackorders";
             this.teBackorders.Properties.Appearance.Options.UseTextOptions = true;
             this.teBackorders.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -324,9 +378,12 @@
             0,
             0});
             this.teBackorders.Properties.SpinStyle = DevExpress.XtraEditors.Controls.SpinStyles.Horizontal;
-            this.teBackorders.Size = new System.Drawing.Size(354, 40);
+            this.teBackorders.Size = new System.Drawing.Size(354, 42);
             this.teBackorders.StyleController = this.layoutControl1;
             this.teBackorders.TabIndex = 26;
+            // 
+            // lcgRoot
+            // 
             this.lcgRoot.AppearanceItemCaption.FontSizeDelta = -1;
             this.lcgRoot.AppearanceItemCaption.Options.UseFont = true;
             this.lcgRoot.CustomizationFormText = "Root";
@@ -339,8 +396,11 @@
             this.lcgRoot.Location = new System.Drawing.Point(0, 0);
             this.lcgRoot.Name = "Root";
             this.lcgRoot.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 0, 0, 0);
-            this.lcgRoot.Size = new System.Drawing.Size(1048, 685);
+            this.lcgRoot.Size = new System.Drawing.Size(1048, 713);
             this.lcgRoot.TextVisible = false;
+            // 
+            // lciBack
+            // 
             this.lciBack.Control = this.lciBackPicture;
             this.lciBack.CustomizationFormText = "lciBack";
             this.lciBack.Location = new System.Drawing.Point(0, 0);
@@ -349,10 +409,13 @@
             this.lciBack.Name = "lciBack";
             this.lciBack.OptionsPrint.AllowPrint = false;
             this.lciBack.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 20, 10);
-            this.lciBack.Size = new System.Drawing.Size(60, 685);
+            this.lciBack.Size = new System.Drawing.Size(60, 713);
             this.lciBack.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciBack.TextSize = new System.Drawing.Size(0, 0);
             this.lciBack.TextVisible = false;
+            // 
+            // lcgDetails
+            // 
             this.lcgDetails.CustomizationFormText = "lcgMain";
             this.lcgDetails.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.lcgDetails.GroupBordersVisible = false;
@@ -378,162 +441,219 @@
             this.lcgDetails.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.AlignWithChildren;
             this.lcgDetails.OptionsItemText.TextToControlDistance = 55;
             this.lcgDetails.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 50, 10, 50);
-            this.lcgDetails.Size = new System.Drawing.Size(624, 685);
+            this.lcgDetails.Size = new System.Drawing.Size(624, 713);
             this.lcgDetails.Text = "lcgMain";
             this.lcgDetails.TextVisible = false;
+            // 
+            // layoutControlItem10
+            // 
             this.layoutControlItem10.Control = this.meDescription;
             this.layoutControlItem10.CustomizationFormText = "DESCRIPTION";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 552);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 578);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 3, 3);
-            this.layoutControlItem10.Size = new System.Drawing.Size(570, 69);
+            this.layoutControlItem10.Size = new System.Drawing.Size(570, 71);
             this.layoutControlItem10.Text = "DESCRIPTION";
             this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(79, 17);
             this.layoutControlItem10.TextToControlDistance = 10;
+            // 
+            // lcEditProductName
+            // 
             this.lcEditProductName.Control = this.teProductName;
             this.lcEditProductName.CustomizationFormText = "PRODUCT";
             this.lcEditProductName.Location = new System.Drawing.Point(138, 0);
             this.lcEditProductName.Name = "lcEditProductName";
             this.lcEditProductName.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 2, 3, 3);
-            this.lcEditProductName.Size = new System.Drawing.Size(432, 46);
+            this.lcEditProductName.Size = new System.Drawing.Size(432, 48);
             this.lcEditProductName.Text = "PRODUCT";
             this.lcEditProductName.TextSize = new System.Drawing.Size(157, 17);
             this.lcEditProductName.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
+            // layoutControlItem1
+            // 
             this.layoutControlItem1.Control = this.dateEdit1;
             this.layoutControlItem1.CustomizationFormText = "PRODUCTION START DATE";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 46);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 3, 3);
-            this.layoutControlItem1.Size = new System.Drawing.Size(570, 46);
+            this.layoutControlItem1.Size = new System.Drawing.Size(570, 48);
             this.layoutControlItem1.Text = "PRODUCTION START DATE";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(157, 17);
+            // 
+            // layoutControlItem2
+            // 
             this.layoutControlItem2.Control = this.cbAvailable;
             this.layoutControlItem2.CustomizationFormText = "AVAILABLE FOR SALE";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 92);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 3, 3);
-            this.layoutControlItem2.Size = new System.Drawing.Size(570, 44);
+            this.layoutControlItem2.Size = new System.Drawing.Size(570, 50);
             this.layoutControlItem2.Text = "AVAILABLE FOR SALE";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(157, 17);
+            // 
+            // layoutControlItem3
+            // 
             this.layoutControlItem3.Control = this.cbSupport;
             this.layoutControlItem3.CustomizationFormText = "SUPPORT ENGINEER";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 136);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 146);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 3, 3);
-            this.layoutControlItem3.Size = new System.Drawing.Size(570, 46);
+            this.layoutControlItem3.Size = new System.Drawing.Size(570, 48);
             this.layoutControlItem3.Text = "SUPPORT ENGINEER";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(157, 17);
+            // 
+            // layoutControlItem4
+            // 
             this.layoutControlItem4.Control = this.cbProductEngineer;
             this.layoutControlItem4.CustomizationFormText = "PRODUCT ENGINEER";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 182);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 194);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 3, 3);
-            this.layoutControlItem4.Size = new System.Drawing.Size(570, 46);
+            this.layoutControlItem4.Size = new System.Drawing.Size(570, 48);
             this.layoutControlItem4.Text = "PRODUCT ENGINEER";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(157, 17);
+            // 
+            // layoutControlItem5
+            // 
             this.layoutControlItem5.Control = this.teInventory;
             this.layoutControlItem5.CustomizationFormText = "CURRENT INVENTORY";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 290);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 306);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 3, 3);
-            this.layoutControlItem5.Size = new System.Drawing.Size(570, 46);
+            this.layoutControlItem5.Size = new System.Drawing.Size(570, 48);
             this.layoutControlItem5.Text = "CURRENT INVENTORY";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(157, 17);
+            // 
+            // layoutControlItem6
+            // 
             this.layoutControlItem6.Control = this.teBackorders;
             this.layoutControlItem6.CustomizationFormText = "BACKORDERS";
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 336);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 354);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 3, 3);
-            this.layoutControlItem6.Size = new System.Drawing.Size(570, 46);
+            this.layoutControlItem6.Size = new System.Drawing.Size(570, 48);
             this.layoutControlItem6.Text = "BACKORDERS";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(157, 17);
+            // 
+            // layoutControlItem7
+            // 
             this.layoutControlItem7.Control = this.teCost;
             this.layoutControlItem7.CustomizationFormText = "COST";
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 382);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 402);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 3, 3);
-            this.layoutControlItem7.Size = new System.Drawing.Size(570, 46);
+            this.layoutControlItem7.Size = new System.Drawing.Size(570, 48);
             this.layoutControlItem7.Text = "COST";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(157, 17);
+            // 
+            // layoutControlItem8
+            // 
             this.layoutControlItem8.Control = this.teSalePrice;
             this.layoutControlItem8.CustomizationFormText = "SALE PRICE";
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 428);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 450);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 3, 3);
-            this.layoutControlItem8.Size = new System.Drawing.Size(570, 46);
+            this.layoutControlItem8.Size = new System.Drawing.Size(570, 48);
             this.layoutControlItem8.Text = "SALE PRICE";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(157, 17);
+            // 
+            // layoutControlItem9
+            // 
             this.layoutControlItem9.Control = this.teRetailPrice;
             this.layoutControlItem9.CustomizationFormText = "RETAIL PRICE";
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 474);
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 498);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 3, 3);
-            this.layoutControlItem9.Size = new System.Drawing.Size(570, 46);
+            this.layoutControlItem9.Size = new System.Drawing.Size(570, 48);
             this.layoutControlItem9.Text = "RETAIL PRICE";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(157, 17);
+            // 
+            // emptySpaceItem2
+            // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 520);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 546);
             this.emptySpaceItem2.MaxSize = new System.Drawing.Size(0, 32);
             this.emptySpaceItem2.MinSize = new System.Drawing.Size(10, 32);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(570, 32);
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem1
+            // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 272);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 288);
             this.emptySpaceItem1.MaxSize = new System.Drawing.Size(0, 18);
             this.emptySpaceItem1.MinSize = new System.Drawing.Size(104, 18);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(570, 18);
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem12
+            // 
             this.layoutControlItem12.Control = this.cbCategory;
             this.layoutControlItem12.CustomizationFormText = "CATEGORY";
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 228);
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 242);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(570, 44);
+            this.layoutControlItem12.Size = new System.Drawing.Size(570, 46);
             this.layoutControlItem12.Text = "CATEGORY";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(157, 17);
+            // 
+            // lcLabelProductName2
+            // 
             this.lcLabelProductName2.Control = this.labelControl1;
             this.lcLabelProductName2.ControlAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.lcLabelProductName2.CustomizationFormText = "PRODUCT";
             this.lcLabelProductName2.Location = new System.Drawing.Point(87, 0);
             this.lcLabelProductName2.Name = "lcLabelProductName2";
-            this.lcLabelProductName2.Size = new System.Drawing.Size(51, 46);
+            this.lcLabelProductName2.Size = new System.Drawing.Size(51, 48);
             this.lcLabelProductName2.Text = "PRODUCT";
             this.lcLabelProductName2.TextSize = new System.Drawing.Size(0, 0);
             this.lcLabelProductName2.TextVisible = false;
             this.lcLabelProductName2.TrimClientAreaToControl = false;
+            // 
+            // lcLabelProductName1
+            // 
             this.lcLabelProductName1.Control = this.labelControl2;
             this.lcLabelProductName1.ControlAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.lcLabelProductName1.CustomizationFormText = "lcLabelProductName1";
             this.lcLabelProductName1.Location = new System.Drawing.Point(0, 0);
             this.lcLabelProductName1.Name = "lcLabelProductName1";
             this.lcLabelProductName1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 2, 2, 2);
-            this.lcLabelProductName1.Size = new System.Drawing.Size(87, 46);
+            this.lcLabelProductName1.Size = new System.Drawing.Size(87, 48);
             this.lcLabelProductName1.TextSize = new System.Drawing.Size(0, 0);
             this.lcLabelProductName1.TextVisible = false;
             this.lcLabelProductName1.TrimClientAreaToControl = false;
+            // 
+            // lcPdfViewer
+            // 
             this.lcPdfViewer.Control = this.pdfViewer;
             this.lcPdfViewer.CustomizationFormText = "lcPdfViewer";
             this.lcPdfViewer.Location = new System.Drawing.Point(684, 0);
             this.lcPdfViewer.Name = "lcPdfViewer";
             this.lcPdfViewer.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
-            this.lcPdfViewer.Size = new System.Drawing.Size(354, 685);
+            this.lcPdfViewer.Size = new System.Drawing.Size(354, 713);
             this.lcPdfViewer.TextSize = new System.Drawing.Size(0, 0);
             this.lcPdfViewer.TextVisible = false;
+            // 
+            // errorProvider
+            // 
             this.errorProvider.ContainerControl = this;
             this.errorProvider.DataSource = this.productBindingSource;
+            // 
+            // PortalEditableView
+            // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
-            this.Name = "ProductsEditableView";
+            this.Name = "PortalEditableView";
             this.Size = new System.Drawing.Size(1065, 627);
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

@@ -51,9 +51,9 @@ namespace DevExpress.DevAV {
                 Application.Run(new MainForm());
             }
         }
-        public static Icon AppIcon {
-            get { return DevExpress.Utils.ResourceImageHelper.CreateIconFromResourcesEx("DevExpress.DevAV.Resources.AppIcon.ico", typeof(MainForm).Assembly); }
-        }
+        //public static Icon AppIcon {
+        //    get { return DevExpress.Utils.ResourceImageHelper.CreateIconFromResourcesEx("DevExpress.DevAV.Resources.AppIcon.ico", typeof(MainForm).Assembly); }
+        //}
         public static MainForm MainForm { get; set; }
         private static bool? isTablet = null;
         public static bool IsTablet {

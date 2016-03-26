@@ -10,14 +10,14 @@ using DevExpress.DevAV;
 using DevExpress.XtraLayout.Utils;
 
 namespace DevExpress.DevAV.Modules {
-    public partial class ProductsEditableView : BaseModuleControl, ISupportNavigation {
-        public ProductsEditableView()
+    public partial class PortalEditableView : BaseModuleControl, ISupportNavigation {
+        public PortalEditableView()
             : base(CreateViewModel<ProductViewModel>) {
             InitializeComponent();
             cbCategory.Properties.Items.AddEnum<ProductCategory>();
         }
         protected override void Return() {
-            GetParentViewModel<MainViewModel>().SelectModule(ModuleType.Products);
+            GetParentViewModel<MainViewModel>().SelectModule(ModuleType.Portal);
         }
         private void lciBackPicture_Click(object sender, EventArgs e) {
             if(CheckSave()) Return();

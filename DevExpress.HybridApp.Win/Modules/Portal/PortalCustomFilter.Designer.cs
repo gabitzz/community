@@ -1,5 +1,5 @@
 ﻿namespace DevExpress.DevAV.Modules {
-    partial class ProductCustomFilterModule {
+    partial class PortalCustomFilterModule {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -133,14 +133,14 @@
             this.productsLabelItem.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.productsLabelItem.AppearanceItemCaption.Options.UseFont = true;
             this.productsLabelItem.AppearanceItemCaption.Options.UseForeColor = true;
-            this.productsLabelItem.CustomizationFormText = "Products";
+            this.productsLabelItem.CustomizationFormText = "Portal";
             this.productsLabelItem.Location = new System.Drawing.Point(0, 0);
             this.productsLabelItem.MaxSize = new System.Drawing.Size(100, 29);
             this.productsLabelItem.MinSize = new System.Drawing.Size(100, 29);
             this.productsLabelItem.Name = "productsLabelItem";
             this.productsLabelItem.Size = new System.Drawing.Size(100, 29);
             this.productsLabelItem.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.productsLabelItem.Text = "Products";
+            this.productsLabelItem.Text = "Portal";
             this.productsLabelItem.TextSize = new System.Drawing.Size(111, 25);
             this.customFilterLabelItem.AllowHotTrack = false;
             this.customFilterLabelItem.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -260,7 +260,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl);
-            this.Name = "ProductCustomFilterModule";
+            this.Name = "PortalCustomFilterModule";
             this.Size = new System.Drawing.Size(984, 495);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).EndInit();
             this.layoutControl.ResumeLayout(false);

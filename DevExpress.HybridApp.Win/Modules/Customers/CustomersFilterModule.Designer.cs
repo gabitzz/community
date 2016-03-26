@@ -133,7 +133,7 @@
             this.customersLabelItem.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.customersLabelItem.AppearanceItemCaption.Options.UseFont = true;
             this.customersLabelItem.AppearanceItemCaption.Options.UseForeColor = true;
-            this.customersLabelItem.CustomizationFormText = "Products";
+            this.customersLabelItem.CustomizationFormText = "Portal";
             this.customersLabelItem.Location = new System.Drawing.Point(0, 0);
             this.customersLabelItem.MaxSize = new System.Drawing.Size(100, 29);
             this.customersLabelItem.MinSize = new System.Drawing.Size(100, 29);

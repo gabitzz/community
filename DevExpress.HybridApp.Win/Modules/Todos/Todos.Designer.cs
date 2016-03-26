@@ -319,7 +319,7 @@
             // 
             this.treeListColumn1.Caption = "treeListColumn1";
             this.treeListColumn1.FieldName = "treeListColumn1";
-            this.treeListColumn1.MinWidth = 52;
+            this.treeListColumn1.MinWidth = 96;
             this.treeListColumn1.Name = "treeListColumn1";
             this.treeListColumn1.OptionsColumn.AllowEdit = false;
             this.treeListColumn1.Visible = true;
