@@ -57,18 +57,13 @@
     <ApplicationIcon>Resources\AppIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.DevAV.v15.2.Data, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.DevAV.v15.2.Data, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\DevExpress.DevAV.v15.2.Data.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v15.2.Extensions">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v15.2.Wizard">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="EntityFramework">
@@ -77,168 +72,108 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Charts.v15.2.Core">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Data.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Images.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Map.v15.2.Core">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Mvvm.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.RichEdit.v15.2.Core">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Pdf.v15.2.Core">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Utils.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Printing.v15.2.Core">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraBars.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v15.2.UI">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraEditors.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraGrid.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraLayout.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraMap.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraNavBar.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraPrinting.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraRichEdit.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraRichEdit.v15.2.Extensions">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraTreeList.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraPdfViewer.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Office.v15.2.Core">
-      <HintPath>
-      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v15.2">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2.UI">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions">
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraReports.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Snap.v15.2.Core">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Snap.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Snap.v15.2.Extensions">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraPivotGrid.v15.2">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.PivotGrid.v15.2.Core">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Sparkline.v15.2.Core">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v15.2">
-      <HintPath>
-      </HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.Pdf.v15.2.Core">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Pdf.v15.2.Drawing">
-      <HintPath>
-      </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore">
@@ -329,12 +264,33 @@
     <Compile Include="Common\ViewModel\SingleObjectChildViewModel.cs" />
     <Compile Include="Common\ViewModel\SingleObjectViewModel.cs" />
     <Compile Include="Common\ViewModel\SingleObjectViewModel.partial.cs" />
+    <Compile Include="Controls\Messages\BaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\ButtonsPanel.cs" />
+    <Compile Include="Controls\Messages\Common.cs" />
+    <Compile Include="Controls\Messages\Helpers\ColorHelper.cs" />
+    <Compile Include="Controls\Messages\Helpers\Contact.cs" />
+    <Compile Include="Controls\Messages\Helpers\DataHelper.cs" />
+    <Compile Include="Controls\Messages\DataSourceChangedEventArgs.cs" />
     <Compile Include="Controls\DataTileControl.cs" />
     <Compile Include="Controls\GridViewWithButtons.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\GroupPainter.cs" />
+    <Compile Include="Controls\Messages\Helpers\DragSelection.cs" />
+    <Compile Include="Controls\Messages\Helpers\Message.cs" />
+    <Compile Include="Controls\Messages\Helpers\ObjectHelper.cs" />
+    <Compile Include="Controls\Messages\MyTreeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Messages\ucMailTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Messages\ucMailTree.Designer.cs">
+      <DependentUpon>ucMailTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Messages\UCTreeDragDropEventArgs.cs" />
     <Compile Include="DevAVDbDataModel\CustomRepositories\OrderRepository.cs" />
     <Compile Include="DevAVDbDataModel\CustomRepositories\QuoteRepository.cs" />
     <Compile Include="DevAVDbDataModel\DevAVDbUnitOfWork.cs" />
@@ -601,6 +557,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CommonResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Messages\ucMailTree.resx">
+      <DependentUpon>ucMailTree.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\BaseModule.resx">
       <DependentUpon>BaseModule.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -760,6 +719,9 @@
     <None Include="Dll\System.Data.SQLite.EF6.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="Data\Mail.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Icons\DevExpress.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -870,6 +832,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
   </PropertyGroup>
