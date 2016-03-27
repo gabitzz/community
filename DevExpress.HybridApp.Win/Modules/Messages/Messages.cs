@@ -6,7 +6,10 @@ using DevExpress.DevAV.ViewModels;
 using DevExpress.XtraEditors;
 using DevExpress.XtraCharts;
 using DevExpress.DevAV.Common.Utils;
+using DevExpress.DevAV.Controls.Messages;
+using DevExpress.DevAV.Controls.Messages.Helpers;
 using DevExpress.DevAV.Helpers;
+using OpenPop.Pop3;
 
 namespace DevExpress.DevAV.Modules {
     public enum Periods : int {
@@ -43,8 +46,70 @@ namespace DevExpress.DevAV.Modules {
             InitializeButtonPanel();
         }
         private void InitializeButtonPanel() {
-            BottomPanel.Visible = false;
+            var buttons = new List<ButtonInfo>
+            {
+                new ButtonInfo
+                {
+                    Type = typeof (SimpleButton),
+                    Text = "Send/Receive",
+                    Name = "1",
+                    Image = Properties.Resources.Refresh,
+                    mouseEventHandler = sendReceive
+                }
+            };
+
+            BottomPanel.InitializeButtons(buttons, false);
         }
+
+        private void sendReceive(object sender, EventArgs e)
+        {
+            //var message = new Message
+            //{
+            //    Date = DateTime.Now,
+            //    From = "mihaita.vladut@gmail.com",
+            //    Subject = "Test subject",
+            //    Text = "Test text",
+            //    MailType = MailType.Inbox,
+            //    MailFolder = (int) MailFolder.Announcements
+            //};
+
+
+            //DataHelper.AddMessage(message);
+
+            // TODO send receive
+            using (var client = new Pop3Client())
+            {
+                // Connect to the server
+                client.Connect("pop.gmail.com", 995, true);
+
+                // Authenticate ourselves towards the server
+                client.Authenticate("silentbusters@gmail.com", "silent123");
+
+                // Get the number of messages in the inbox
+                int messageCount = client.GetMessageCount();
+
+                // Most servers give the latest message the highest number
+                for (int i = messageCount; i > 0; i--)
+                {
+                    var msg = client.GetMessage(i);
+                    var messageDate = DateTime.Parse(msg.Headers.Date);
+                    var nessage = new Message
+                    {
+                        Date = messageDate,
+                        From = msg.Headers.From.Address,
+                        Subject = msg.Headers.Subject,
+                        Text = msg.FindFirstHtmlVersion().GetBodyAsText(),
+                        MailType = MailType.Inbox,
+                        MailFolder = (int)MailFolder.Announcements
+                    };
+                    DataHelper.AddMessage(nessage);
+                }
+            }
+            ucMailTree1.UpdateTreeViewMessages();
+
+
+        }
+
         public OrderCollectionViewModel ViewModel {
             get {
                 return GetViewModel<OrderCollectionViewModel>();

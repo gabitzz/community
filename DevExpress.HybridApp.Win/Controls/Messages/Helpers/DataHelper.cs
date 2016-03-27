@@ -156,5 +156,29 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
             }
             return null;
         }
+
+        public static void AddMessage(Message message)
+        {
+            // Add message
+            Messages.Add(message);
+            // Save message inside XML
+            DataSet dataSet = new DataSet();
+            var dataFile = Path.Combine(Application. StartupPath, "Data\\Mail.xml");
+            if (dataFile != string.Empty)
+            {
+                FileInfo fi = new FileInfo(dataFile);
+                dataSet.ReadXml(fi.FullName);
+
+                var messagesSection = "Messages";
+                var messages = dataSet.Tables[messagesSection];
+
+                var newRow = messages.NewRow();
+                message.ToDataRow(newRow);
+                messages.Rows.Add(newRow);
+
+                //TODO this is a temporary harcoded path 
+                dataSet.WriteXml(@"..\DevExpress.HybridApp.Win\Data\Mail.xml", XmlWriteMode.WriteSchema);
+            }
+        }
     }
 }

@@ -115,5 +115,16 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
             if (propertyChanged != null) propertyChanged(this, new PropertyChangedEventArgs(name));
         }
         #endregion
+
+        public void ToDataRow(DataRow row)
+        {
+            row["Date"] = this.Date;
+            row["From"] = from;
+            row["Subject"] = Subject;
+            row["Text"] = this.text;
+            row["HasAttachment"] = hasAttachment;
+            row["Folder"] = MailFolder.ToString();
+            row["IsReply"] = IsReply;
+        }
     }
 }

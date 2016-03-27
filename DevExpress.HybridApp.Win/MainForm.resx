@@ -190,7 +190,7 @@
         YII=
 </value>
   </data>
-  <data name="tileItemElement6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tileItemElement11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAE9SURBVEhLtZVBSgNBEEWzcuUBvIRbwWMIgmcQBLeC
@@ -202,7 +202,7 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="tileItemElement7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tileItemElement12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC4SURBVEhL1ZFtCoQwEEM9nqda8FT+2rPVRowMNtNO
@@ -211,7 +211,7 @@
         VpJoOWgKgJX0lIOQAKC4txyEBXf5nWDdp2NB5yl4KWnaABIHOEXfqL6NAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="tileItemElement8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tileItemElement13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFcSURBVEhLrdXBRkRRHMfxISIieoBZRfQMEb1E21bz
@@ -223,7 +223,7 @@
         O6/ZvaKe8QRHbWGoqBc9m9EfAtO66CNUYCQAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="tileItemElement14.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tileItemElement15.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAE0SURBVEhLrdUxSsZAFATgHyxE8ACC4AGs7G1srLS3
@@ -234,7 +234,7 @@
         3IdG0/3w2LLy2yGzvmq2FO6QWZuTLY36kNmbky0buPGfNo+IxTf1H1W80qpPzAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="tileItemElement15.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tileItemElement16.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFSSURBVEhLtZUxSgRBEEU3EowEU8EDCB5AEEwFU0Hw
@@ -246,7 +246,7 @@
         W/ffX7ItfgEi/YKkGFeangAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="tileItemElement16.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tileItemElement17.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD1SURBVEhLzZHBTcNAEEXTAYecEAXkmAM1UAlNcKKb
@@ -265,7 +265,7 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="tileItemElement17.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tileItemElement18.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAE9SURBVEhLtZVBSgNBEEWzcuUBvIRbwWMIgmcQBLeC
@@ -275,6 +275,18 @@
         CyqZ00DQ20XPkt3DHI5cO7NmorwB+7h6TEsM3wAP/ZJ7/OkGyLulR17QOM/MsigIebd8yczQgopZ5s1D
         1uResrtibcgzQ1k0HTEzlHmDJTNDmTdYMjOUeYMlM0OZN1jS/w84H8q8wRGcVj+GUuImM//WZAAAAABJ
         RU5ErkJggg==
+</value>
+  </data>
+  <data name="tileItemElement19.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFcSURBVEhLrdXBRkRRHMfxISIieoBZRfQMEb1E21bz
+        AK16gNZtWrTpAVpFREQMbSPaliKtIkVExO37G/cc5x6/OffI/fFh+nfu/3/OzL0zo6Zpam3hHK8tvVbN
+        rY1sMbGCE3xgXvbhrp2xxdYyHtCXX2zC9SgOOEBtpnA9igOeUJtPuB7FAT+ozRdcj8FOcAPXozjgBbW5
+        h+tRHKC7ozZ6O12P4oA71EZrXY/iAD2lj+jLM/71HIie5L63agx37YwtZk4xL5dw10S2mNEO35BHD9c6
+        3DWRLRprOIMeqG9cYANubYctDskWW/o23cVhUssdYwKtdf+3Axaxh3eEbCNfp9s4RJ+Hvn1X0VnX+QM7
+        cL8B18jXqpZHg3SiuC68WII+xFLSU6S7d9Htq55xQOleD0lP4XafR7/ZccCVKhXRKfp2H3KLhTCg9ptT
+        O6/ZvaKe8QRHbWGoqBc9m9EfAtO66CNUYCQAAAAASUVORK5CYII=
 </value>
   </data>
 </root>
