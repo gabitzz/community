@@ -12,53 +12,53 @@ using DevExpress.DevAV.Helpers;
 using OpenPop.Pop3;
 
 namespace DevExpress.DevAV.Modules {
+
     public enum Periods : int {
         Month = 1,
         Today = 2,
         Year = 0
     }
     public partial class Messages : BaseModuleControl {
-        private List<DevExpress.DevAV.ViewModels.SalesInfo> listSales;
-        private List<CostInfo> listCost;
+
         public Messages()
             : base(CreateViewModel<OrderCollectionViewModel>) {
             InitializeComponent();
             InitializeData();
         }
         private void InitializeData() {
-            salesBindingSource.SetItemsSource(ViewModel.Entities);
-            InitializeOpportunitiesChartControl();
-            InitializeRevenuesChartControl();
-            InitializeCostChartControl();
+
         }
-        private void InitializeCostChartControl() {
-            listCost = ViewModel.GetCostForDashboard();
-            SetCostData(0);
-        }
-        private void InitializeRevenuesChartControl() {
-            listSales = ViewModel.GetSalesForDashboard();
-            SetRevenuesData(0);
-        }
-        private void InitializeOpportunitiesChartControl() {
-        }
+        
         protected internal override void OnTransitionCompleted() {
             base.OnTransitionCompleted();
             InitializeButtonPanel();
         }
         private void InitializeButtonPanel() {
-            var buttons = new List<ButtonInfo>
-            {
+            var buttons = new List<ButtonInfo>{
+                new ButtonInfo
+                {
+                    Type = typeof (SimpleButton),
+                    Text = "New",
+                    Name = "1",
+                    Image = Properties.Resources.mail,
+                    mouseEventHandler = NewMessage
+                },
                 new ButtonInfo
                 {
                     Type = typeof (SimpleButton),
                     Text = "Send/Receive",
-                    Name = "1",
+                    Name = "2",
                     Image = Properties.Resources.Refresh,
                     mouseEventHandler = sendReceive
                 }
             };
 
             BottomPanel.InitializeButtons(buttons, false);
+        }
+
+        private void NewMessage(object sender, EventArgs e)
+        {
+            
         }
 
         private void sendReceive(object sender, EventArgs e)
@@ -142,6 +142,19 @@ namespace DevExpress.DevAV.Modules {
 
         private void opportunitiesChartControl_CustomDrawSeriesPoint(object sender, CustomDrawSeriesPointEventArgs e) {
             ChartControlLegendCustomPainter.Paint(e);
+        }
+
+        private void buttonHide_Click(object sender, EventArgs e)
+        {
+            if (layoutControlGroup3.Visibility == XtraLayout.Utils.LayoutVisibility.Always)
+            {
+                ItemsHideHelper.Hide(new object[] { layoutControlGroup3 }, buttonHide);
+                return;
+            }
+            if (layoutControlGroup3.Visibility == XtraLayout.Utils.LayoutVisibility.Never)
+            {
+                ItemsHideHelper.Expand(new object[] { layoutControlGroup3 }, buttonHide);
+            }
         }
     }
     public class ChartControlLegendCustomPainter {

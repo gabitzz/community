@@ -52,6 +52,7 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.buttonHide = new DevExpress.XtraLayout.SimpleLabelItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.orderItemsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesGridControl)).BeginInit();
@@ -68,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,10 +154,10 @@
             this.salesGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1,
             gridLevelNode2});
-            this.salesGridControl.Location = new System.Drawing.Point(172, 72);
+            this.salesGridControl.Location = new System.Drawing.Point(200, 72);
             this.salesGridControl.MainView = this.salesGridView;
             this.salesGridControl.Name = "salesGridControl";
-            this.salesGridControl.Size = new System.Drawing.Size(697, 446);
+            this.salesGridControl.Size = new System.Drawing.Size(669, 446);
             this.salesGridControl.TabIndex = 2;
             this.salesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.salesGridView,
@@ -267,7 +269,7 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(795, 354, 250, 350);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(787, 354, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(893, 542);
             this.layoutControl1.TabIndex = 19;
@@ -288,7 +290,8 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.emptySpaceItem1,
             this.layoutControlGroup2,
-            this.layoutControlGroup3});
+            this.layoutControlGroup3,
+            this.buttonHide});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(893, 542);
@@ -297,7 +300,7 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(138, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(166, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(10, 522);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -307,9 +310,9 @@
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3,
             this.layoutControlItem4});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(148, 0);
+            this.layoutControlGroup2.Location = new System.Drawing.Point(176, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(725, 522);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(697, 522);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem3
@@ -318,7 +321,7 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(104, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(701, 450);
+            this.layoutControlItem3.Size = new System.Drawing.Size(673, 450);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
@@ -331,7 +334,7 @@
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(104, 46);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(701, 48);
+            this.layoutControlItem4.Size = new System.Drawing.Size(673, 48);
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
@@ -353,6 +356,21 @@
             this.layoutControlItem5.Size = new System.Drawing.Size(114, 498);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
+            // 
+            // buttonHide
+            // 
+            this.buttonHide.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
+            this.buttonHide.AllowHotTrack = false;
+            this.buttonHide.Image = global::DevExpress.DevAV.Properties.Resources.ArrowLeft;
+            this.buttonHide.Location = new System.Drawing.Point(138, 0);
+            this.buttonHide.MaxSize = new System.Drawing.Size(28, 0);
+            this.buttonHide.MinSize = new System.Drawing.Size(28, 1);
+            this.buttonHide.Name = "buttonHide";
+            this.buttonHide.Size = new System.Drawing.Size(28, 522);
+            this.buttonHide.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.buttonHide.Text = " ";
+            this.buttonHide.TextSize = new System.Drawing.Size(34, 25);
+            this.buttonHide.Click += new System.EventHandler(this.buttonHide_Click);
             // 
             // layoutControlItem1
             // 
@@ -385,6 +403,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonHide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
@@ -417,5 +436,6 @@
         private XtraLayout.LayoutControlItem layoutControlItem5;
         private XtraLayout.LayoutControlGroup layoutControlGroup2;
         private XtraLayout.LayoutControlGroup layoutControlGroup3;
+        private XtraLayout.SimpleLabelItem buttonHide;
     }
 }
