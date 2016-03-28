@@ -429,6 +429,7 @@
     <Compile Include="Modules\Customers\CustomersFilterModule.Designer.cs">
       <DependentUpon>CustomersFilterModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Messages\MessageReceiver.cs" />
     <Compile Include="Modules\Messages\Messages.cs">
       <SubType>UserControl</SubType>
     </Compile>

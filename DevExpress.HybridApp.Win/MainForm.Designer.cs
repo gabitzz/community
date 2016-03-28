@@ -80,6 +80,7 @@ namespace DevExpress.DevAV {
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.tileBarItem1 = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarItem2 = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.marqueeProgressBarControl1 = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.productsTileBarDropDownContainter)).BeginInit();
             this.productsTileBarDropDownContainter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customTileBarDropDownContainter)).BeginInit();
@@ -87,6 +88,7 @@ namespace DevExpress.DevAV {
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).BeginInit();
             this.flyoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // modulesContainer
@@ -618,6 +620,14 @@ namespace DevExpress.DevAV {
             this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tileBarItem2.Name = "tileBarItem2";
             // 
+            // marqueeProgressBarControl1
+            // 
+            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(0, 0);
+            this.marqueeProgressBarControl1.MenuManager = this.barManager1;
+            this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
+            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(100, 18);
+            this.marqueeProgressBarControl1.TabIndex = 10;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -629,6 +639,7 @@ namespace DevExpress.DevAV {
             this.Controls.Add(this.tileNavPane);
             this.Controls.Add(this.customTileBarDropDownContainter);
             this.Controls.Add(this.productsTileBarDropDownContainter);
+            this.Controls.Add(this.marqueeProgressBarControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -645,6 +656,7 @@ namespace DevExpress.DevAV {
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).EndInit();
             this.flyoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -693,5 +705,6 @@ namespace DevExpress.DevAV {
         private XtraBars.Navigation.TileBarItem tileBarItem1;
         private XtraBars.Navigation.TileBarItem oldportalTileBar;
         private XtraBars.Navigation.TileBarItem tileBarItem2;
+        private XtraEditors.MarqueeProgressBarControl marqueeProgressBarControl1;
     }
 }

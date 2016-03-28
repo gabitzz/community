@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Threading;
+using System.Windows.Forms;
 using DevExpress.DevAV.ViewModels;
 using DevExpress.XtraEditors;
 using DevExpress.XtraCharts;
@@ -9,7 +12,10 @@ using DevExpress.DevAV.Common.Utils;
 using DevExpress.DevAV.Controls.Messages;
 using DevExpress.DevAV.Controls.Messages.Helpers;
 using DevExpress.DevAV.Helpers;
+using DevExpress.XtraLayout.Utils;
 using OpenPop.Pop3;
+using Message = DevExpress.DevAV.Controls.Messages.Helpers.Message;
+using Timer = System.Windows.Forms.Timer;
 
 namespace DevExpress.DevAV.Modules {
 
@@ -21,10 +27,34 @@ namespace DevExpress.DevAV.Modules {
     public partial class Messages : BaseModuleControl {
 
         public Messages()
-            : base(CreateViewModel<OrderCollectionViewModel>) {
+            : base(CreateViewModel<OrderCollectionViewModel>)
+        {
             InitializeComponent();
             InitializeData();
+
+            MessageReceiver.Instance.DoReceiveStarted += Instance_DoReceiveStarted;
+            MessageReceiver.Instance.DoReceiveEnded += Instance_DoReceiveEnded;
+
+            var timer = new Timer {Interval = 2000};
+            timer.Tick += Timer_Tick;
+            timer.Start();
         }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            MessageReceiver.Instance.Receive();
+        }
+
+        private void Instance_DoReceiveStarted(object sender, EventArgs e)
+        {
+            ShowProgress();
+        }
+
+        private void Instance_DoReceiveEnded(object sender, EventArgs e)
+        {
+            UpdateMessagesTree();
+            HideProgress();}
+
         private void InitializeData() {
 
         }
@@ -74,40 +104,47 @@ namespace DevExpress.DevAV.Modules {
             //};
 
 
-            //DataHelper.AddMessage(message);
+            MessageReceiver.Instance.Receive();
+        }
 
-            // TODO send receive
-            using (var client = new Pop3Client())
+        void ShowProgress()
+        {
+            if (sendReceiveProgress.InvokeRequired)
             {
-                // Connect to the server
-                client.Connect("pop.gmail.com", 995, true);
-
-                // Authenticate ourselves towards the server
-                client.Authenticate("silentbusters@gmail.com", "silent123");
-
-                // Get the number of messages in the inbox
-                int messageCount = client.GetMessageCount();
-
-                // Most servers give the latest message the highest number
-                for (int i = messageCount; i > 0; i--)
-                {
-                    var msg = client.GetMessage(i);
-                    var messageDate = DateTime.Parse(msg.Headers.Date);
-                    var nessage = new Message
-                    {
-                        Date = messageDate,
-                        From = msg.Headers.From.Address,
-                        Subject = msg.Headers.Subject,
-                        Text = msg.FindFirstHtmlVersion().GetBodyAsText(),
-                        MailType = MailType.Inbox,
-                        MailFolder = (int)MailFolder.Announcements
-                    };
-                    DataHelper.AddMessage(nessage);
-                }
+                Invoke(new MethodInvoker(ShowProgress));
             }
-            ucMailTree1.UpdateTreeViewMessages();
+            else
+            {
+                sendReceiveProgress.Properties.Stopped = false;
+                sendReceiveProgress.Properties.ShowTitle = true;
+            }
+        }
+
+        void HideProgress()
+        {
+            if (sendReceiveProgress.InvokeRequired)
+            {
+                Invoke(new MethodInvoker(HideProgress));
+            }
+            else
+            {
+                sendReceiveProgress.Properties.Stopped = true;
+                sendReceiveProgress.Properties.ShowTitle = false;
+            }
+        }
 
 
+
+        private void UpdateMessagesTree()
+        {
+            if (ucMailTree1.InvokeRequired)
+            {
+                Invoke(new MethodInvoker(UpdateMessagesTree));
+            }
+            else
+            {
+                ucMailTree1.UpdateTreeViewMessages();
+            }
         }
 
         public OrderCollectionViewModel ViewModel {
@@ -156,6 +193,7 @@ namespace DevExpress.DevAV.Modules {
                 ItemsHideHelper.Expand(new object[] { layoutControlGroup3 }, buttonHide);
             }
         }
+
     }
     public class ChartControlLegendCustomPainter {
         public static void Paint(CustomDrawSeriesPointEventArgs e) {

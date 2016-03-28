@@ -44,6 +44,7 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.searchControl = new DevExpress.XtraEditors.SearchControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.sendReceiveProgress = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             this.ucMailTree1 = new DevExpress.DevAV.Controls.Messages.ucMailTree();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -53,6 +54,8 @@
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.buttonHide = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.layoutControlSendReceive = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.orderItemsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesGridControl)).BeginInit();
@@ -62,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.searchControl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sendReceiveProgress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
@@ -70,6 +74,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonHide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlSendReceive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,7 +163,7 @@
             this.salesGridControl.Location = new System.Drawing.Point(200, 72);
             this.salesGridControl.MainView = this.salesGridView;
             this.salesGridControl.Name = "salesGridControl";
-            this.salesGridControl.Size = new System.Drawing.Size(669, 446);
+            this.salesGridControl.Size = new System.Drawing.Size(669, 424);
             this.salesGridControl.TabIndex = 2;
             this.salesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.salesGridView,
@@ -263,24 +269,41 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.sendReceiveProgress);
             this.layoutControl1.Controls.Add(this.ucMailTree1);
             this.layoutControl1.Controls.Add(this.searchControl);
             this.layoutControl1.Controls.Add(this.salesGridControl);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(787, 354, 250, 350);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(747, 158, 690, 527);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(893, 542);
             this.layoutControl1.TabIndex = 19;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // sendReceiveProgress
+            // 
+            this.sendReceiveProgress.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sendReceiveProgress.EditValue = "Send/Receive";
+            this.sendReceiveProgress.Location = new System.Drawing.Point(750, 510);
+            this.sendReceiveProgress.Margin = new System.Windows.Forms.Padding(0);
+            this.sendReceiveProgress.MinimumSize = new System.Drawing.Size(0, 22);
+            this.sendReceiveProgress.Name = "sendReceiveProgress";
+            this.sendReceiveProgress.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.sendReceiveProgress.Properties.MarqueeAnimationSpeed = 150;
+            this.sendReceiveProgress.Properties.ShowTitle = true;
+            this.sendReceiveProgress.Properties.Stopped = true;
+            this.sendReceiveProgress.Size = new System.Drawing.Size(133, 22);
+            this.sendReceiveProgress.StyleController = this.layoutControl1;
+            this.sendReceiveProgress.TabIndex = 20;
             // 
             // ucMailTree1
             // 
             this.ucMailTree1.Location = new System.Drawing.Point(24, 24);
             this.ucMailTree1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ucMailTree1.Name = "ucMailTree1";
-            this.ucMailTree1.Size = new System.Drawing.Size(110, 494);
+            this.ucMailTree1.Size = new System.Drawing.Size(110, 472);
             this.ucMailTree1.TabIndex = 19;
             // 
             // layoutControlGroup1
@@ -291,7 +314,9 @@
             this.emptySpaceItem1,
             this.layoutControlGroup2,
             this.layoutControlGroup3,
-            this.buttonHide});
+            this.buttonHide,
+            this.layoutControlSendReceive,
+            this.emptySpaceItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(893, 542);
@@ -302,7 +327,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(166, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(10, 522);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(10, 500);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup2
@@ -312,7 +337,7 @@
             this.layoutControlItem4});
             this.layoutControlGroup2.Location = new System.Drawing.Point(176, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(697, 522);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(697, 500);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem3
@@ -321,7 +346,7 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(104, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(673, 450);
+            this.layoutControlItem3.Size = new System.Drawing.Size(673, 428);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
@@ -345,7 +370,7 @@
             this.layoutControlItem5});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(138, 522);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(138, 500);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem5
@@ -353,7 +378,7 @@
             this.layoutControlItem5.Control = this.ucMailTree1;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(114, 498);
+            this.layoutControlItem5.Size = new System.Drawing.Size(114, 476);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -366,11 +391,29 @@
             this.buttonHide.MaxSize = new System.Drawing.Size(28, 0);
             this.buttonHide.MinSize = new System.Drawing.Size(28, 1);
             this.buttonHide.Name = "buttonHide";
-            this.buttonHide.Size = new System.Drawing.Size(28, 522);
+            this.buttonHide.Size = new System.Drawing.Size(28, 500);
             this.buttonHide.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.buttonHide.Text = " ";
             this.buttonHide.TextSize = new System.Drawing.Size(34, 25);
             this.buttonHide.Click += new System.EventHandler(this.buttonHide_Click);
+            // 
+            // layoutControlSendReceive
+            // 
+            this.layoutControlSendReceive.Control = this.sendReceiveProgress;
+            this.layoutControlSendReceive.Location = new System.Drawing.Point(740, 500);
+            this.layoutControlSendReceive.Name = "layoutControlSendReceive";
+            this.layoutControlSendReceive.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlSendReceive.Size = new System.Drawing.Size(133, 22);
+            this.layoutControlSendReceive.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlSendReceive.TextVisible = false;
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 500);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(740, 22);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem1
             // 
@@ -396,6 +439,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.searchControl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sendReceiveProgress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
@@ -404,6 +448,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonHide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlSendReceive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
@@ -437,5 +483,8 @@
         private XtraLayout.LayoutControlGroup layoutControlGroup2;
         private XtraLayout.LayoutControlGroup layoutControlGroup3;
         private XtraLayout.SimpleLabelItem buttonHide;
+        private XtraEditors.MarqueeProgressBarControl sendReceiveProgress;
+        private XtraLayout.LayoutControlItem layoutControlSendReceive;
+        private XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }

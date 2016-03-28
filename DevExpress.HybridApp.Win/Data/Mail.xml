@@ -4725,4 +4725,24 @@
     <Folder>1</Folder>
     <IsReply>false</IsReply>
   </Messages>
+  <Messages>
+    <Date>2016-03-28T00:29:08+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>Another test</Subject>
+    <Text>&lt;div dir="ltr"&gt;ksjdafnm,vnxzkfdsdkmgf;sadk&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
+  <Messages>
+    <Date>2016-03-29T00:55:26+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>bla bla</Subject>
+    <Text>&lt;div dir="ltr"&gt;fasfsdfsdffasdf&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
 </NewDataSet>
