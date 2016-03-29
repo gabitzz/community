@@ -266,6 +266,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <Private>False</Private>
     </Reference>
@@ -313,6 +314,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppSettings.cs" />
     <Compile Include="Common\CommonResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

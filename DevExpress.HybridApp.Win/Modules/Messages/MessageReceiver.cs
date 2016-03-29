@@ -11,7 +11,7 @@ namespace DevExpress.DevAV.Modules
         public event EventHandler DoReceiveStarted;
         public event EventHandler DoReceiveEnded;
 
-        private BackgroundWorker _backgroundWorker;
+        private readonly BackgroundWorker _backgroundWorker;
 
         public static MessageReceiver Instance { get; } = new MessageReceiver();
 
@@ -45,7 +45,7 @@ namespace DevExpress.DevAV.Modules
 
         private void DoReceive()
         {
-            // TODO send receive
+            // TODO Use client settings
             using (var client = new Pop3Client())
             {
                 // Connect to the server

@@ -35,7 +35,7 @@ namespace DevExpress.DevAV.Modules {
             MessageReceiver.Instance.DoReceiveStarted += Instance_DoReceiveStarted;
             MessageReceiver.Instance.DoReceiveEnded += Instance_DoReceiveEnded;
 
-            var timer = new Timer {Interval = 2000};
+            var timer = new Timer {Interval = AppSettings.Instance.SendReceiveTimeInterval};
             timer.Tick += Timer_Tick;
             timer.Start();
         }

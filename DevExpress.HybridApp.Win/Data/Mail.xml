@@ -4745,4 +4745,14 @@
     <Folder>1</Folder>
     <IsReply>false</IsReply>
   </Messages>
+  <Messages>
+    <Date>2016-03-30T00:52:14+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>final test</Subject>
+    <Text>&lt;div dir="ltr"&gt;sdal;kfsl;dkf&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
 </NewDataSet>
