@@ -376,7 +376,21 @@
     <Compile Include="DevAVDbDataModel\DevAVDbUnitOfWork.cs" />
     <Compile Include="DevAVDbDataModel\IDevAVDbUnitOfWork.cs" />
     <Compile Include="DevAVDbDataModel\UnitOfWorkFactory.cs" />
+    <Compile Include="Forms\EmailAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmailAccountForm.Designer.cs">
+      <DependentUpon>EmailAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AccountReader.cs" />
+    <Compile Include="Helpers\AppContext.cs" />
+    <Compile Include="Helpers\AppSettings.cs" />
+    <Compile Include="Helpers\AppSettingsReader.cs" />
     <Compile Include="Helpers\ButtonInfo.cs" />
+    <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Helpers\EmailAccount.cs" />
+    <Compile Include="Helpers\IAccountReader.cs" />
+    <Compile Include="Helpers\IAppSettingsReader.cs" />
     <Compile Include="Helpers\ItemsHideHelper.cs" />
     <Compile Include="Helpers\ItemsSourceExtensions.cs" />
     <Compile Include="Helpers\LabelTabController.cs" />
@@ -641,6 +655,9 @@
     <EmbeddedResource Include="Controls\Messages\ucMailTree.resx">
       <DependentUpon>ucMailTree.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmailAccountForm.resx">
+      <DependentUpon>EmailAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\BaseModule.resx">
       <DependentUpon>BaseModule.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -799,6 +816,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Resources\mail.png" />
+    <Content Include="Data\Accounts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Toolbar\Back.png" />
     <Content Include="Resources\Toolbar\Forward.png" />
     <EmbeddedResource Include="Resources\Toolbar\SortAZ.png" />

@@ -95,6 +95,7 @@ namespace DevExpress.DevAV.Controls.Messages
                     !message.Deleted)
                         messages.Add(message);
             }
+            //TODO: Check when the exception occurs.
             node.SetValue(colData, messages);
         }
         protected override void LookAndFeelStyleChanged() {

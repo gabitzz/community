@@ -413,6 +413,7 @@ namespace DevExpress.DevAV {
             this.customMyAccountTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.customMyAccountTileBarItem.Name = "customMyAccountTileBarItem";
             this.customMyAccountTileBarItem.Tag = DevExpress.DevAV.Modules.CustomersFilter.MyAccount;
+            this.customMyAccountTileBarItem.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.customMyAccountTileBarItem_ItemClick);
             // 
             // customJohnAccountTileBarItem
             // 
@@ -622,6 +623,7 @@ namespace DevExpress.DevAV {
             // 
             // marqueeProgressBarControl1
             // 
+            this.marqueeProgressBarControl1.EditValue = 0;
             this.marqueeProgressBarControl1.Location = new System.Drawing.Point(0, 0);
             this.marqueeProgressBarControl1.MenuManager = this.barManager1;
             this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
