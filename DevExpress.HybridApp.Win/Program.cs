@@ -11,6 +11,8 @@ using DevExpress.XtraEditors;
 using DevExpress.Internal;
 using System.Reflection;
 using System.IO;
+using DevExpress.DevAV.Forms;
+using DevExpress.DevAV.Helpers;
 using DevExpress.XtraEditors.Controls;
 
 namespace DevExpress.DevAV {
@@ -48,7 +50,37 @@ namespace DevExpress.DevAV {
                 WindowsFormsSettings.TouchScaleFactor = touchScaleFactor;
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MainForm());
+
+                bool accountCreated = CheckAccountExists();
+                if (!accountCreated)
+                {
+                    accountCreated = CreateAccount();
+                }
+                if (accountCreated)
+                {
+                    Application.Run(new MainForm());
+                }
+            }
+        }
+
+        private static bool CheckAccountExists()
+        {
+            try
+            {
+                return AppContext.CurrentContext.Accounts.Any();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Error - Cannot load accounts file" + ex.Message);
+            }
+            return false;
+        }
+
+        private static bool CreateAccount()
+        {
+            using (var accountForm = new EmailAccountForm())
+            {
+                return accountForm.ShowDialog() == DialogResult.OK;
             }
         }
         //public static Icon AppIcon {

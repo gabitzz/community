@@ -6,6 +6,9 @@ using DevExpress.DevAV.ViewModels;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Navigation;
 using System.Drawing;
+using System.Linq;
+using DevExpress.DevAV.Forms;
+using DevExpress.DevAV.Helpers;
 using DevExpress.Utils.Gesture;
 using DevExpress.Utils.TouchHelpers;
 using DevExpress.Utils.Animation;
@@ -189,6 +192,15 @@ namespace DevExpress.DevAV {
         }
         void navButtonHelp_ElementClick(object sender, NavElementEventArgs e) {
             DevExpress.Utils.About.AboutHelper.Show(DevExpress.Utils.About.ProductKind.DXperienceWin, new DevExpress.Utils.About.ProductStringInfo("Hybrid App", "WinForm Controls"));
+        }
+
+        private void customMyAccountTileBarItem_ItemClick(object sender, TileItemEventArgs e)
+        {
+            using (var emailAccountForm = new EmailAccountForm())
+            {
+                emailAccountForm.EmailAccount = AppContext.CurrentContext.Accounts.FirstOrDefault();
+                emailAccountForm.ShowDialog();
+            }
         }
     }
 }

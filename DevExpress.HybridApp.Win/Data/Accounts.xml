@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<accounts>
+  <account>
+    <account-type>POP3</account-type>
+    <name>Silent Busters</name>
+    <email>silentbusters@gmail.com</email>
+    <incoming>pop.gmail.com</incoming>
+    <outgoing>smtp.gmail.com</outgoing>
+    <username>silentbusters@gmail.com</username>
+    <password>silent123</password>
+  </account>
+</accounts>
