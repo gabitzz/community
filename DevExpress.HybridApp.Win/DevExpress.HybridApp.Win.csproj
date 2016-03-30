@@ -383,6 +383,7 @@
       <DependentUpon>EmailAccountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\AccountReader.cs" />
+    <Compile Include="Helpers\AccountWriter.cs" />
     <Compile Include="Helpers\AppContext.cs" />
     <Compile Include="Helpers\AppSettings.cs" />
     <Compile Include="Helpers\AppSettingsReader.cs" />
@@ -394,6 +395,7 @@
     <Compile Include="Helpers\ItemsHideHelper.cs" />
     <Compile Include="Helpers\ItemsSourceExtensions.cs" />
     <Compile Include="Helpers\LabelTabController.cs" />
+    <Compile Include="Helpers\XmlElementExtensions.cs" />
     <Compile Include="Modules\BaseModule.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -819,6 +821,7 @@
     <None Include="Resources\mail.png" />
     <Content Include="Data\Accounts.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Resources\Toolbar\Back.png" />
     <Content Include="Resources\Toolbar\Forward.png" />

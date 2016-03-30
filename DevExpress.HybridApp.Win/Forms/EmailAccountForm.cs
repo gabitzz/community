@@ -31,7 +31,25 @@ namespace DevExpress.DevAV.Forms
                 txtOutgoing.Text = EmailAccount.Outgoing;
                 txtUserName.Text = EmailAccount.Username;
                 txtPass.Text = EmailAccount.Password;
+                txtPort.Text = EmailAccount.Port;
             }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            EmailAccount.Name = txtName.Text;
+            EmailAccount.Email = txtEmailAddress.Text;
+            EmailAccount.Incoming = txtIncoming.Text;
+            EmailAccount.Outgoing = txtOutgoing.Text;
+            EmailAccount.Username = txtUserName.Text;
+            EmailAccount.Password = txtPass.Text;
+            EmailAccount.Port = txtPort.Text;
+
+            AccountWriter writer = new AccountWriter();
+            writer.Save(EmailAccount);
+
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

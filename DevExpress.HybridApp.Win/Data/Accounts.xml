@@ -8,5 +8,6 @@
     <outgoing>smtp.gmail.com</outgoing>
     <username>silentbusters@gmail.com</username>
     <password>silent123</password>
+    <port>587</port>
   </account>
 </accounts>
