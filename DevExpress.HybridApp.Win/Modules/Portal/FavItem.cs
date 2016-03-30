@@ -17,9 +17,6 @@ namespace DevExpress.DevAV.Modules
             InitializeComponent();
         }
 
-        private void labelControl1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
