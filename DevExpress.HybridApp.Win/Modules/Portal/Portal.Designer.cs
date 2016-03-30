@@ -118,9 +118,10 @@
             this.portalWebBrowser.Location = new System.Drawing.Point(172, 2);
             this.portalWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.portalWebBrowser.Name = "portalWebBrowser";
+            this.portalWebBrowser.ScriptErrorsSuppressed = true;
             this.portalWebBrowser.Size = new System.Drawing.Size(890, 578);
             this.portalWebBrowser.TabIndex = 27;
-            this.portalWebBrowser.Url = new System.Uri("http://www.google.ro", System.UriKind.Absolute);
+            this.portalWebBrowser.Url = new System.Uri("http://portal.netrom.local", System.UriKind.Absolute);
             this.portalWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.portalWebBrowser_DocumentCompleted);
             // 
             // tileControl
