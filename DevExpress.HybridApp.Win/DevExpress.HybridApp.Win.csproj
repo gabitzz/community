@@ -454,6 +454,12 @@
     <Compile Include="Modules\Messages\Messages.Designer.cs">
       <DependentUpon>Messages.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Portal\FavItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Portal\FavItem.Designer.cs">
+      <DependentUpon>FavItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Teams\MemeberMailMerge.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -693,6 +699,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Messages\Messages.resx">
       <DependentUpon>Messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Portal\FavItem.resx">
+      <DependentUpon>FavItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Teams\MemeberMailMerge.resx">
       <DependentUpon>MemeberMailMerge.cs</DependentUpon>

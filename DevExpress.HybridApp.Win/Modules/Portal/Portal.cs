@@ -15,6 +15,7 @@ using DevExpress.Data.Filtering;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraBars.Docking2010.Customization;
 using System.Windows.Forms;
+using DevExpress.DevAV.Forms;
 
 namespace DevExpress.DevAV.Modules {
     public enum ProductCustomFilter {
@@ -164,12 +165,19 @@ namespace DevExpress.DevAV.Modules {
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Back", Name = "2", Image= Properties.Resources.ArrowLeft, mouseEventHandler = goToPreviousPage });         
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Next", Name = "3", Image = Properties.Resources.ArrowRight, mouseEventHandler = goToNextPage });
             listBI.Add(new ButtonInfo());
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Pin", Name = "4", Image = Properties.Resources.pin, mouseEventHandler = goToPreviousPage });
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Pin", Name = "4", Image = Properties.Resources.pin, mouseEventHandler = pinFavPage });
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Unpin", Name = "5", Image = Properties.Resources.unpin, mouseEventHandler = goToPreviousPage });
             listBI.Add(new ButtonInfo());
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Open in browser", Name = "6", Image = Properties.Resources.browseropen, mouseEventHandler = openInBrowser });
             BottomPanel.InitializeButtons(listBI, false);
             
+        }
+
+        private void pinFavPage(object sender, EventArgs e)
+        {
+          FavItem newFavItem = new FavItem();
+          DialogResult result = FlyoutDialog.Show(FindForm(), newFavItem);
+
         }
 
         private void customFilterClick(object sender, EventArgs e) {
