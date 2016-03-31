@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraBars.Docking2010;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace DevExpress.DevAV.Helpers {
         public Control PopupMenuContent { get; set; }
 
         public EventHandler mouseEventHandler { get; set; }
+        public WindowsUIButton Button { get; set; } 
         public Type Type { get; set; }
     }
     public static class ImageHelper {

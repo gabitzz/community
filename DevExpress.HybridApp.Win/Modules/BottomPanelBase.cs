@@ -50,6 +50,7 @@ namespace DevExpress.DevAV.Modules {
                     button = new WindowsUIButton(buttonInfo.Text, buttonInfo.Image, 0, ButtonStyle.PushButton, 0);
                     button.Tag = buttonInfo.PopupMenuContent;
                     button.Click += buttonInfo.mouseEventHandler;
+                    buttonInfo.Button = button;
                 }
                 windowsUIButtonPanel1.Buttons.Add(button);
             }

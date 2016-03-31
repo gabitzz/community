@@ -395,6 +395,7 @@
     <Compile Include="Helpers\ItemsHideHelper.cs" />
     <Compile Include="Helpers\ItemsSourceExtensions.cs" />
     <Compile Include="Helpers\LabelTabController.cs" />
+    <Compile Include="Helpers\PinnedItem.cs" />
     <Compile Include="Helpers\XmlElementExtensions.cs" />
     <Compile Include="Modules\BaseModule.cs">
       <SubType>UserControl</SubType>

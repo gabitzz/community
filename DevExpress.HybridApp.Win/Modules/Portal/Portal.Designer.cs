@@ -115,18 +115,17 @@
             // 
             // portalWebBrowser
             // 
-            this.portalWebBrowser.Location = new System.Drawing.Point(172, 2);
+            this.portalWebBrowser.Location = new System.Drawing.Point(232, 2);
             this.portalWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.portalWebBrowser.Name = "portalWebBrowser";
             this.portalWebBrowser.ScriptErrorsSuppressed = true;
-            this.portalWebBrowser.Size = new System.Drawing.Size(890, 578);
+            this.portalWebBrowser.Size = new System.Drawing.Size(830, 578);
             this.portalWebBrowser.TabIndex = 27;
-            this.portalWebBrowser.Url = new System.Uri("http://portal.netrom.local", System.UriKind.Absolute);
+            this.portalWebBrowser.Url = new System.Uri("http://google.ro", System.UriKind.Absolute);
             this.portalWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.portalWebBrowser_DocumentCompleted);
             // 
             // tileControl
             // 
-            this.tileControl.AllowDrag = false;
             this.tileControl.AllowGlyphSkinning = true;
             this.tileControl.AllowSelectedItem = true;
             this.tileControl.AppearanceItem.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(191)))));
@@ -149,18 +148,18 @@
             this.tileControl.Groups.Add(this.tileGroup);
             this.tileControl.HorizontalContentAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.tileControl.IndentBetweenItems = 10;
-            this.tileControl.ItemPadding = new System.Windows.Forms.Padding(7, 7, 7, 4);
+            this.tileControl.ItemPadding = new System.Windows.Forms.Padding(4);
             this.tileControl.ItemSize = 60;
             this.tileControl.Location = new System.Drawing.Point(40, 0);
             this.tileControl.Margin = new System.Windows.Forms.Padding(0);
             this.tileControl.MaxId = 8;
-            this.tileControl.MaximumSize = new System.Drawing.Size(100, 0);
-            this.tileControl.MinimumSize = new System.Drawing.Size(100, 0);
+            this.tileControl.MaximumSize = new System.Drawing.Size(160, 0);
+            this.tileControl.MinimumSize = new System.Drawing.Size(160, 0);
             this.tileControl.Name = "tileControl";
             this.tileControl.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.tileControl.Padding = new System.Windows.Forms.Padding(0);
             this.tileControl.SelectedItem = this.tileItemAll;
-            this.tileControl.Size = new System.Drawing.Size(100, 580);
+            this.tileControl.Size = new System.Drawing.Size(160, 580);
             this.tileControl.TabIndex = 26;
             this.tileControl.Text = "tileControl";
             this.tileControl.VerticalContentAlignment = DevExpress.Utils.VertAlignment.Top;
@@ -338,7 +337,7 @@
             this.tileControlLCI.Name = "tileControlLCI";
             this.tileControlLCI.OptionsPrint.AllowPrint = false;
             this.tileControlLCI.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 2, 0, 2);
-            this.tileControlLCI.Size = new System.Drawing.Size(102, 582);
+            this.tileControlLCI.Size = new System.Drawing.Size(162, 582);
             this.tileControlLCI.TextSize = new System.Drawing.Size(0, 0);
             this.tileControlLCI.TextVisible = false;
             // 
@@ -347,7 +346,7 @@
             this.hideButton.AllowHotTrack = false;
             this.hideButton.CustomizationFormText = " ";
             this.hideButton.Image = ((System.Drawing.Image)(resources.GetObject("hideButton.Image")));
-            this.hideButton.Location = new System.Drawing.Point(102, 0);
+            this.hideButton.Location = new System.Drawing.Point(162, 0);
             this.hideButton.MaxSize = new System.Drawing.Size(28, 0);
             this.hideButton.MinSize = new System.Drawing.Size(28, 1);
             this.hideButton.Name = "hideButton";
@@ -362,9 +361,9 @@
             this.layoutControlItem1.BestFitWeight = 800;
             this.layoutControlItem1.Control = this.portalWebBrowser;
             this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.layoutControlItem1.Location = new System.Drawing.Point(130, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(190, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(894, 582);
+            this.layoutControlItem1.Size = new System.Drawing.Size(834, 582);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 

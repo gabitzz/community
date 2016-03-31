@@ -178,7 +178,7 @@
         private XtraLayout.LayoutControlItem layoutControlItem2;
         private XtraLayout.LayoutControlItem layoutControlItem3;
         private XtraLayout.LayoutControlItem layoutControlItem4;
-        private XtraEditors.TextEdit textEdit1;
+        public XtraEditors.TextEdit textEdit1;
         private XtraLayout.EmptySpaceItem S;
     }
 }

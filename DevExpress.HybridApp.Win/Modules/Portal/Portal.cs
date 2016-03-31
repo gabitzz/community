@@ -25,9 +25,19 @@ namespace DevExpress.DevAV.Modules {
         RemoteControl,
         CdPlayer
     }
+
+
     public partial class Portal : BaseModuleControl {
         BaseItemCollection hideItemCollection = new BaseItemCollection();
         TileBar productTileBar;
+        string currentFilter = null;
+        private List<PinnedItem> pins;
+
+        private List<ButtonInfo> listBI;
+        private ButtonInfo pinBtn;
+        private ButtonInfo unpinBtn;
+        
+
         public Portal()
             : base(CreateViewModel<ProductCollectionViewModel>) {
             InitializeComponent();
@@ -36,8 +46,7 @@ namespace DevExpress.DevAV.Modules {
             UpdateTileAndItems();
             //viewProducts.DataController.Refreshed += DataController_Refreshed;
             ItemsHideHelper.Hide(hideItemCollection, hideButton);
-
-
+            pins = new List<PinnedItem>();
         }
         bool lockRefreshed = false;
         void DataController_Refreshed(object sender, EventArgs e) {
@@ -83,33 +92,39 @@ namespace DevExpress.DevAV.Modules {
             if(ProductTileBar == null) return;
             productTileBar = ProductTileBar;
             productTileBar.ItemClick += ProductTileBar_ItemClick;
+            productTileBar.Groups[0].Items.Clear();  //TEMPORARY CODE UNTIL ALL PREVIOUS DATA IS REMOVED FROM DESIGNER ;)
         }
 
         void ProductTileBar_ItemClick(object sender, TileItemEventArgs e) {
             lockRefreshed = true;
-            if(e.Item.Tag is ProductCustomFilter) {
-                ProductCustomFilter filter = (ProductCustomFilter)e.Item.Tag;
-                switch(filter) {
-                    case ProductCustomFilter.HDVideoPlayer:
-                        SetCustomFilter("HD", ProductCategory.VideoPlayers);
-                        break;
-                    case ProductCustomFilter.Plasma:
-                        SetCustomFilter("50", ProductCategory.Televisions);
-                        break;
-                    case ProductCustomFilter.Monitor:
-                        SetCustomFilter("21", ProductCategory.Monitors);
-                        break;
-                    case ProductCustomFilter.RemoteControl:
-                        SetCustomFilter("remote", ProductCategory.Automation);
-                        break;
-                    case ProductCustomFilter.CdPlayer:
-                        SetCustomFilter("CD", ProductCategory.VideoPlayers);
-                        break;
-                }
+            if (e.Item.Tag is PinnedItem)
+            {
+                portalWebBrowser.Navigate(((PinnedItem)e.Item.Tag).URL);
             }
-            if(e.Item.Tag is string) {
-                SetFilterString((string)e.Item.Tag);
-            }
+
+            //if(e.Item.Tag is ProductCustomFilter) {
+            //    ProductCustomFilter filter = (ProductCustomFilter)e.Item.Tag;
+            //    switch(filter) {
+            //        case ProductCustomFilter.HDVideoPlayer:
+            //            SetCustomFilter("HD", ProductCategory.VideoPlayers);
+            //            break;
+            //        case ProductCustomFilter.Plasma:
+            //            SetCustomFilter("50", ProductCategory.Televisions);
+            //            break;
+            //        case ProductCustomFilter.Monitor:
+            //            SetCustomFilter("21", ProductCategory.Monitors);
+            //            break;
+            //        case ProductCustomFilter.RemoteControl:
+            //            SetCustomFilter("remote", ProductCategory.Automation);
+            //            break;
+            //        case ProductCustomFilter.CdPlayer:
+            //            SetCustomFilter("CD", ProductCategory.VideoPlayers);
+            //            break;
+            //    }
+            //}
+            //if(e.Item.Tag is string) {
+            //    SetFilterString((string)e.Item.Tag);
+            //}
             lockRefreshed = false;
         }
 
@@ -159,14 +174,16 @@ namespace DevExpress.DevAV.Modules {
         }
         void InitializeButtonPanel() {
            
-            var listBI = new List<ButtonInfo>();
+            listBI = new List<ButtonInfo>();
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Refresh", Name = "1", Image = Properties.Resources.Refresh, mouseEventHandler = refreshPage});
             listBI.Add(new ButtonInfo());
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Back", Name = "2", Image= Properties.Resources.ArrowLeft, mouseEventHandler = goToPreviousPage });         
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Next", Name = "3", Image = Properties.Resources.ArrowRight, mouseEventHandler = goToNextPage });
             listBI.Add(new ButtonInfo());
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Pin", Name = "4", Image = Properties.Resources.pin, mouseEventHandler = pinFavPage });
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Unpin", Name = "5", Image = Properties.Resources.unpin, mouseEventHandler = goToPreviousPage });
+            pinBtn = new ButtonInfo() { Type = typeof(SimpleButton), Text = "Pin", Name = "4", Image = Properties.Resources.pin, mouseEventHandler = pinFavPage };
+            listBI.Add(pinBtn);
+            unpinBtn = new ButtonInfo() { Type = typeof(SimpleButton), Text = "Unpin", Name = "5", Image = Properties.Resources.unpin, mouseEventHandler = unpinFavPage };
+            listBI.Add(unpinBtn);
             listBI.Add(new ButtonInfo());
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Open in browser", Name = "6", Image = Properties.Resources.browseropen, mouseEventHandler = openInBrowser });
             BottomPanel.InitializeButtons(listBI, false);
@@ -175,12 +192,26 @@ namespace DevExpress.DevAV.Modules {
 
         private void pinFavPage(object sender, EventArgs e)
         {
-          FavItem newFavItem = new FavItem();
-          DialogResult result = FlyoutDialog.Show(FindForm(), newFavItem);
+            FavItem newFavItem = new FavItem();
+            DialogResult result = FlyoutDialog.Show(FindForm(), newFavItem);
+            if (result == DialogResult.OK)
+            {
+                PinnedItem newPin = new PinnedItem(newFavItem.textEdit1.Text, portalWebBrowser.Url.AbsoluteUri);
+                pins.Add(newPin);
+                ProductTileBar.Groups[0].Items.Add(new TileBarItem() { TextAlignment = TileItemContentAlignment.MiddleCenter, Text = newFavItem.textEdit1.Text, Tag = newPin });
+                UpdatePinButtons(portalWebBrowser.Url.AbsoluteUri);
+            }
+            
 
         }
 
-        private void customFilterClick(object sender, EventArgs e) {
+
+        private void unpinFavPage(object sender, EventArgs e)
+        {
+           //
+            }
+
+       private void customFilterClick(object sender, EventArgs e) {
             PortalCustomFilterModule customFilter = new PortalCustomFilterModule(ViewModel.Entities.ToBindingList());
             DialogResult result = FlyoutDialog.Show(FindForm(), customFilter);
             if(result == DialogResult.OK) {
@@ -245,7 +276,8 @@ namespace DevExpress.DevAV.Modules {
                 ((BaseModuleControl)main.SelectedModule).Refresh();
             });
         }
-        string currentFilter = null;
+        
+
         void UpdateTileFilter(TileItem tileItem) {
             string filter = (string)tileItem.Tag;
             if(filter == currentFilter) return;
@@ -284,8 +316,30 @@ namespace DevExpress.DevAV.Modules {
 
         private void portalWebBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
+            UpdatePinButtons(portalWebBrowser.Url.AbsoluteUri);
+        }
 
-            //BottomPanel.searchControl.Text = e.Url.ToString();
+        private void UpdatePinButtons(string URL)
+        {
+            bool isAlreadyPinned = PinExists(URL);
+            {
+                pinBtn.Button.Enabled = !isAlreadyPinned;
+                unpinBtn.Button.Enabled = isAlreadyPinned;
+            }
+        }
+
+        private bool PinExists (string currentURL)
+        {
+            bool exists = false;
+            foreach (PinnedItem pin in pins)
+            {
+                if (pin.URL.Equals (currentURL))
+                    {
+                    exists = true;
+                    break;
+                }
+            }
+            return exists;
         }
     }
 }
