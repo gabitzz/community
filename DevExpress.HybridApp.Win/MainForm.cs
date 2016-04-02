@@ -198,7 +198,7 @@ namespace DevExpress.DevAV {
         {
             using (var emailAccountForm = new EmailAccountForm())
             {
-                emailAccountForm.EmailAccount = AppContext.CurrentContext.Accounts.FirstOrDefault();
+                emailAccountForm.EmailAccount = AppContext.Instance.Accounts.FirstOrDefault();
                 emailAccountForm.ShowDialog();
             }
         }

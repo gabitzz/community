@@ -67,7 +67,7 @@ namespace DevExpress.DevAV {
         {
             try
             {
-                return AppContext.CurrentContext.Accounts.Any();
+                return AppContext.Instance.Accounts.Any();
             }
             catch (Exception ex)
             {

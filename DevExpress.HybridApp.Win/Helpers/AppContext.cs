@@ -4,8 +4,6 @@ namespace DevExpress.DevAV.Helpers
 {
     public class AppContext
     {
-        private static AppContext _context;
-
         private AppSettings _settings;
         private List<EmailAccount> _accounts;
 
@@ -18,7 +16,8 @@ namespace DevExpress.DevAV.Helpers
             _accountReader = new AccountReader();
         }
 
-        public static AppContext CurrentContext => _context ?? (_context = new AppContext());
+        public static AppContext Instance { get; } = new AppContext();
+
         public AppSettings Settings => _settings ?? (_settings = _appSettingsReader.Read());
         public List<EmailAccount> Accounts => _accounts ?? (_accounts = _accountReader.GetAccounts());
     }

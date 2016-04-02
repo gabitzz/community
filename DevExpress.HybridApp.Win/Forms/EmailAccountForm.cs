@@ -31,7 +31,7 @@ namespace DevExpress.DevAV.Forms
                 txtOutgoing.Text = EmailAccount.Outgoing;
                 txtUserName.Text = EmailAccount.Username;
                 txtPass.Text = EmailAccount.Password;
-                txtPort.Text = EmailAccount.Port;
+                txtPort.EditValue = EmailAccount.Port;
             }
         }
 
@@ -43,8 +43,7 @@ namespace DevExpress.DevAV.Forms
             EmailAccount.Outgoing = txtOutgoing.Text;
             EmailAccount.Username = txtUserName.Text;
             EmailAccount.Password = txtPass.Text;
-            EmailAccount.Port = txtPort.Text;
-
+            EmailAccount.Port = (int) txtPort.EditValue;
             AccountWriter writer = new AccountWriter();
             writer.Save(EmailAccount);
 
