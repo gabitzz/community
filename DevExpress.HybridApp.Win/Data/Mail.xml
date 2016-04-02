@@ -43,6 +43,7 @@
                 <xs:element name="HasAttachment" type="xs:boolean" minOccurs="0" />
                 <xs:element name="Folder" type="xs:string" minOccurs="0" />
                 <xs:element name="IsReply" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Attachments" type="xs:string" minOccurs="0" />
               </xs:sequence>
             </xs:complexType>
           </xs:element>
@@ -4764,5 +4765,26 @@
     <HasAttachment>false</HasAttachment>
     <Folder>1</Folder>
     <IsReply>false</IsReply>
+  </Messages>
+  <Messages>
+    <Date>2016-04-03T02:36:49.6559866+03:00</Date>
+    <From>From</From>
+    <Subject>Subject</Subject>
+    <Text>Body</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+    <Attachments>test1.xml</Attachments>
+  </Messages>
+  <Messages>
+    <Date>2016-04-03T02:45:13+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>sadfasdfsdf</Subject>
+    <Text>&lt;div dir="ltr"&gt;dsafasdfsdf&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+    <Attachments>C:\Attachments\57a9aeaa-ada9-4285-9b06-7a82baa510c3\E3055_CS (1).dxsample,C:\Attachments\57a9aeaa-ada9-4285-9b06-7a82baa510c3\E3055_CS.dxsample,C:\Attachments\57a9aeaa-ada9-4285-9b06-7a82baa510c3\E2216_CS (1).dxsample</Attachments>
   </Messages>
 </NewDataSet>
