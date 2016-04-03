@@ -12,6 +12,7 @@ using DevExpress.DevAV.Common.Utils;
 using DevExpress.DevAV.Controls.Messages;
 using DevExpress.DevAV.Controls.Messages.Helpers;
 using DevExpress.DevAV.Helpers;
+using DevExpress.MailClient.Win;
 using DevExpress.XtraLayout.Utils;
 using OpenPop.Pop3;
 using Message = DevExpress.DevAV.Controls.Messages.Helpers.Message;
@@ -88,7 +89,9 @@ namespace DevExpress.DevAV.Modules {
 
         private void NewMessage(object sender, EventArgs e)
         {
-            
+            using (var frmMail = new frmEditMail())
+            {
+                frmMail.ShowDialog();}
         }
 
         private void sendReceive(object sender, EventArgs e)

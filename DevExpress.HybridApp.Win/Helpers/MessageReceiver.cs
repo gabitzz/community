@@ -108,14 +108,13 @@ namespace DevExpress.DevAV.Helpers
         private static void TryToConnect(EmailAccount emailAccount, Pop3Client client)
         {
             try
-            {
-                // Connect to the server
+            {// Connect to the server
                 client.Connect(emailAccount.Incoming, emailAccount.Port, true);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 XtraMessageBox.Show("Email receive error - invalid incoming/port settings");
-                throw;
+                throw ex;
             }
         }
     }
