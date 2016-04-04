@@ -21,8 +21,7 @@ namespace DevExpress.DevAV.Forms
             Load += EmailAccountForm_Load;
         }
 
-        private void EmailAccountForm_Load(object sender, EventArgs e)
-        {
+        private void EmailAccountForm_Load(object sender, EventArgs e){
             if (this.EmailAccount != null)
             {
                 txtName.Text = EmailAccount.Name;

@@ -14,7 +14,7 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
         internal static bool ShowAllMessageCount = false;
         internal static bool ShowUnreadMessageCount = true;
         static List<Message> messages = null;
-        //static List<Contact> contacts = null;
+        static List<Contact> contacts = null;
         //static List<Task> tasks = null;internal static DateTime LastMailDate = DateTime.Now;
         internal static DateTime CalendarDate = DateTime.Today;
         //internal static string[] ApplicationArguments;
@@ -60,15 +60,15 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
                 return messages;
             }
         }
-        //public static List<Contact> Contacts
-        //{
-        //    get
-        //    {
-        //        if (contacts == null)
-        //            contacts = GetContacts();
-        //        return contacts;
-        //    }
-        //}
+        public static List<Contact> Contacts
+        {
+            get
+            {
+                if (contacts == null)
+                    contacts = GetContacts();
+                return contacts;
+            }
+        }
         //public static List<Task> Tasks
         //{
         //    get
@@ -90,23 +90,23 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
         //        ret.Add(TaskGenerator.CreateTask(s, TaskCategory.Shopping));
         //    return ret;
         //}
-        //internal static List<Contact> GetContacts()
-        //{
-        //    List<Contact> ret = new List<Contact>();
-        //    DataSet temp = new DataSet();
-        //    string dbName = FilesHelper.FindingFileName(Application.StartupPath, "Data\\VideoRent.xml", false);
-        //    if (string.IsNullOrEmpty(dbName)) return ret;
-        //    temp.ReadXml(dbName);
-        //    DataTable tbl = temp.Relations["FK_CustomerOidOidPerson"].ChildTable;
-        //    for (int i = 0; i < tbl.Rows.Count; i++)
-        //        ret.Add(new Contact(tbl.Rows[i], tbl.Rows[i].GetParentRow("FK_CustomerOidOidPerson")));
-        //    return ret;
-        //}
-        //internal static Contact FindByName(string name)
-        //{
-        //    if (string.IsNullOrEmpty(name)) return null;
-        //    return Contacts.Find(contact => name.Equals(contact.Name));
-        //}
+        internal static List<Contact> GetContacts()
+        {
+            List<Contact> ret = new List<Contact>();
+            DataSet temp = new DataSet();
+            string dbName = FilesHelper.FindingFileName(Application.StartupPath, "Data\\VideoRent.xml", false);
+            if (string.IsNullOrEmpty(dbName)) return ret;
+            temp.ReadXml(dbName);
+            DataTable tbl = temp.Relations["FK_CustomerOidOidPerson"].ChildTable;
+            for (int i = 0; i < tbl.Rows.Count; i++)
+                ret.Add(new Contact(tbl.Rows[i], tbl.Rows[i].GetParentRow("FK_CustomerOidOidPerson")));
+            return ret;
+        }
+        internal static Contact FindByName(string name)
+        {
+            if (string.IsNullOrEmpty(name)) return null;
+            return Contacts.Find(contact => name.Equals(contact.Name));
+        }
         static Message CreateMessageAbout()
         {
             Message ret = new Message();

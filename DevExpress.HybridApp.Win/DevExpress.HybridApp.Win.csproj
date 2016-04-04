@@ -61,6 +61,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\DevExpress.DevAV.v15.2.Data.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.SpellChecker.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v15.2.Extensions">
       <HintPath>
       </HintPath>
@@ -71,6 +72,7 @@
       </HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework">
       <HintPath>
       </HintPath>
@@ -358,8 +360,12 @@
     </Compile>
     <Compile Include="Controls\GroupPainter.cs" />
     <Compile Include="Controls\Messages\Helpers\DragSelection.cs" />
+    <Compile Include="Controls\Messages\Helpers\EditorHelper.cs" />
+    <Compile Include="Controls\Messages\Helpers\EmailSender.cs" />
     <Compile Include="Controls\Messages\Helpers\Message.cs" />
     <Compile Include="Controls\Messages\Helpers\ObjectHelper.cs" />
+    <Compile Include="Helpers\TextHelper.cs" />
+    <Compile Include="Controls\Messages\Helpers\TokenEditHelper.cs" />
     <Compile Include="Controls\Messages\MyTreeList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -370,6 +376,12 @@
       <DependentUpon>ucMailTree.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Messages\UCTreeDragDropEventArgs.cs" />
+    <Compile Include="Controls\ucMessageInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucMessageInfo.Designer.cs">
+      <DependentUpon>ucMessageInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="DevAVDbDataModel\CustomRepositories\OrderRepository.cs" />
     <Compile Include="DevAVDbDataModel\CustomRepositories\QuoteRepository.cs" />
     <Compile Include="DevAVDbDataModel\DevAVDbUnitOfWork.cs" />
@@ -380,6 +392,12 @@
     </Compile>
     <Compile Include="Forms\EmailAccountForm.Designer.cs">
       <DependentUpon>EmailAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEditMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditMail.Designer.cs">
+      <DependentUpon>frmEditMail.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\AccountReader.cs" />
     <Compile Include="Helpers\AccountWriter.cs" />
@@ -663,8 +681,14 @@
     <EmbeddedResource Include="Controls\Messages\ucMailTree.resx">
       <DependentUpon>ucMailTree.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucMessageInfo.resx">
+      <DependentUpon>ucMessageInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmailAccountForm.resx">
       <DependentUpon>EmailAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditMail.resx">
+      <DependentUpon>frmEditMail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\BaseModule.resx">
       <DependentUpon>BaseModule.cs</DependentUpon>
