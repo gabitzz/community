@@ -25,9 +25,9 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditMail));
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling1 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling2 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraRichEdit.Model.BorderInfo borderInfo1 = new DevExpress.XtraRichEdit.Model.BorderInfo();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling3 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling4 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraRichEdit.Model.BorderInfo borderInfo2 = new DevExpress.XtraRichEdit.Model.BorderInfo();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.flyoutPanel1 = new DevExpress.Utils.FlyoutPanel();
             this.lblDescription = new DevExpress.XtraEditors.LabelControl();
@@ -268,7 +268,6 @@
             // 
             // picContact
             // 
-            //this.picContact.EditValue = global::DevExpress.MailClient.Win.Properties.Resources.Unknown_user;
             resources.ApplyResources(this.picContact, "picContact");
             this.picContact.MenuManager = this.ribbonControl;
             this.picContact.Name = "picContact";
@@ -438,9 +437,7 @@
             // fileSaveItem1
             // 
             resources.ApplyResources(this.fileSaveItem1, "fileSaveItem1");
-            //this.fileSaveItem1.Glyph = global::DevExpress.MailClient.Win.Properties.Resources.Save_16x16;
             this.fileSaveItem1.Id = 3;
-            //this.fileSaveItem1.LargeGlyph = global::DevExpress.MailClient.Win.Properties.Resources.Save_32x32;
             this.fileSaveItem1.Name = "fileSaveItem1";
             this.fileSaveItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.fileSaveItem1_ItemClick);
             // 
@@ -502,7 +499,6 @@
             // changeFontNameItem1
             // 
             this.changeFontNameItem1.Edit = this.repositoryItemFontEdit1;
-            resources.ApplyResources(this.changeFontNameItem1, "changeFontNameItem1");
             this.changeFontNameItem1.Id = 21;
             this.changeFontNameItem1.Name = "changeFontNameItem1";
             // 
@@ -543,7 +539,7 @@
             this.richEditControl.Options.HorizontalRuler.Visibility = DevExpress.XtraRichEdit.RichEditRulerVisibility.Hidden;
             this.richEditControl.Options.VerticalRuler.Visibility = DevExpress.XtraRichEdit.RichEditRulerVisibility.Hidden;
             this.richEditControl.SpellChecker = this.spellChecker1;
-            this.spellChecker1.SetSpellCheckerOptions(this.richEditControl, optionsSpelling1);
+            this.spellChecker1.SetSpellCheckerOptions(this.richEditControl, optionsSpelling3);
             this.richEditControl.SelectionChanged += new System.EventHandler(this.richEditControl_SelectionChanged);
             this.richEditControl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richEditControl_KeyDown);
             // 
@@ -559,7 +555,7 @@
             this.edtSubject.MenuManager = this.ribbonControl;
             this.edtSubject.Name = "edtSubject";
             this.spellChecker1.SetShowSpellCheckMenu(this.edtSubject, true);
-            this.spellChecker1.SetSpellCheckerOptions(this.edtSubject, optionsSpelling2);
+            this.spellChecker1.SetSpellCheckerOptions(this.edtSubject, optionsSpelling4);
             this.edtSubject.EditValueChanged += new System.EventHandler(this.edtSubject_EditValueChanged);
             // 
             // fontSizeIncreaseItem1
@@ -806,13 +802,13 @@
             // changeTableBorderLineStyleItem1
             // 
             this.changeTableBorderLineStyleItem1.Edit = this.repositoryItemBorderLineStyle1;
-            borderInfo1.Color = System.Drawing.Color.Black;
-            borderInfo1.Frame = false;
-            borderInfo1.Offset = 0;
-            borderInfo1.Shadow = false;
-            borderInfo1.Style = DevExpress.XtraRichEdit.Model.BorderLineStyle.Single;
-            borderInfo1.Width = 10;
-            this.changeTableBorderLineStyleItem1.EditValue = borderInfo1;
+            borderInfo2.Color = System.Drawing.Color.Black;
+            borderInfo2.Frame = false;
+            borderInfo2.Offset = 0;
+            borderInfo2.Shadow = false;
+            borderInfo2.Style = DevExpress.XtraRichEdit.Model.BorderLineStyle.Single;
+            borderInfo2.Width = 10;
+            this.changeTableBorderLineStyleItem1.EditValue = borderInfo2;
             resources.ApplyResources(this.changeTableBorderLineStyleItem1, "changeTableBorderLineStyleItem1");
             this.changeTableBorderLineStyleItem1.Id = 88;
             this.changeTableBorderLineStyleItem1.Name = "changeTableBorderLineStyleItem1";
@@ -1029,7 +1025,6 @@
             // 
             this.changeFloatingObjectOutlineWeightItem1.Edit = this.repositoryItemFloatingObjectOutlineWeight1;
             this.changeFloatingObjectOutlineWeightItem1.EditValue = 20;
-            resources.ApplyResources(this.changeFloatingObjectOutlineWeightItem1, "changeFloatingObjectOutlineWeightItem1");
             this.changeFloatingObjectOutlineWeightItem1.Id = 124;
             this.changeFloatingObjectOutlineWeightItem1.Name = "changeFloatingObjectOutlineWeightItem1";
             // 
@@ -1656,7 +1651,6 @@
             // 
             // frmEditMail
             // 
-            this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainerControl1);

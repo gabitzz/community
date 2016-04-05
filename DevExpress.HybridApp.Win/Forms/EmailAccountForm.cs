@@ -30,8 +30,8 @@ namespace DevExpress.DevAV.Forms
                 txtOutgoing.Text = EmailAccount.Outgoing;
                 txtUserName.Text = EmailAccount.Username;
                 txtPass.Text = EmailAccount.Password;
-                txtPort.EditValue = EmailAccount.Port;
-            }
+                txtPort.EditValue = EmailAccount.OutgoingPort;
+                txtIncomingPort.EditValue = EmailAccount.IncomingPort;}
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -42,7 +42,8 @@ namespace DevExpress.DevAV.Forms
             EmailAccount.Outgoing = txtOutgoing.Text;
             EmailAccount.Username = txtUserName.Text;
             EmailAccount.Password = txtPass.Text;
-            EmailAccount.Port = (int) txtPort.EditValue;
+            EmailAccount.OutgoingPort = (int) txtPort.EditValue;
+            EmailAccount.IncomingPort = int.Parse(txtIncomingPort.Text);
             AccountWriter writer = new AccountWriter();
             writer.Save(EmailAccount);
 

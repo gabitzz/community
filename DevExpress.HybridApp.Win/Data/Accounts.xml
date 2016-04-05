@@ -5,9 +5,10 @@
     <name>Silent Busters</name>
     <email>silentbusters@gmail.com</email>
     <incoming>pop.gmail.com</incoming>
+    <incoming-port>587</incoming-port>
     <outgoing>smtp.gmail.com</outgoing>
+    <outgoing-port>995</outgoing-port>
     <username>silentbusters@gmail.com</username>
     <password>silent123</password>
-    <port>995</port>
   </account>
 </accounts>

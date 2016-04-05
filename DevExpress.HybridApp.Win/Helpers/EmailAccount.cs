@@ -9,7 +9,8 @@ namespace DevExpress.DevAV.Helpers
         public string Outgoing { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public int Port { get; set; }
+        public int OutgoingPort { get; set; }
+        public int IncomingPort { get; set; }
 
         public EmailAccount()
         {

@@ -179,8 +179,7 @@ namespace DevExpress.MailClient.Win {
             try
             {
                 _messageSent = false;
-                var message = CreateMessage();
-                var emailSender = new EmailSender();
+                var message = CreateMessage();var emailSender = new EmailSender();
                 emailSender.Send(message);
                 _messageSent = true;
                 this.Close();

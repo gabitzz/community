@@ -27,7 +27,8 @@ namespace DevExpress.DevAV.Helpers
                         account.Outgoing = accountNode.SelectSingleNode("outgoing")?.InnerText;
                         account.Username = accountNode.SelectSingleNode("username")?.InnerText;
                         account.Password = accountNode.SelectSingleNode("password")?.InnerText;
-                        account.Port = Convert.ToInt32(accountNode.SelectSingleNode("port")?.InnerText);
+                        account.OutgoingPort = Convert.ToInt32(accountNode.SelectSingleNode("outgoing-port")?.InnerText);
+                        account.IncomingPort = Convert.ToInt32(accountNode.SelectSingleNode("incoming-port")?.InnerText);
 
                         accountList.Add(account);
                     }

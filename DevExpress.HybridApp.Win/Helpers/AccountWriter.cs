@@ -19,7 +19,7 @@ namespace DevExpress.DevAV.Helpers
             accountNode.CreateLeaf("outgoing", account.Outgoing);
             accountNode.CreateLeaf("username", account.Username);
             accountNode.CreateLeaf("password", account.Password);
-            accountNode.CreateLeaf("port", account.Port.ToString());
+            accountNode.CreateLeaf("port", account.OutgoingPort.ToString());
 
             rootNode.AppendChild(accountNode);
 

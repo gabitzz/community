@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Mail;
+using DevExpress.DevAV.Helpers;
 using DevExpress.XtraEditors;
 
 namespace DevExpress.DevAV.Controls.Messages.Helpers
@@ -10,23 +12,26 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
         {
 
         }
-
         public void Send(MailMessage message)
         {
             try
             {
-                SmtpClient client = new SmtpClient(host: "smtp.gmail.com", port: 587);
+                var account = AppContext.Instance.Accounts.FirstOrDefault();
+                if (account != null)
+                {
+                    // if port 995 is not working, try port 587
+                    SmtpClient client = new SmtpClient(host: account.Outgoing, port: 587);
 
-                client.UseDefaultCredentials = false;
-                client.EnableSsl = true;
-                client.Credentials = new System.Net.NetworkCredential("silentbusters@gmail.com", "silent123");
-                client.Send(message);
-
+                    client.UseDefaultCredentials = false;
+                    client.EnableSsl = true;
+                    client.Credentials = new System.Net.NetworkCredential(account.Email, account.Password);
+                    client.Send(message);
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 XtraMessageBox.Show("Error - Cannot send email!");
-                throw;
+                throw ex;
             }
         }
     }
