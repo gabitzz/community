@@ -1,8 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
-using System.Text;
 using DevExpress.DevAV.Controls.Messages;
 using DevExpress.DevAV.Controls.Messages.Helpers;
 using DevExpress.XtraEditors;
@@ -74,7 +72,7 @@ namespace DevExpress.DevAV.Helpers
                     {
                         var msg = client.GetMessage(i);
                         var messageDate = DateTime.Parse(msg.Headers.Date);
-                        var message = new Message
+                        var nessage = new Message
                         {
                             Date = messageDate,
                             From = msg.Headers.From.Address,
@@ -83,37 +81,14 @@ namespace DevExpress.DevAV.Helpers
                             MailType = MailType.Inbox,
                             MailFolder = (int) MailFolder.Announcements
                         };
-                        AddAttachements(msg, message);
-                        DataHelper.AddMessage(message);
+                        DataHelper.AddMessage(nessage);
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                // TODO log exception
-                var message = e.Message;
             }
-        }
-
-        private static void AddAttachements(OpenPop.Mime.Message msg, Message message)
-        {
-            var attachments = new StringBuilder();
-            var attachementsFolder = Path.Combine(@"C:\Attachments", Guid.NewGuid().ToString());
-            if (!Directory.Exists(attachementsFolder))
-            {
-                Directory.CreateDirectory(attachementsFolder);
-            }
-            foreach (var attachment in msg.FindAllAttachments())
-            {
-
-                var filePath = Path.Combine(attachementsFolder, attachment.FileName);
-                attachments.Append(filePath).Append(",");
-                var stream = new FileStream(filePath, FileMode.Create);
-                var binaryWriter = new BinaryWriter(stream);
-                binaryWriter.Write(attachment.Body);
-                binaryWriter.Close();
-            }
-            message.Attachments = attachments.ToString().Substring(0, attachments.Length - 1);
         }
 
         private static void TryToAuthenticate(EmailAccount emailAccount, Pop3Client client)
