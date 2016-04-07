@@ -16,6 +16,7 @@ using DevExpress.DevAV.Controls.Messages.Helpers;
 using DevExpress.DevAV.Helpers;
 using DevExpress.XtraPrinting.Export;
 using DevExpress.XtraRichEdit.Model;
+using DevExpress.XtraSpellChecker;
 using EmailSender = DevExpress.DevAV.Controls.Messages.Helpers.EmailSender;
 using Message = DevExpress.DevAV.Controls.Messages.Helpers.Message;
 

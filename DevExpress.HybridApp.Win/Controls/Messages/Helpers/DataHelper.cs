@@ -4,6 +4,7 @@ using System.Data;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.DevAV.Helpers;
 using DevExpress.Utils;
 using DevExpress.XtraEditors;
 
@@ -147,7 +148,7 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
         private static DataTable CreateDataTable(string table)
         {
             DataSet dataSet = new DataSet();
-            var dataFile = Path.Combine(Application.StartupPath, "Data\\Mail.xml");
+            var dataFile = GetMailDataFile();
             if (dataFile != string.Empty)
             {
                 FileInfo fi = new FileInfo(dataFile);
@@ -163,7 +164,7 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
             Messages.Add(message);
             // Save message inside XML
             DataSet dataSet = new DataSet();
-            var dataFile = Path.Combine(Application. StartupPath, "Data\\Mail.xml");
+            var dataFile = GetMailDataFile();
             if (dataFile != string.Empty)
             {
                 FileInfo fi = new FileInfo(dataFile);
@@ -176,9 +177,14 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
                 message.ToDataRow(newRow);
                 messages.Rows.Add(newRow);
 
-                //TODO this is a temporary harcoded path 
-                dataSet.WriteXml(@"..\DevExpress.HybridApp.Win\Data\Mail.xml", XmlWriteMode.WriteSchema);
+                //TODO this is a temporary harcoded path; add basePath to config
+                dataSet.WriteXml(GetMailDataFile(), XmlWriteMode.WriteSchema);
             }
+        }
+
+        private static string GetMailDataFile()
+        {
+            return Path.Combine(Constants.BASE_DATA_PATH, "Mail.xml");
         }
     }
 }

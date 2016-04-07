@@ -109,7 +109,7 @@ namespace DevExpress.DevAV.Helpers
         {
             try
             {// Connect to the server
-                client.Connect(emailAccount.Incoming, emailAccount.OutgoingPort, true);
+                client.Connect(emailAccount.Incoming, emailAccount.IncomingPort, true);
             }
             catch (Exception ex)
             {

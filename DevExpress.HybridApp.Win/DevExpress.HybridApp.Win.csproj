@@ -61,7 +61,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\DevExpress.DevAV.v15.2.Data.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.SpellChecker.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v15.2.Core, Version=15.2, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v15.2.Extensions">
       <HintPath>
       </HintPath>
@@ -72,7 +72,7 @@
       </HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraSpellChecker.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v15.2, Version=15.2, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework">
       <HintPath>
       </HintPath>
@@ -361,9 +361,17 @@
     <Compile Include="Controls\GroupPainter.cs" />
     <Compile Include="Controls\Messages\Helpers\DragSelection.cs" />
     <Compile Include="Controls\Messages\Helpers\EditorHelper.cs" />
+    <Compile Include="Controls\Messages\Helpers\EmailRule.cs" />
+    <Compile Include="Controls\Messages\Helpers\EmailRules.cs" />
     <Compile Include="Controls\Messages\Helpers\EmailSender.cs" />
     <Compile Include="Controls\Messages\Helpers\Message.cs" />
     <Compile Include="Controls\Messages\Helpers\ObjectHelper.cs" />
+    <Compile Include="Forms\EmailRulesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmailRulesForm.Designer.cs">
+      <DependentUpon>EmailRulesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\TextHelper.cs" />
     <Compile Include="Controls\Messages\Helpers\TokenEditHelper.cs" />
     <Compile Include="Controls\Messages\MyTreeList.cs">
@@ -683,6 +691,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ucMessageInfo.resx">
       <DependentUpon>ucMessageInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmailRulesForm.resx">
+      <DependentUpon>EmailRulesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmailAccountForm.resx">
       <DependentUpon>EmailAccountForm.cs</DependentUpon>

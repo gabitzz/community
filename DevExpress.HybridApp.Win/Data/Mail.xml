@@ -4787,4 +4787,14 @@
     <IsReply>false</IsReply>
     <Attachments>C:\Attachments\57a9aeaa-ada9-4285-9b06-7a82baa510c3\E3055_CS (1).dxsample,C:\Attachments\57a9aeaa-ada9-4285-9b06-7a82baa510c3\E3055_CS.dxsample,C:\Attachments\57a9aeaa-ada9-4285-9b06-7a82baa510c3\E2216_CS (1).dxsample</Attachments>
   </Messages>
+  <Messages>
+    <Date>2016-04-08T00:34:57+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>another test</Subject>
+    <Text>&lt;div dir="ltr"&gt;f;lsadfl;skdfd&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
 </NewDataSet>

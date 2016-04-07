@@ -202,5 +202,13 @@ namespace DevExpress.DevAV {
                 emailAccountForm.ShowDialog();
             }
         }
+
+        private void emailRulesTileBarItem_ItemClick(object sender, TileItemEventArgs e)
+        {
+            using (var emailRulesForm = new EmailRulesForm())
+            {
+                emailRulesForm.ShowDialog();
+            }
+        }
     }
 }

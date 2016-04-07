@@ -60,7 +60,7 @@ namespace DevExpress.DevAV {
             this.tileBarGroup4 = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.AllStoresTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.customMyAccountTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.customJohnAccountTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.emailRulesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.customTopStoresTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.todosTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.teamsTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
@@ -383,7 +383,7 @@ namespace DevExpress.DevAV {
             // 
             this.tileBarGroup4.Items.Add(this.AllStoresTBI);
             this.tileBarGroup4.Items.Add(this.customMyAccountTileBarItem);
-            this.tileBarGroup4.Items.Add(this.customJohnAccountTileBarItem);
+            this.tileBarGroup4.Items.Add(this.emailRulesTileBarItem);
             this.tileBarGroup4.Items.Add(this.customTopStoresTileBarItem);
             this.tileBarGroup4.Name = "tileBarGroup4";
             this.tileBarGroup4.Text = "CUSTOM FILTER";
@@ -412,17 +412,18 @@ namespace DevExpress.DevAV {
             this.customMyAccountTileBarItem.Tag = DevExpress.DevAV.Modules.CustomersFilter.MyAccount;
             this.customMyAccountTileBarItem.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.customMyAccountTileBarItem_ItemClick);
             // 
-            // customJohnAccountTileBarItem
+            // emailRulesTileBarItem
             // 
-            this.customJohnAccountTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.customJohnAccountTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement8.Text = "John\'s Accounts";
+            this.emailRulesTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.emailRulesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement8.Text = "Email Rules";
             tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.customJohnAccountTileBarItem.Elements.Add(tileItemElement8);
-            this.customJohnAccountTileBarItem.Id = 1;
-            this.customJohnAccountTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.customJohnAccountTileBarItem.Name = "customJohnAccountTileBarItem";
-            this.customJohnAccountTileBarItem.Tag = DevExpress.DevAV.Modules.CustomersFilter.JohnAccount;
+            this.emailRulesTileBarItem.Elements.Add(tileItemElement8);
+            this.emailRulesTileBarItem.Id = 1;
+            this.emailRulesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.emailRulesTileBarItem.Name = "emailRulesTileBarItem";
+            this.emailRulesTileBarItem.Tag = "EmailRules";
+            this.emailRulesTileBarItem.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.emailRulesTileBarItem_ItemClick);
             // 
             // customTopStoresTileBarItem
             // 
@@ -683,7 +684,7 @@ namespace DevExpress.DevAV {
         private XtraBars.Navigation.TileBarDropDownContainer productsTileBarDropDownContainter;
         private XtraBars.Navigation.TileBarGroup tileBarGroup4;
         private XtraBars.Navigation.TileBarItem customMyAccountTileBarItem;
-        private XtraBars.Navigation.TileBarItem customJohnAccountTileBarItem;
+        private XtraBars.Navigation.TileBarItem emailRulesTileBarItem;
         private XtraBars.Navigation.TileBarItem customTopStoresTileBarItem;
         public XtraBars.Navigation.TileBar productTileBar;
         private XtraBars.Navigation.TileBarGroup tileBarGroup1;
