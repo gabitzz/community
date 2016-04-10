@@ -33,6 +33,8 @@ namespace DevExpress.DevAV.Modules {
         string currentFilter = null;
         private List<PinnedItem> pins;
 
+        private PinnedItem currentPin;
+
         private List<ButtonInfo> listBI;
         private ButtonInfo pinBtn;
         private ButtonInfo unpinBtn;
@@ -100,6 +102,7 @@ namespace DevExpress.DevAV.Modules {
             if (e.Item.Tag is PinnedItem)
             {
                 portalWebBrowser.Navigate(((PinnedItem)e.Item.Tag).URL);
+                currentPin = (PinnedItem) e.Item.Tag;
             }
 
             //if(e.Item.Tag is ProductCustomFilter) {
@@ -198,8 +201,11 @@ namespace DevExpress.DevAV.Modules {
             {
                 PinnedItem newPin = new PinnedItem(newFavItem.textEdit1.Text, portalWebBrowser.Url.AbsoluteUri);
                 pins.Add(newPin);
-                ProductTileBar.Groups[0].Items.Add(new TileBarItem() { TextAlignment = TileItemContentAlignment.MiddleCenter, Text = newFavItem.textEdit1.Text, Tag = newPin });
-                UpdatePinButtons(portalWebBrowser.Url.AbsoluteUri);
+                TileBarItem newTileBarItem = new TileBarItem() { TextAlignment = TileItemContentAlignment.MiddleCenter, Text = newFavItem.textEdit1.Text, Tag = newPin };
+                ProductTileBar.Groups[0].Items.Add(newTileBarItem);
+                newPin.TileBarItem = newTileBarItem;
+                updatePinButtons(portalWebBrowser.Url.AbsoluteUri);
+                currentPin = newPin;
             }
             
 
@@ -208,8 +214,17 @@ namespace DevExpress.DevAV.Modules {
 
         private void unpinFavPage(object sender, EventArgs e)
         {
-           //
+          if (currentPin != null)
+            {
+                if (currentPin.TileBarItem != null)
+                {
+                    ProductTileBar.Groups[0].Items.Remove(currentPin.TileBarItem);
+                }
+                pins.Remove(currentPin);
+                currentPin = null;
+                updatePinButtons(portalWebBrowser.Url.AbsoluteUri);
             }
+        }
 
        private void customFilterClick(object sender, EventArgs e) {
             PortalCustomFilterModule customFilter = new PortalCustomFilterModule(ViewModel.Entities.ToBindingList());
@@ -316,26 +331,26 @@ namespace DevExpress.DevAV.Modules {
 
         private void portalWebBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            UpdatePinButtons(portalWebBrowser.Url.AbsoluteUri);
+            updatePinButtons(portalWebBrowser.Url.AbsoluteUri);
         }
 
-        private void UpdatePinButtons(string URL)
+        private void updatePinButtons(string URL)
         {
             bool isAlreadyPinned = PinExists(URL);
-            {
-                pinBtn.Button.Enabled = !isAlreadyPinned;
-                unpinBtn.Button.Enabled = isAlreadyPinned;
-            }
+            pinBtn.Button.Enabled = !isAlreadyPinned;
+            unpinBtn.Button.Enabled = isAlreadyPinned;
         }
 
         private bool PinExists (string currentURL)
         {
+            currentPin = null;
             bool exists = false;
             foreach (PinnedItem pin in pins)
             {
                 if (pin.URL.Equals (currentURL))
                     {
                     exists = true;
+                    currentPin = pin;
                     break;
                 }
             }
