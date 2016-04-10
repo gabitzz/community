@@ -16,6 +16,8 @@ using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraBars.Docking2010.Customization;
 using System.Windows.Forms;
 using DevExpress.DevAV.Forms;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace DevExpress.DevAV.Modules {
     public enum ProductCustomFilter {
@@ -44,7 +46,6 @@ namespace DevExpress.DevAV.Modules {
             : base(CreateViewModel<ProductCollectionViewModel>) {
             InitializeComponent();
             ((ITileControl)tileControl).Properties.LargeItemWidth = 200;
-            LoadData();
             UpdateTileAndItems();
             //viewProducts.DataController.Refreshed += DataController_Refreshed;
             ItemsHideHelper.Hide(hideItemCollection, hideButton);
@@ -88,6 +89,7 @@ namespace DevExpress.DevAV.Modules {
         protected internal override void OnTransitionCompleted() {
             base.OnTransitionCompleted();
             InitializeButtonPanel();
+            LoadData();
         }
 
         void SubscribeTileBarProductsFilter() {
@@ -105,29 +107,7 @@ namespace DevExpress.DevAV.Modules {
                 currentPin = (PinnedItem) e.Item.Tag;
             }
 
-            //if(e.Item.Tag is ProductCustomFilter) {
-            //    ProductCustomFilter filter = (ProductCustomFilter)e.Item.Tag;
-            //    switch(filter) {
-            //        case ProductCustomFilter.HDVideoPlayer:
-            //            SetCustomFilter("HD", ProductCategory.VideoPlayers);
-            //            break;
-            //        case ProductCustomFilter.Plasma:
-            //            SetCustomFilter("50", ProductCategory.Televisions);
-            //            break;
-            //        case ProductCustomFilter.Monitor:
-            //            SetCustomFilter("21", ProductCategory.Monitors);
-            //            break;
-            //        case ProductCustomFilter.RemoteControl:
-            //            SetCustomFilter("remote", ProductCategory.Automation);
-            //            break;
-            //        case ProductCustomFilter.CdPlayer:
-            //            SetCustomFilter("CD", ProductCategory.VideoPlayers);
-            //            break;
-            //    }
-            //}
-            //if(e.Item.Tag is string) {
-            //    SetFilterString((string)e.Item.Tag);
-            //}
+   
             lockRefreshed = false;
         }
 
@@ -152,28 +132,48 @@ namespace DevExpress.DevAV.Modules {
             }
         }
         void LoadData() {
-            productsSource.SetItemsSource(ViewModel.Entities);
-           // viewProducts.BestFitColumns();
+            //productsSource.SetItemsSource(ViewModel.Entities);
+
+            string serializationFile = Path.Combine(Constants.BASE_DATA_PATH, "Pins.xml");
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<PinnedItem>));
+            if (File.Exists(Path.Combine(Constants.BASE_DATA_PATH, "Pins.xml")))
+            {
+                using (Stream stream = File.Open(serializationFile, FileMode.Open))
+                {
+
+                    pins = (List<PinnedItem>)serializer.Deserialize(stream);
+
+                }
+
+                if (pins != null)
+                {
+                    foreach (PinnedItem pin in pins)
+                    {
+                        TileBarItem newTileBarItem = new TileBarItem() { TextAlignment = TileItemContentAlignment.MiddleCenter, Text = pin.Name, Tag = pin };
+                        ProductTileBar.Groups[0].Items.Add(newTileBarItem);
+                        pin.TileBarItem = newTileBarItem;
+                    }
+
+                    if (pins.Count > 0) {
+                        currentPin = pins[0];
+                        portalWebBrowser.Navigate(currentPin.URL);
+                    }
+
+                }
+            }
         }
 
-        Hashtable cachedSales = new Hashtable();
-        ICollection<double> ShapeUnboundDataForSparkline(ICollection<double> collection) {
-            while(collection.Count != 12) {
-                if(collection.Count > 12) collection.Remove(collection.Count - 1);
-                if(collection.Count < 12) collection.Add(0);
-            }
-            return collection;
-        }
 
         void gridView1_CustomUnboundColumnData(object sender, XtraGrid.Views.Base.CustomColumnDataEventArgs e) {
-            if(e.Column.ColumnEdit is RepositoryItemSparklineEdit) {
-                var product = (Product)e.Row;
-                var cached = cachedSales[product];
-                if(cached == null) {
-                    cached = cachedSales[product] = ShapeUnboundDataForSparkline(ViewModel.GetMonthlySalesByProduct(product));
-                }
-                e.Value = cached;
-            }
+            //if(e.Column.ColumnEdit is RepositoryItemSparklineEdit) {
+            //    var product = (Product)e.Row;
+            //    var cached = cachedSales[product];
+            //    if(cached == null) {
+            //        cached = cachedSales[product] = ShapeUnboundDataForSparkline(ViewModel.GetMonthlySalesByProduct(product));
+            //    }
+            //    e.Value = cached;
+            //}
         }
         void InitializeButtonPanel() {
            
@@ -356,5 +356,18 @@ namespace DevExpress.DevAV.Modules {
             }
             return exists;
         }
+
+    protected override void OnDisposing()
+        {
+            string serializationFile = Path.Combine(Constants.BASE_DATA_PATH, "Pins.xml");
+            XmlSerializer serializer = new XmlSerializer(typeof(List<PinnedItem>));
+
+            using (Stream stream = File.Open(serializationFile, FileMode.Create))
+            {
+                serializer.Serialize(stream, pins);
+            }
+        }
     }
+
+  
 }
