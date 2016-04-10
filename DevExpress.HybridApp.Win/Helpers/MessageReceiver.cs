@@ -14,11 +14,14 @@ namespace DevExpress.DevAV.Helpers
         public event EventHandler DoReceiveEnded;
 
         private readonly BackgroundWorker _backgroundWorker;
+        private readonly MessageFilterEvaluator _messageFilterEvaluator;
 
         public static MessageReceiver Instance { get; } = new MessageReceiver();
 
         private MessageReceiver()
         {
+            _messageFilterEvaluator = new MessageFilterEvaluator(EmailRulesHelper.Instance.GetEmailRules());
+
             _backgroundWorker = new BackgroundWorker();
             _backgroundWorker.DoWork += BackgroundWorker_DoWork;
         }
@@ -54,7 +57,7 @@ namespace DevExpress.DevAV.Helpers
             }
         }
 
-        private static void PerformReceive(EmailAccount emailAccount)
+        private void PerformReceive(EmailAccount emailAccount)
         {
             try
             {
@@ -72,16 +75,17 @@ namespace DevExpress.DevAV.Helpers
                     {
                         var msg = client.GetMessage(i);
                         var messageDate = DateTime.Parse(msg.Headers.Date);
-                        var nessage = new Message
+                        var message = new Message
                         {
                             Date = messageDate,
                             From = msg.Headers.From.Address,
                             Subject = msg.Headers.Subject,
                             Text = msg.FindFirstHtmlVersion().GetBodyAsText(),
                             MailType = MailType.Inbox,
-                            MailFolder = (int) MailFolder.Announcements
                         };
-                        DataHelper.AddMessage(nessage);
+                        _messageFilterEvaluator.ApplyRules(message);
+
+                        DataHelper.AddMessage(message);
                     }
                 }
             }

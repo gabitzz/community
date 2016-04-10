@@ -361,17 +361,21 @@
     <Compile Include="Controls\GroupPainter.cs" />
     <Compile Include="Controls\Messages\Helpers\DragSelection.cs" />
     <Compile Include="Controls\Messages\Helpers\EditorHelper.cs" />
-    <Compile Include="Controls\Messages\Helpers\EmailRule.cs" />
-    <Compile Include="Controls\Messages\Helpers\EmailRules.cs" />
-    <Compile Include="Controls\Messages\Helpers\EmailSender.cs" />
+    <Compile Include="Controls\Messages\Helpers\Rules\FromFilterRule.cs" />
+    <Compile Include="Controls\Messages\Helpers\Rules\IMessageFilterRule.cs" />
+    <Compile Include="Controls\Messages\Helpers\Rules\EmailRule.cs" />
+    <Compile Include="Controls\Messages\Helpers\Rules\EmailRules.cs" />
+    <Compile Include="Controls\Messages\Helpers\Rules\EmailSender.cs" />
     <Compile Include="Controls\Messages\Helpers\Message.cs" />
     <Compile Include="Controls\Messages\Helpers\ObjectHelper.cs" />
+    <Compile Include="Controls\Messages\Helpers\Rules\SubjectFilterRule.cs" />
     <Compile Include="Forms\EmailRulesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\EmailRulesForm.Designer.cs">
       <DependentUpon>EmailRulesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Messages\Helpers\Rules\MessageFilterEvaluator.cs" />
     <Compile Include="Helpers\TextHelper.cs" />
     <Compile Include="Controls\Messages\Helpers\TokenEditHelper.cs" />
     <Compile Include="Controls\Messages\MyTreeList.cs">
