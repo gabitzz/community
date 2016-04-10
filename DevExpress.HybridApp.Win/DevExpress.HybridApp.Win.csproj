@@ -867,6 +867,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Resources\Meal\fast-food.png" />
+    <None Include="Resources\Meal\fast-food_25x25.png" />
+    <None Include="Resources\Meal\meal_25x25.png" />
+    <None Include="Resources\Meal\meal_32x32.png" />
     <Content Include="Resources\Toolbar\Back.png" />
     <Content Include="Resources\Toolbar\Forward.png" />
     <EmbeddedResource Include="Resources\Toolbar\SortAZ.png" />
@@ -993,7 +997,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Modules\Meal\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
   </PropertyGroup>
