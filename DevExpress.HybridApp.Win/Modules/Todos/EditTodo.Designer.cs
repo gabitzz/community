@@ -1,5 +1,5 @@
 ﻿namespace DevExpress.DevAV.Modules {
-    partial class EditTask {
+    partial class EditTodo {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -26,7 +26,7 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditTask));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditTodo));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layout = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.tbComplete = new DevExpress.XtraEditors.TrackBarControl();

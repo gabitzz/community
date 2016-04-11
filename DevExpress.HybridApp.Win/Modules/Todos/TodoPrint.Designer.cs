@@ -1,5 +1,5 @@
 ﻿namespace DevExpress.DevAV.Modules {
-    partial class TaskPrint {
+    partial class TodoPrint {
         /// <summary> 
         /// Required designer variable.
         /// </summary>

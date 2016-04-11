@@ -11,9 +11,9 @@ using DevExpress.XtraLayout.Utils;
 using DevExpress.DevAV.Common.Utils;
 
 namespace DevExpress.DevAV.Modules {
-    public partial class EmployeeEdit : BaseModuleControl {
+    public partial class MemberEdit : BaseModuleControl {
         BaseModuleControl openedSubModule;
-        public EmployeeEdit()
+        public MemberEdit()
             : base(CreateViewModel<EmployeeViewModel>) {
             InitializeComponent();
             ViewModel.EntityChanged += ViewModel_EntityChanged;
@@ -163,7 +163,7 @@ namespace DevExpress.DevAV.Modules {
             ViewModel.EmployeeEvaluationsLookUp.New();
         }
         void TaskButtonClick() {
-            EditTask.NewTaskOwner = ViewModel.Entity;
+            EditTodo.NewTaskOwner = ViewModel.Entity;
             ViewModel.EmployeeAssignedTasksLookUp.New();
         }
         void MailMergeClick() {

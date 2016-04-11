@@ -105,7 +105,7 @@
         }
         private void closeButtonClick(object sender, EventArgs e) {
             if(Parent as Teams != null) (Parent as Teams).CloseSubModule();
-            if(Parent as EmployeeEdit != null) (Parent as EmployeeEdit).CloseSubModule();
+            if(Parent as MemberEdit != null) (Parent as MemberEdit).CloseSubModule();
         }
         private XtraReport CreateAndInitializeReport(EmployeeReportType reportType) {
             var locator = GetService<Services.IReportLocator>();

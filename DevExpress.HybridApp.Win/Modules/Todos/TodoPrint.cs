@@ -10,8 +10,8 @@ using DevExpress.XtraReports.UI;
 using DevExpress.DevAV.Common.ViewModel;
 
 namespace DevExpress.DevAV.Modules {
-    public partial class TaskPrint : BaseModuleControl {
-        public TaskPrint()
+    public partial class TodoPrint : BaseModuleControl {
+        public TodoPrint()
             : base(CreateViewModel<TaskPrintView>) {
             InitializeComponent();
             ViewModel.ParameterChanged += ViewModel_ParameterChanged;

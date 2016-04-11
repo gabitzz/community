@@ -6,8 +6,8 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.DXErrorProvider;
 
 namespace DevExpress.DevAV.Modules {
-    public partial class EditTask : BaseModuleControl {
-        public EditTask()
+    public partial class EditTodo : BaseModuleControl {
+        public EditTodo()
             : base(CreateViewModel<EmployeeTaskViewModel>) {
             InitializeComponent();
             ViewModel.EntityChanged += ViewModel_EntityChanged;

@@ -163,7 +163,7 @@ namespace DevExpress.DevAV.Modules {
             prevFocusedRow = GetSelectedIndex();
             var employee = GetSelectedEmployee();
             if(employee != null) {
-                EditTask.NewTaskOwner = employee;
+                EditTodo.NewTaskOwner = employee;
                 TasksViewModel.New();
             }
         }
@@ -200,7 +200,7 @@ namespace DevExpress.DevAV.Modules {
                 else {
                     ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, main, new DefaultEntityInitializer<Employee, DevAV.DevAVDbDataModel.IDevAVDbUnitOfWork>());
                 }
-                ((EmployeeEdit)main.SelectedModule).Refresh();
+                ((MemberEdit)main.SelectedModule).Refresh();
             });
         }
         void deleteMouseClick(object sender, EventArgs e) {
