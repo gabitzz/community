@@ -95,6 +95,7 @@ namespace DevExpress.DevAV.Modules {
         void SubscribeTileBarProductsFilter() {
             if(ProductTileBar == null) return;
             productTileBar = ProductTileBar;
+            productTileBar.Text = "FAV PINS";
             productTileBar.ItemClick += ProductTileBar_ItemClick;
             productTileBar.Groups[0].Items.Clear();  //TEMPORARY CODE UNTIL ALL PREVIOUS DATA IS REMOVED FROM DESIGNER ;)
         }

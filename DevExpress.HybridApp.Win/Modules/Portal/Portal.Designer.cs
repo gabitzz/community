@@ -175,6 +175,7 @@
             this.tileGroup.Items.Add(this.tileItemAutomation);
             this.tileGroup.Name = "tileGroup";
             this.tileGroup.Text = null;
+            this.tileGroup.Visible = false;
             // 
             // tileItemAll
             // 
@@ -354,6 +355,7 @@
             this.hideButton.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.hideButton.Text = " ";
             this.hideButton.TextSize = new System.Drawing.Size(34, 25);
+            this.hideButton.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             this.hideButton.Click += new System.EventHandler(this.hideButton_Click);
             // 
             // layoutControlItem1
