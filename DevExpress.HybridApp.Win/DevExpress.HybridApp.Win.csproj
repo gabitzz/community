@@ -482,6 +482,12 @@
       <DependentUpon>CustomersFilterModule.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\MessageReceiver.cs" />
+    <Compile Include="Modules\Meal\MealInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Meal\MealInfo.Designer.cs">
+      <DependentUpon>MealInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Messages\Messages.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -740,6 +746,9 @@
     <EmbeddedResource Include="Modules\Customers\CustomersFilterModule.resx">
       <DependentUpon>CustomersFilterModule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Meal\MealInfo.resx">
+      <DependentUpon>MealInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Messages\Messages.resx">
       <DependentUpon>Messages.cs</DependentUpon>
     </EmbeddedResource>
@@ -818,6 +827,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -1004,9 +1014,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modules\Meal\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\CommunityData\CommunityData.csproj">
       <Project>{af8f8aeb-1177-4eb9-bdd0-7a71a026df51}</Project>

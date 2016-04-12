@@ -63,7 +63,8 @@ namespace DevExpress.DevAV {
             viewModel.GetModule(ModuleType.CustomersModule);
             viewModel.GetModule(ModuleType.Messages);
             viewModel.GetModule(ModuleType.Sales);
-            
+            viewModel.GetModule(ModuleType.Meal);
+
 
         }
         void viewModel_ModuleAdded(object sender, EventArgs e) {
@@ -134,6 +135,7 @@ namespace DevExpress.DevAV {
             customersTileBarItem.Tag = ModuleType.CustomersModule;
             todosTileBarItem.Tag = ModuleType.Todos;
             portalTileBarItem.Tag = ModuleType.Portal;
+            mealTileBarItem.Tag = ModuleType.Meal;
             messagesTileBarItem.Tag = ModuleType.Messages;
             salesTileBarItem.Tag = ModuleType.Sales;
             opportunitiesTileBarItem.Tag = ModuleType.Opportunities;

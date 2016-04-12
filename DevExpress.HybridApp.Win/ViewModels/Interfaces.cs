@@ -33,6 +33,8 @@ namespace DevExpress.DevAV {
         EditNotes,
         Notes,
 
+        Meal
+
     }
     public interface IMainModule : IPeekModulesHost,
     ISupportModuleLayout, ISupportTransitions, IDXMenuManagerProvider {
