@@ -9,7 +9,7 @@
         protected override string GetTitle() {
             return Entity.FullName;
         }
-        public IQueryable<Employee> GetEmployyes() {
+        public IQueryable<DevExpress.DevAV.Employee> GetEmployyes() {
             return  UnitOfWork.Employees.GetEntities();
         }
         public event EventHandler EntityChanged;

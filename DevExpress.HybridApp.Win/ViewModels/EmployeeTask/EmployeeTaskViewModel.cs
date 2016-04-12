@@ -39,7 +39,7 @@ namespace DevExpress.DevAV.ViewModels {
         /// <summary>
         /// The look-up collection of Teams for the corresponding navigation property in the view.
         /// </summary>
-        public IList<Employee> LookUpEmployees {
+        public IList<DevExpress.DevAV.Employee> LookUpEmployees {
             get { return GetLookUpEntities(x => x.Employees); }
         }
     }

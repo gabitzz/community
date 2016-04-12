@@ -48,8 +48,8 @@ namespace DevExpress.DevAV.DevAVDbDataModel {
             get { return GetRepositoryCore<IRepository<Order, long>, Order>(() => new OrderRepository(this)); }
         }
 
-        IRepository<Employee, long> IDevAVDbUnitOfWork.Employees {
-            get { return GetRepository(x => x.Set<Employee>(), x => x.Id); }
+        IRepository<DevExpress.DevAV.Employee, long> IDevAVDbUnitOfWork.Employees {
+            get { return GetRepository(x => x.Set<DevExpress.DevAV.Employee>(), x => x.Id); }
         }
 
         IRepository<EmployeeTask, long> IDevAVDbUnitOfWork.Tasks {

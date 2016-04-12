@@ -48,7 +48,7 @@ namespace DevExpress.DevAV.DevAVDbDataModel {
         /// <summary>
         /// The Employee entities repository.
         /// </summary>
-        IRepository<Employee, long> Employees { get; }
+        IRepository<DevExpress.DevAV.Employee, long> Employees { get; }
 
         /// <summary>
         /// The EmployeeTask entities repository.

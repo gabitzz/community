@@ -1,0 +1,14 @@
+D:\Vio\Community\DevAv.Data\bin\Debug\DevExpress.DevAV.v15.2.Data.dll
+D:\Vio\Community\DevAv.Data\bin\Debug\DevExpress.DevAV.v15.2.Data.pdb
+D:\Vio\Community\DevAv.Data\bin\Debug\DevExpress.Data.v15.2.dll
+D:\Vio\Community\DevAv.Data\bin\Debug\EntityFramework.dll
+D:\Vio\Community\DevAv.Data\bin\Debug\System.Data.SQLite.dll
+D:\Vio\Community\DevAv.Data\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Vio\Community\DevAv.Data\bin\Debug\DevExpress.Data.v15.2.xml
+D:\Vio\Community\DevAv.Data\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
+D:\Vio\Community\DevAv.Data\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
+D:\Vio\Community\DevAv.Data\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
+D:\Vio\Community\DevAv.Data\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
+D:\Vio\Community\DevAv.Data\obj\x86\Debug\DevExpress.DevAV.v15.2.Data.csprojResolveAssemblyReference.cache
+D:\Vio\Community\DevAv.Data\obj\x86\Debug\DevExpress.DevAV.v15.2.Data.dll
+D:\Vio\Community\DevAv.Data\obj\x86\Debug\DevExpress.DevAV.v15.2.Data.pdb
