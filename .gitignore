@@ -3,3 +3,5 @@
 /.vs/DevExpress.HybridApp.Win/v14/*.suo
 *.user
 *.licx
+/CommunityData/bin
+/CommunityData/obj
