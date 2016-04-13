@@ -25,7 +25,10 @@ namespace DevExpress.DevAV.Modules {
         Today = 2,
         Year = 0
     }
-    public partial class Messages : BaseModuleControl {
+    public partial class Messages : BaseModuleControl
+    {
+
+        MailType currentMailType = MailType.Inbox;
 
         public Messages()
             : base(CreateViewModel<OrderCollectionViewModel>)
@@ -39,6 +42,15 @@ namespace DevExpress.DevAV.Modules {
             var timer = new Timer {Interval = AppContext.Instance.Settings.SendReceiveTimeInterval};
             timer.Tick += Timer_Tick;
             timer.Start();
+
+            ucMailTree1.DataSourceChanged += UcMailTree1_DataSourceChanged;
+        }
+
+        private void UcMailTree1_DataSourceChanged(object sender, DataSourceChangedEventArgs e)
+        {
+            currentMailType = e.Type;
+            mail1.MessagesDataChanged(e);
+            //ShowInfo(e.List.Count);
         }
 
         private void Timer_Tick(object sender, EventArgs e)

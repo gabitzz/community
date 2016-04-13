@@ -180,12 +180,12 @@ namespace DevExpress.DevAV.Controls.Messages
                 fControl.FindEdit.ContainsFocus ||
                 fControl.ClearButton.Focused)
             {
-                ribbon.PageCategories[TagResources.SearchTools].Visible = true;
-                ribbon.SelectedPage = ribbon.PageCategories[TagResources.SearchTools].Pages[0];
+                //ribbon.PageCategories[TagResources.SearchTools].Visible = true;
+                //ribbon.SelectedPage = ribbon.PageCategories[TagResources.SearchTools].Pages[0];
             }
             else {
-                ribbon.PageCategories[TagResources.SearchTools].Visible = false;
-                ribbon.SelectedPage = ribbon.DefaultPageCategory.Pages[0];
+                //ribbon.PageCategories[TagResources.SearchTools].Visible = false;
+                //ribbon.SelectedPage = ribbon.DefaultPageCategory.Pages[0];
             }
         }
 
