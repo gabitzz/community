@@ -1,4 +1,6 @@
-﻿namespace DevExpress.DevAV.Controls.Messages.Helpers
+﻿using DevExpress.XtraEditors.Repository;
+
+namespace DevExpress.DevAV.Controls.Messages.Helpers
 {
     public class EditorHelper
     {
@@ -14,6 +16,15 @@
                 case ContactTitle.Prof: return "Prof.";
             }
             return string.Empty;
+        }
+
+        public static void InitPriorityComboBox(RepositoryItemImageComboBox edit)
+        {
+            edit.Items.Clear();
+            edit.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+                new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Low", 0, 0),
+                new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Medium", 1, -1),
+                new DevExpress.XtraEditors.Controls.ImageComboBoxItem("High", 2, 1)});
         }
     }
 }

@@ -58,15 +58,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Awesomium.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=e1a0d7c8071a5214, processorArchitecture=x86">
-      <HintPath>..\packages\Awesomium.NetWrapper.Unofficial.1.7.5.0\lib\Packed\Awesomium.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Awesomium.Windows.Controls, Version=1.7.5.0, Culture=neutral, PublicKeyToken=7a34e179b8b61c39, processorArchitecture=x86">
-      <HintPath>..\packages\Awesomium.NetWrapper.Unofficial.1.7.5.0\lib\Awesomium.Windows.Controls.dll</HintPath>
+      <HintPath>..\packages\Awesomium.Windows.Forms.Unofficial.1.7.5.0\lib\Awesomium.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Awesomium.Windows.Forms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=9bd24830fbe304a0, processorArchitecture=x86">
-      <HintPath>..\packages\Awesomium.NetWrapper.Unofficial.1.7.5.0\lib\Awesomium.Windows.Forms.dll</HintPath>
+      <HintPath>..\packages\Awesomium.Windows.Forms.Unofficial.1.7.5.0\lib\Awesomium.Windows.Forms.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.SpellChecker.v15.2.Core, Version=15.2, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -369,6 +365,7 @@
     <Compile Include="Controls\GroupPainter.cs" />
     <Compile Include="Controls\Messages\Helpers\DragSelection.cs" />
     <Compile Include="Controls\Messages\Helpers\EditorHelper.cs" />
+    <Compile Include="Controls\Messages\Helpers\Helpers.cs" />
     <Compile Include="Controls\Messages\Helpers\Rules\FromFilterRule.cs" />
     <Compile Include="Controls\Messages\Helpers\Rules\IMessageFilterRule.cs" />
     <Compile Include="Controls\Messages\Helpers\Rules\EmailRule.cs" />
@@ -491,6 +488,12 @@
     </Compile>
     <Compile Include="Modules\Meal\MealInfo.Designer.cs">
       <DependentUpon>MealInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Messages\Mail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Messages\Mail.Designer.cs">
+      <DependentUpon>Mail.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Messages\Messages.cs">
       <SubType>UserControl</SubType>
@@ -753,6 +756,9 @@
     <EmbeddedResource Include="Modules\Meal\MealInfo.resx">
       <DependentUpon>MealInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Messages\Mail.resx">
+      <DependentUpon>Mail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Messages\Messages.resx">
       <DependentUpon>Messages.cs</DependentUpon>
     </EmbeddedResource>
@@ -831,7 +837,6 @@
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
