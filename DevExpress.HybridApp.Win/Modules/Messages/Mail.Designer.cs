@@ -103,6 +103,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.EmbeddedNavigator.Margin = ((System.Windows.Forms.Padding)(resources.GetObject("gridControl1.EmbeddedNavigator.Margin")));
             resources.ApplyResources(this.gridControl1, "gridControl1");
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -277,7 +278,7 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(6, 6, 6, 6);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1226, 621);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1635, 955);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // lcList
@@ -287,7 +288,7 @@
             this.lcList.Location = new System.Drawing.Point(0, 0);
             this.lcList.Name = "lcList";
             this.lcList.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.lcList.Size = new System.Drawing.Size(1209, 609);
+            this.lcList.Size = new System.Drawing.Size(1591, 943);
             this.lcList.TextSize = new System.Drawing.Size(0, 0);
             this.lcList.TextVisible = false;
             // 
@@ -295,9 +296,9 @@
             // 
             this.splitterItem1.AllowHotTrack = true;
             resources.ApplyResources(this.splitterItem1, "splitterItem1");
-            this.splitterItem1.Location = new System.Drawing.Point(1209, 0);
+            this.splitterItem1.Location = new System.Drawing.Point(1591, 0);
             this.splitterItem1.Name = "splitterItem1";
-            this.splitterItem1.Size = new System.Drawing.Size(5, 609);
+            this.splitterItem1.Size = new System.Drawing.Size(32, 943);
             // 
             // Mail
             // 

@@ -5143,4 +5143,84 @@
     <Folder>1</Folder>
     <IsReply>false</IsReply>
   </Messages>
+  <Messages>
+    <Date>2016-04-13T23:08:36+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>Test 2016041301</Subject>
+    <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>2</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
+  <Messages>
+    <Date>2016-04-14T01:20:54+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>Test1 20160414</Subject>
+    <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>2</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
+  <Messages>
+    <Date>2016-04-14T01:23:48+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>Test1 2016041402</Subject>
+    <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>4</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
+  <Messages>
+    <Date>2016-04-14T01:35:32+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>winforms1</Subject>
+    <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
+  <Messages>
+    <Date>2016-04-14T01:36:22+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>winforms2</Subject>
+    <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
+  <Messages>
+    <Date>2016-04-14T01:40:32+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>idetools</Subject>
+    <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
+  <Messages>
+    <Date>2016-04-14T01:45:24+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>idetools</Subject>
+    <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
+  <Messages>
+    <Date>2016-04-14T01:48:06+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>idetools</Subject>
+    <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>8</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
 </NewDataSet>

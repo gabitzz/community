@@ -83,7 +83,7 @@ namespace DevExpress.DevAV.Helpers
                             Text = msg.FindFirstHtmlVersion().GetBodyAsText(),
                             MailType = MailType.Inbox,
                         };
-                        _messageFilterEvaluator.ApplyRules(message);
+                        new MessageFilterEvaluator(EmailRulesHelper.Instance.GetEmailRules()).ApplyRules(message);
 
                         DataHelper.AddMessage(message);
                     }

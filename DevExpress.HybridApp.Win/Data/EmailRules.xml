@@ -1,23 +1,23 @@
-<?xml version="1.0"?>
-<EmailRules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" standalone="yes"?>
+<EmailRules>
   <Rules>
     <EmailRule>
       <From>mihaita.vladut@gmail.com</From>
       <To />
-      <Subject>test</Subject>
+      <Subject>ASP</Subject>
       <Folder>ASP</Folder>
     </EmailRule>
     <EmailRule>
       <From />
       <To />
-      <Subject>test</Subject>
-      <Folder>ASP</Folder>
+      <Subject>WinForms</Subject>
+      <Folder>WinForms</Folder>
     </EmailRule>
     <EmailRule>
       <From />
       <To />
-      <Subject>test</Subject>
-      <Folder>ASP</Folder>
+      <Subject>idetools</Subject>
+      <Folder>IDETools</Folder>
     </EmailRule>
   </Rules>
 </EmailRules>

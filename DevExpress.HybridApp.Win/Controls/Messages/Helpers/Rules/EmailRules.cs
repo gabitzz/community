@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -8,7 +9,7 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
 {
     public class EmailRules
     {
-        public List<EmailRule> Rules { get; set; } = new List<EmailRule>();
+        public BindingList<EmailRule> Rules { get; set; } = new BindingList<EmailRule>();
     }
 
     public class EmailRulesHelper
@@ -21,18 +22,18 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
 
         private EmailRulesHelper()
         {
-            EmailRules = new EmailRules();
-            if (!File.Exists(GetEmailRulesFile())) return;
-
-            using (var fileStream = new FileStream(GetEmailRulesFile(), FileMode.Open))
-            {
-                EmailRules = _xmlSerializer.Deserialize(fileStream) as EmailRules;
-            }
         }
 
         public EmailRules GetEmailRules()
         {
-            return EmailRules;
+            if (File.Exists(GetEmailRulesFile()))
+            {
+                using (var fileStream = new FileStream(GetEmailRulesFile(), FileMode.Open))
+                {
+                    return _xmlSerializer.Deserialize(fileStream) as EmailRules;
+                }
+            }
+            return new EmailRules();
         }
 
         public void AddRule(EmailRule rule)

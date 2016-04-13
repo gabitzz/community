@@ -39,6 +39,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLayoutControlItem)).BeginInit();
             this.SuspendLayout();
+            // 
+            // layoutControl1
+            // 
             this.layoutControl1.AllowCustomization = false;
             this.layoutControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.layoutControl1.Controls.Add(this.searchControl);
@@ -55,6 +58,9 @@
             this.layoutControl1.Size = new System.Drawing.Size(280, 80);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // searchControl
+            // 
             this.searchControl.Location = new System.Drawing.Point(178, 21);
             this.searchControl.MaximumSize = new System.Drawing.Size(300, 38);
             this.searchControl.MinimumSize = new System.Drawing.Size(100, 38);
@@ -67,6 +73,9 @@
             this.searchControl.Size = new System.Drawing.Size(100, 38);
             this.searchControl.StyleController = this.layoutControl1;
             this.searchControl.TabIndex = 17;
+            // 
+            // windowsUIButtonPanel1
+            // 
             this.windowsUIButtonPanel1.AppearanceButton.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.windowsUIButtonPanel1.AppearanceButton.Hovered.FontSizeDelta = -1;
             this.windowsUIButtonPanel1.AppearanceButton.Hovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
@@ -84,7 +93,7 @@
             this.windowsUIButtonPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.windowsUIButtonPanel1.ButtonBackgroundImages = this.imageList1;
             this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", ((System.Drawing.Image)(resources.GetObject("windowsUIButtonPanel1.Buttons"))), -1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, -1),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", ((System.Drawing.Image)(resources.GetObject("windowsUIButtonPanel1.Buttons")))),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Button", ((System.Drawing.Image)(resources.GetObject("windowsUIButtonPanel1.Buttons1"))), -1, DevExpress.XtraBars.Docking2010.ImageLocation.Default, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", false, -1, false, null, true, false, true, null, null, -1, false, false),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton(),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton(),
@@ -98,11 +107,17 @@
             this.windowsUIButtonPanel1.Size = new System.Drawing.Size(172, 67);
             this.windowsUIButtonPanel1.TabIndex = 5;
             this.windowsUIButtonPanel1.Text = "windowsUIButtonPanel1";
+            // 
+            // imageList1
+            // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "transparent1.png");
             this.imageList1.Images.SetKeyName(1, "transparent2.png");
             this.imageList1.Images.SetKeyName(2, "transparent3.png");
+            // 
+            // layoutControlGroup1
+            // 
             this.layoutControlGroup1.CustomizationFormText = "Root";
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -113,6 +128,9 @@
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Size = new System.Drawing.Size(280, 80);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
             this.layoutControlItem1.Control = this.windowsUIButtonPanel1;
             this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
@@ -122,6 +140,9 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             this.layoutControlItem1.TrimClientAreaToControl = false;
+            // 
+            // searchLayoutControlItem
+            // 
             this.searchLayoutControlItem.Control = this.searchControl;
             this.searchLayoutControlItem.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.searchLayoutControlItem.CustomizationFormText = "searchLayoutControlItem";
@@ -132,6 +153,9 @@
             this.searchLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
             this.searchLayoutControlItem.TextVisible = false;
             this.searchLayoutControlItem.TrimClientAreaToControl = false;
+            // 
+            // BottomPanelBase
+            // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
