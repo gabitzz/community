@@ -8,7 +8,8 @@
     }
     internal class ModuleActivator : IModuleActivator {
         private Assembly moduleAssembly;
-        private string rootNamespace;public ModuleActivator(Assembly moduleAssembly, string rootNamespace) {
+        private string rootNamespace;
+        public ModuleActivator(Assembly moduleAssembly, string rootNamespace) {
             this.moduleAssembly = moduleAssembly;
             this.rootNamespace = rootNamespace;
         }

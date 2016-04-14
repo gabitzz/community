@@ -504,11 +504,11 @@
       <DependentUpon>CustomersFilterModule.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\MessageReceiver.cs" />
-    <Compile Include="Modules\Meal\MealInfo.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Modules\Meal\Meal.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Meal\MealInfo.Designer.cs">
-      <DependentUpon>MealInfo.cs</DependentUpon>
+    <Compile Include="Modules\Meal\Meal.Designer.cs">
+      <DependentUpon>Meal.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Messages\Mail.cs">
       <SubType>UserControl</SubType>
@@ -719,6 +719,8 @@
     <Compile Include="ViewModels\Product\ProductCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Product\ProductViewModel.cs" />
     <Compile Include="ViewModels\Product\ProductViewModel.partial.cs" />
+    <Compile Include="ViewModels\ProviderMenuItem\ProviderMenuItemModel.cs" />
+    <Compile Include="ViewModels\ProviderMenuItem\ProviderMenuItemModel.partial.cs" />
     <Compile Include="ViewModels\Quote\QuoteCollectionViewModel.cs" />
     <Compile Include="ViewModels\Quote\QuoteCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Quote\QuoteViewModel.cs" />
@@ -773,9 +775,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Customers\CustomersFilterModule.resx">
       <DependentUpon>CustomersFilterModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Meal\MealInfo.resx">
-      <DependentUpon>MealInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Messages\Mail.resx">
       <DependentUpon>Mail.cs</DependentUpon>

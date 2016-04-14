@@ -95,5 +95,10 @@ namespace DevExpress.DevAV.DevAVDbDataModel {
         IRepository<State, StateEnum> IDevAVDbUnitOfWork.States {
             get { return GetRepository(x => x.Set<State>(), x => x.ShortName); }
         }
+
+        IRepository<ProviderMenuItem, int> IDevAVDbUnitOfWork.ProviderMenuItems
+        {
+            get { return GetRepository(x => x.Set<ProviderMenuItem>(), x => x.MenuItemTypeID); }
+        }
     }
 }

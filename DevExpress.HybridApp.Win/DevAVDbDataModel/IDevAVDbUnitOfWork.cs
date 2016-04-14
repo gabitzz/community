@@ -79,6 +79,10 @@ namespace DevExpress.DevAV.DevAVDbDataModel {
         /// The Product entities repository.
         /// </summary>
         IRepository<Product, long> Products { get; }
+        /// <summary>
+        /// The Product entities repository.
+        /// </summary>
+        IRepository<ProviderMenuItem, int> ProviderMenuItems { get; }
 
         /// <summary>
         /// The ProductCatalog entities repository.
