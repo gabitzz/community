@@ -33,6 +33,7 @@ namespace DevExpress.DevAV.Forms
             gridControl1.DataSource = _xmlDataSet.Tables["EmailRule"];
 
             gridView1.Columns["To"].Visible = false;
+            gridView1.Columns["From"].Width = 130;
 
             SetMoveToEditor();
         }
