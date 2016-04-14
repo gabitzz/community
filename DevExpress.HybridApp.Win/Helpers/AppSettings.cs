@@ -6,7 +6,7 @@ namespace DevExpress.DevAV.Helpers
 {
     public class AppSettings
     {
-        private const int DEFAULT_SEND_RECEIVE_TIME_INTERVAL = 5;
+        private const int DEFAULT_SEND_RECEIVE_TIME_INTERVAL = 60;
 
         public bool ShowSplashScreen { get; set; }
         public List<EmailAccount> Accounts { get; set; }

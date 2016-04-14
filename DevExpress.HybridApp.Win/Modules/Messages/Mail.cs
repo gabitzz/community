@@ -36,6 +36,33 @@ namespace DevExpress.MailClient.Win {
             InitializeComponent();
             ShowPreview();
             CreateTimer();
+            gridView1.DoubleClick += gridView1_DoubleClick;
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            GridView view = (GridView)sender;
+            Point pt = view.GridControl.PointToClient(Control.MousePosition);
+            DoRowDoubleClick(view, pt);
+        }
+
+        private void DoRowDoubleClick(GridView view, Point pt)
+        {
+            GridHitInfo info = view.CalcHitInfo(pt);
+            if (info.InRow || info.InRowCell)
+            {
+                OpenMail(info.RowHandle);
+            }
+        }
+
+        private void OpenMail(int row)
+        {
+            if (row >= 0)
+            {
+                Message message = ((Message)gridView1.GetRow(row));
+                if (message.MailType != MailType.Deleted && !message.Deleted)
+                    EditMessage(message,false, null);
+            }
         }
 
         private void Mail_Load(object sender, EventArgs e) {
@@ -141,7 +168,14 @@ namespace DevExpress.MailClient.Win {
             //OwnerForm.ReadMessagesChanged();
             MakeFocusedRowVisible();
         }
-        void RaiseUpdateTreeViewMessages() {
+        void RaiseUpdateTreeViewMessages()
+        {
+            if(Parent.Parent is DevExpress.DevAV.Modules.Messages)
+            {
+                var owner = Parent.Parent as DevExpress.DevAV.Modules.Messages;
+                owner.UpdateMessagesTree();
+            }
+            //UpdateMessagesTree
             //OwnerForm.UpdateTreeViewMessages();
         }
         void RaiseEnableDelete(bool enabled) {
@@ -280,12 +314,12 @@ namespace DevExpress.MailClient.Win {
             form.Show();
             Cursor.Current = Cursors.Default;
         }
-        void CreateReplyAllMailMessages() {
+        public void CreateReplyAllMailMessages() {
             foreach (int row in gridView1.GetSelectedRows())
                 CreateReplyMailMessage(row);
         }
 
-        void CreateReplyMailMessage() {
+        public void CreateReplyMailMessage() {
             int[] rows = gridView1.GetSelectedRows();
             if (rows.Length != 1)
                 return;
@@ -307,7 +341,7 @@ namespace DevExpress.MailClient.Win {
             message.IsReply = true;
             EditMessage(message, true, null);
         }
-        void CreateForwardMailMessage() {
+        public void CreateForwardMailMessage() {
             int[] rows = gridView1.GetSelectedRows();
             if (rows.Length != 1)
                 return;
@@ -345,7 +379,7 @@ namespace DevExpress.MailClient.Win {
         void QuoteReplyMessage(RichEditDocumentServer server, string to, DateTime originalMessageDate) {
             QuoteMessage(server);
             Document document = server.Document;
-            string replyHeader = String.Format("Dear, {0}{ 1}, you wrote:",to, originalMessageDate);
+            string replyHeader = String.Format("Dear, {0}{1}, you wrote:",to, originalMessageDate);
             document.InsertText(document.Range.Start, replyHeader);
         }
         void QuoteMessage(RichEditDocumentServer server) {

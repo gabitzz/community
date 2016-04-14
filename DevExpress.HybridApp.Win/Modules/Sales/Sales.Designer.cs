@@ -597,12 +597,12 @@
             series1.Label = doughnutSeriesLabel1;
             series1.LegendTextPattern = "{A}";
             series1.Name = "Series 1";
-            doughnutSeriesView1.ExplodedPointsFiltersConjunctionMode = DevExpress.XtraCharts.ConjunctionTypes.And;
+            //doughnutSeriesView1.ExplodedPointsFiltersConjunctionMode = DevExpress.XtraCharts.ConjunctionTypes.And;
             doughnutSeriesView1.HoleRadiusPercent = 56;
             series1.View = doughnutSeriesView1;
             this.chartControl.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            doughnutSeriesView2.ExplodedPointsFiltersConjunctionMode = DevExpress.XtraCharts.ConjunctionTypes.And;
+            //doughnutSeriesView2.ExplodedPointsFiltersConjunctionMode = DevExpress.XtraCharts.ConjunctionTypes.And;
             this.chartControl.SeriesTemplate.View = doughnutSeriesView2;
             this.chartControl.Size = new System.Drawing.Size(240, 352);
             this.chartControl.TabIndex = 4;

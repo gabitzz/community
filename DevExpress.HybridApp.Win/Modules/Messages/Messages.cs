@@ -89,11 +89,48 @@ namespace DevExpress.DevAV.Modules {
                 new ButtonInfo
                 {
                     Type = typeof (SimpleButton),
-                    Text = "Send/Receive",
+                    Text = "Reply",
                     Name = "2",
+                    Image = Properties.Resources.reply,
+                    mouseEventHandler = reply
+                },
+
+                new ButtonInfo
+                {
+                    Type = typeof (SimpleButton),
+                    Text = "Reply all",
+                    Name = "3",
+                    Image = Properties.Resources.replyall,
+                    mouseEventHandler = replyAll
+                },
+
+                 new ButtonInfo
+                {
+                    Type = typeof (SimpleButton),
+                    Text = "Forward",
+                    Name = "4",
+                    Image = Properties.Resources.forward,
+                    mouseEventHandler = forward
+                },
+
+                new ButtonInfo
+                {
+                    Type = typeof (SimpleButton),
+                    Text = "Delete",
+                    Name = "4",
+                    Image = Properties.Resources.delete,
+                    mouseEventHandler = deleteMessage
+                },
+
+                new ButtonInfo
+                {
+                    Type = typeof (SimpleButton),
+                    Text = "Send/Receive",
+                    Name = "3",
                     Image = Properties.Resources.Refresh,
                     mouseEventHandler = sendReceive
-                }
+                },
+                
             };
 
             BottomPanel.InitializeButtons(buttons, false);
@@ -104,6 +141,30 @@ namespace DevExpress.DevAV.Modules {
             using (var frmMail = new frmEditMail())
             {
                 frmMail.ShowDialog();}
+        }
+
+        private void reply(object sender, EventArgs e)
+        {
+            mail1.CreateReplyMailMessage();
+        }
+
+        private void forward(object sender, EventArgs e)
+        {
+            mail1.CreateForwardMailMessage();
+        }
+
+        private void replyAll(object sender, EventArgs e)
+        {
+            mail1.CreateReplyAllMailMessages();
+        }
+
+        private void deleteMessage(object sender, EventArgs e)
+        {
+            int[] rows = mail1.gridView1.GetSelectedRows();
+            if (rows.Length != 1)
+                return;
+            var row = mail1.gridView1.GetDataRow(rows[0]);
+            mail1.gridView1.DeleteRow(rows[0]);
         }
 
         private void sendReceive(object sender, EventArgs e)
@@ -150,7 +211,7 @@ namespace DevExpress.DevAV.Modules {
 
 
 
-        private void UpdateMessagesTree()
+        public void UpdateMessagesTree()
         {
             if (ucMailTree1.InvokeRequired)
             {
