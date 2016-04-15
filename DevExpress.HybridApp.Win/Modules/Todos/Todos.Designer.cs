@@ -53,8 +53,6 @@
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.treeListLookUpEdit1 = new DevExpress.XtraEditors.TreeListLookUpEdit();
             this.treeListLookUpEdit1TreeList = new DevExpress.XtraTreeList.TreeList();
-            this.treeList1 = new DevExpress.XtraTreeList.TreeList();
-            this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.tileControl1 = new DevExpress.XtraEditors.TileControl();
             this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
             this.tileItemAll = new DevExpress.XtraEditors.TileItem();
@@ -70,7 +68,6 @@
             this.tileControlLCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.buttonHide = new DevExpress.XtraLayout.SimpleLabelItem();
             this.tasksSLI = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
             this.simpleLabelItem2 = new DevExpress.XtraLayout.SimpleLabelItem();
@@ -87,14 +84,12 @@
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeListLookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeListLookUpEdit1TreeList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileControlLCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tasksSLI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem2)).BeginInit();
@@ -106,13 +101,13 @@
             // 
             // tasksGridControl
             // 
-            this.tasksGridControl.Location = new System.Drawing.Point(829, 45);
+            this.tasksGridControl.Location = new System.Drawing.Point(274, 45);
             this.tasksGridControl.MainView = this.tasksGridView;
             this.tasksGridControl.Name = "tasksGridControl";
             this.tasksGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemProgressBar1,
             this.repositoryItemComboBox1});
-            this.tasksGridControl.Size = new System.Drawing.Size(555, 498);
+            this.tasksGridControl.Size = new System.Drawing.Size(1110, 498);
             this.tasksGridControl.TabIndex = 1;
             this.tasksGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tasksGridView});
@@ -255,7 +250,6 @@
             this.dataLayoutControl1.AllowCustomization = false;
             this.dataLayoutControl1.BackColor = System.Drawing.Color.White;
             this.dataLayoutControl1.Controls.Add(this.treeListLookUpEdit1);
-            this.dataLayoutControl1.Controls.Add(this.treeList1);
             this.dataLayoutControl1.Controls.Add(this.tileControl1);
             this.dataLayoutControl1.Controls.Add(this.tasksGridControl);
             this.dataLayoutControl1.DataSource = this.taskBindingSource;
@@ -290,40 +284,6 @@
             this.treeListLookUpEdit1TreeList.OptionsView.ShowIndentAsRowStyle = true;
             this.treeListLookUpEdit1TreeList.Size = new System.Drawing.Size(400, 200);
             this.treeListLookUpEdit1TreeList.TabIndex = 0;
-            // 
-            // treeList1
-            // 
-            this.treeList1.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.treeList1.Appearance.SelectedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.treeList1.Appearance.SelectedRow.Options.UseBackColor = true;
-            this.treeList1.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
-            this.treeListColumn1});
-            this.treeList1.Location = new System.Drawing.Point(407, 47);
-            this.treeList1.Name = "treeList1";
-            this.treeList1.BeginUnboundLoad();
-            this.treeList1.AppendNode(new object[] {
-            "Inbox"}, -1);
-            this.treeList1.AppendNode(new object[] {
-            "CareSchade"}, 0);
-            this.treeList1.AppendNode(new object[] {
-            "DailyStatus"}, -1);
-            this.treeList1.EndUnboundLoad();
-            this.treeList1.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
-            this.treeList1.OptionsClipboard.CopyNodeHierarchy = DevExpress.Utils.DefaultBoolean.True;
-            this.treeList1.OptionsView.ShowColumns = false;
-            this.treeList1.OptionsView.ShowIndicator = false;
-            this.treeList1.Size = new System.Drawing.Size(420, 494);
-            this.treeList1.TabIndex = 27;
-            // 
-            // treeListColumn1
-            // 
-            this.treeListColumn1.Caption = "treeListColumn1";
-            this.treeListColumn1.FieldName = "treeListColumn1";
-            this.treeListColumn1.MinWidth = 96;
-            this.treeListColumn1.Name = "treeListColumn1";
-            this.treeListColumn1.OptionsColumn.AllowEdit = false;
-            this.treeListColumn1.Visible = true;
-            this.treeListColumn1.VisibleIndex = 0;
             // 
             // tileControl1
             // 
@@ -567,7 +527,6 @@
             this.tileControlLCI,
             this.buttonHide,
             this.tasksSLI,
-            this.layoutControlItem2,
             this.layoutControlItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
@@ -579,10 +538,10 @@
             // 
             this.layoutControlItem1.Control = this.tasksGridControl;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(789, 45);
+            this.layoutControlItem1.Location = new System.Drawing.Point(234, 45);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlItem1.Size = new System.Drawing.Size(555, 498);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1110, 498);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -628,14 +587,6 @@
             this.tasksSLI.Size = new System.Drawing.Size(1344, 45);
             this.tasksSLI.Text = "TASKS";
             this.tasksSLI.TextSize = new System.Drawing.Size(128, 25);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.treeList1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(234, 45);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(555, 498);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(128, 20);
             // 
             // layoutControlItem3
             // 
@@ -755,14 +706,12 @@
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.treeListLookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeListLookUpEdit1TreeList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileControlLCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonHide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tasksSLI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem2)).EndInit();
@@ -811,9 +760,6 @@
         private Utils.ImageCollection priorityImageList;
         private XtraEditors.TreeListLookUpEdit treeListLookUpEdit1;
         private XtraTreeList.TreeList treeListLookUpEdit1TreeList;
-        private XtraTreeList.TreeList treeList1;
-        private XtraTreeList.Columns.TreeListColumn treeListColumn1;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
         private XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }
