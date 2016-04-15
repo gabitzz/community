@@ -76,7 +76,8 @@ namespace DevExpress.DevAV.Modules {
             base.OnTransitionCompleted();
             InitializeButtonPanel();
         }
-        private void InitializeButtonPanel() {
+        private void InitializeButtonPanel()
+        {
             var buttons = new List<ButtonInfo>{
                 new ButtonInfo
                 {
@@ -86,6 +87,7 @@ namespace DevExpress.DevAV.Modules {
                     Image = Properties.Resources.mail,
                     mouseEventHandler = NewMessage
                 },
+                new ButtonInfo(),
                 new ButtonInfo
                 {
                     Type = typeof (SimpleButton),
@@ -103,8 +105,8 @@ namespace DevExpress.DevAV.Modules {
                     Image = Properties.Resources.replyall,
                     mouseEventHandler = replyAll
                 },
-
-                 new ButtonInfo
+                new ButtonInfo(),
+                new ButtonInfo
                 {
                     Type = typeof (SimpleButton),
                     Text = "Forward",
@@ -112,7 +114,7 @@ namespace DevExpress.DevAV.Modules {
                     Image = Properties.Resources.forward,
                     mouseEventHandler = forward
                 },
-
+                new ButtonInfo(),
                 new ButtonInfo
                 {
                     Type = typeof (SimpleButton),
@@ -121,7 +123,7 @@ namespace DevExpress.DevAV.Modules {
                     Image = Properties.Resources.delete,
                     mouseEventHandler = deleteMessage
                 },
-
+                new ButtonInfo(),
                 new ButtonInfo
                 {
                     Type = typeof (SimpleButton),
@@ -130,7 +132,7 @@ namespace DevExpress.DevAV.Modules {
                     Image = Properties.Resources.Refresh,
                     mouseEventHandler = sendReceive
                 },
-                
+
             };
 
             BottomPanel.InitializeButtons(buttons, false);
@@ -191,6 +193,7 @@ namespace DevExpress.DevAV.Modules {
             }
             else
             {
+                sendReceiveProgress.Visible = true;
                 sendReceiveProgress.Properties.Stopped = false;
                 sendReceiveProgress.Properties.ShowTitle = true;
             }
@@ -204,12 +207,11 @@ namespace DevExpress.DevAV.Modules {
             }
             else
             {
+                sendReceiveProgress.Visible = false;
                 sendReceiveProgress.Properties.Stopped = true;
                 sendReceiveProgress.Properties.ShowTitle = false;
             }
         }
-
-
 
         public void UpdateMessagesTree()
         {

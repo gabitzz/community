@@ -23,8 +23,6 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
-            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.mail1 = new DevExpress.MailClient.Win.Mail();
             this.sendReceiveProgress = new DevExpress.XtraEditors.MarqueeProgressBarControl();
@@ -38,7 +36,6 @@
             this.buttonHide = new DevExpress.XtraLayout.SimpleLabelItem();
             this.layoutControlSendReceive = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sendReceiveProgress.Properties)).BeginInit();
@@ -52,10 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlSendReceive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // salesBindingSource
-            // 
-            this.salesBindingSource.DataSource = typeof(DevExpress.DevAV.Order);
             // 
             // layoutControl1
             // 
@@ -204,7 +197,6 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "Messages";
             this.Size = new System.Drawing.Size(968, 598);
-            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sendReceiveProgress.Properties)).EndInit();
@@ -222,7 +214,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource salesBindingSource;
         private XtraLayout.LayoutControl layoutControl1;
         private XtraLayout.LayoutControlGroup layoutControlGroup1;
         private XtraLayout.EmptySpaceItem emptySpaceItem1;
