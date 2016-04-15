@@ -389,5 +389,10 @@ namespace DevExpress.DevAV.Modules
             //    serializer.Serialize(stream, pins);
             //}
         }
+
+        private void chartControl4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
