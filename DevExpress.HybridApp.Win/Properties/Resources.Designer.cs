@@ -213,6 +213,16 @@ namespace DevExpress.DevAV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lifestyle {
+            get {
+                object obj = ResourceManager.GetObject("lifestyle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LowPriority {
             get {
                 object obj = ResourceManager.GetObject("LowPriority", resourceCulture);
@@ -306,6 +316,16 @@ namespace DevExpress.DevAV.Properties {
         internal static System.Drawing.Bitmap replyall {
             get {
                 object obj = ResourceManager.GetObject("replyall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tehnic {
+            get {
+                object obj = ResourceManager.GetObject("tehnic", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -5254,4 +5254,26 @@
     <IsReply>false</IsReply>
     <Attachments>C:\Attachments\3908d147-b734-4d94-87f8-87a5371e0b61\car1.jpg,C:\Attachments\3908d147-b734-4d94-87f8-87a5371e0b61\car2.jpg,C:\Attachments\3908d147-b734-4d94-87f8-87a5371e0b61\car3.jpg</Attachments>
   </Messages>
+  <Messages>
+    <Date>2016-04-16T19:19:12+03:00</Date>
+    <From>vio69i@gmail.com</From>
+    <Subject>test attachements1</Subject>
+    <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+    <Attachments>C:\Attachments\4a7955f2-03eb-408a-9731-24cdffb1ea5c\WP_20160406_14_15_09_Pro.jpg</Attachments>
+  </Messages>
+  <Messages>
+    <Date>2016-04-16T19:20:23+03:00</Date>
+    <From>vio69i@gmail.com</From>
+    <Subject>test attachements2</Subject>
+    <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+    <Attachments>C:\Attachments\e3d3c67f-6513-4aae-858d-fd737c1fad10\WP_20160406_14_15_09_Pro.jpg</Attachments>
+  </Messages>
 </NewDataSet>

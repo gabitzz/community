@@ -42,7 +42,7 @@ namespace DevExpress.MailClient.Win {
             InitializeComponent();
 
             tokenEditAttachements.Properties.TokenDoubleClick += Properties_TokenDoubleClick;
-
+            btnSend.Enabled = false;
             //DictionaryHelper.InitDictionary(spellChecker1);
             this.newMessage = newMessage;
             DialogResult = DialogResult.Cancel;

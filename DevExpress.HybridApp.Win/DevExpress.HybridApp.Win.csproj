@@ -935,12 +935,14 @@
     <None Include="Resources\forward.png" />
     <None Include="Resources\communityLogo2.png" />
     <None Include="Resources\communityLogo.bmp" />
+    <None Include="Resources\lifestyle.png" />
     <Content Include="Resources\Meal\fast-food.png" />
     <None Include="Resources\Meal\fast-food_25x25.png" />
     <None Include="Resources\Meal\meal_25x25.png" />
     <None Include="Resources\Meal\meal_32x32.png" />
     <None Include="Resources\reply.png" />
     <None Include="Resources\replyall.png" />
+    <None Include="Resources\tehnic.png" />
     <Content Include="Resources\Toolbar\Back.png" />
     <Content Include="Resources\Toolbar\Forward.png" />
     <EmbeddedResource Include="Resources\Toolbar\SortAZ.png" />
