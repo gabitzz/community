@@ -67,9 +67,9 @@
             // 
             // shareWeb
             // 
-            this.shareWeb.Location = new System.Drawing.Point(173, 2);
-            this.shareWeb.Size = new System.Drawing.Size(927, 600);
-            this.shareWeb.Source = new System.Uri("http://www.google.ro/", System.UriKind.Absolute);
+            this.shareWeb.Location = new System.Drawing.Point(42, 2);
+            this.shareWeb.Size = new System.Drawing.Size(1058, 600);
+            this.shareWeb.Source = new System.Uri("http://netvm-89:33526/sites/Community", System.UriKind.Absolute);
             this.shareWeb.TabIndex = 4;
             this.shareWeb.ViewType = Awesomium.Core.WebViewType.Offscreen;
             // 
@@ -92,13 +92,15 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(1062, 604);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(128, 20);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
             // 
             // shareWebControl
             // 
             this.shareWebControl.Location = new System.Drawing.Point(173, 2);
             this.shareWebControl.Size = new System.Drawing.Size(927, 600);
             this.shareWebControl.TabIndex = 4;
+            this.shareWebControl.Visible = false;
             // 
             // Opportunities
             // 

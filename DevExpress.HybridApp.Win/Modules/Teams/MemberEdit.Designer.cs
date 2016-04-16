@@ -609,11 +609,11 @@
             this.statusLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.statusLookUpEdit.Properties.DataSource = new DevExpress.DevAV.EmployeeStatus[] {
-        DevExpress.DevAV.EmployeeStatus.Salaried,
-        DevExpress.DevAV.EmployeeStatus.Commission,
-        DevExpress.DevAV.EmployeeStatus.Contract,
-        DevExpress.DevAV.EmployeeStatus.Terminated,
-        DevExpress.DevAV.EmployeeStatus.OnLeave};
+        DevExpress.DevAV.EmployeeStatus.SilentBusters,
+        DevExpress.DevAV.EmployeeStatus.TeamX,
+        DevExpress.DevAV.EmployeeStatus.TeamY,
+        DevExpress.DevAV.EmployeeStatus.TeamZ,
+        DevExpress.DevAV.EmployeeStatus.TeamW};
             this.statusLookUpEdit.Properties.NullText = "";
             this.statusLookUpEdit.Size = new System.Drawing.Size(116, 40);
             this.statusLookUpEdit.TabIndex = 30;

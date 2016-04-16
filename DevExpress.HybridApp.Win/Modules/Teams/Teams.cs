@@ -258,6 +258,9 @@ namespace DevExpress.DevAV.Modules {
         private void gridControl1_Load(object sender, EventArgs e) {
             tileView1.FocusedRowHandle = 0;
             UpdateSelectedEntity(0);
+
+            tileItemSalaried.PerformItemClick();
+            filterTileControl.SelectedItem = tileItemSalaried;
         }
     }
 }

@@ -2,18 +2,26 @@
 <ArrayOfPinnedItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <PinnedItem>
     <Name>Portal home</Name>
-    <URL>http://www.google.ro/</URL>
+    <URL>http://portal.netrom.local/</URL>
   </PinnedItem>
   <PinnedItem>
-    <Name>Email</Name>
-    <URL>https://accounts.google.com/ServiceLogin?service=mail&amp;passive=true&amp;rm=false&amp;continue=https://mail.google.com/mail/?tab%3Dwm&amp;scc=1&amp;ltmpl=default&amp;ltmplcache=2&amp;emr=1&amp;osid=1</URL>
+    <Name>Media Contest</Name>
+    <URL>http://portal.netrom.local/SitePages/AnimalByNature.aspx</URL>
   </PinnedItem>
   <PinnedItem>
-    <Name>Maps</Name>
-    <URL>https://www.google.ro/maps/@?hl=en</URL>
+    <Name>PRS</Name>
+    <URL>http://portal.netrom.local/groups/prs/SitePages/Home.aspx</URL>
   </PinnedItem>
   <PinnedItem>
-    <Name>Images search</Name>
-    <URL>http://www.google.ro/imghp?hl=en&amp;tab=wi</URL>
+    <Name>HRI</Name>
+    <URL>http://portal.netrom.local/groups/hri/SitePages/Home.aspx</URL>
+  </PinnedItem>
+  <PinnedItem>
+    <Name>OM</Name>
+    <URL>http://portal.netrom.local/responsibilitygroups/om/SitePages/Home.aspx</URL>
+  </PinnedItem>
+  <PinnedItem>
+    <Name>Project site</Name>
+    <URL>http://portal.netrom.local/projects/CareSchade/CAReProjects/default.aspx</URL>
   </PinnedItem>
 </ArrayOfPinnedItem>

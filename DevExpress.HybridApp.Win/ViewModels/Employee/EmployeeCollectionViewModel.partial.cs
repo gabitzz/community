@@ -48,19 +48,19 @@
             }
         }
         private int GetOnLeaveCount() {
-            return Entities.Where(e => e.Status == EmployeeStatus.OnLeave).Count();
+            return Entities.Where(e => e.Status == EmployeeStatus.TeamW).Count();
         }
         private int GetTerminatedCount() {
-            return Entities.Where(e => e.Status == EmployeeStatus.Terminated).Count();
+            return Entities.Where(e => e.Status == EmployeeStatus.TeamZ).Count();
         }
         private int GetProbationCount() {
-            return Entities.Where(e => e.Status == EmployeeStatus.Contract).Count();
+            return Entities.Where(e => e.Status == EmployeeStatus.TeamY).Count();
         }
         private int GetCommissionCount() {
-            return Entities.Where(e => e.Status == EmployeeStatus.Commission).Count();
+            return Entities.Where(e => e.Status == EmployeeStatus.TeamX).Count();
         }
         private int GetSalairedCount() {
-            return Entities.Where(e => e.Status == EmployeeStatus.Salaried).Count();
+            return Entities.Where(e => e.Status == EmployeeStatus.SilentBusters).Count();
         }
         private int GetAllCount() {
             return Entities.Count();

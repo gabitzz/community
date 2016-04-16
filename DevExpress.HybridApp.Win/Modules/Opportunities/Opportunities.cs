@@ -53,15 +53,51 @@ namespace DevExpress.DevAV.Modules {
             InitializeButtonPanel();
         }
         private void InitializeButtonPanel() {
-            //var listBI = new List<ButtonInfo>();
-            //listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Pivot Table", Name = "1", Image = ImageHelper.GetImageFromToolbarResource("PivotTable"), mouseEventHandler = (s, e) => {
-            //    MakeGridVisible();
-            //} });
-            //listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Map View", Name = "2", Image = ImageHelper.GetImageFromToolbarResource("MapView"), mouseEventHandler = (s, e) => {
-            //    MakeMapVisible();
-            //} });
-            //BottomPanel.InitializeButtons(listBI, false);
+            var listBI = new List<ButtonInfo>();
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Refresh", Name = "1", Image = Properties.Resources.Refresh, mouseEventHandler = refreshPage });
+            listBI.Add(new ButtonInfo());
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "LifeStyle", Name = "1", Image = Properties.Resources.Refresh, mouseEventHandler = openLifeStyle });
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Tehnic", Name = "1", Image = Properties.Resources.Refresh, mouseEventHandler = openTehnic });
+            listBI.Add(new ButtonInfo());
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Back", Name = "2", Image = Properties.Resources.ArrowLeft, mouseEventHandler = goToPreviousPage });
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Next", Name = "3", Image = Properties.Resources.ArrowRight, mouseEventHandler = goToNextPage });
+            listBI.Add(new ButtonInfo());
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Open in browser", Name = "6", Image = Properties.Resources.browseropen, mouseEventHandler = openInBrowser });
+            BottomPanel.InitializeButtons(listBI, false);
         }
+
+        void refreshPage(object sender, EventArgs e)
+        {
+            shareWeb.Refresh();
+        }
+
+        void goToNextPage(object sender, EventArgs e)
+        {
+            shareWeb.GoForward();
+        }
+
+        void goToPreviousPage(object sender, EventArgs e)
+        {
+            shareWeb.GoBack();
+        }
+
+        void openLifeStyle(object sender, EventArgs e)
+        {
+            shareWeb.Source = new Uri("http://netvm-89:33526/sites/Lifestyle/SitePages/Categories.aspx/");
+        }
+
+        void openTehnic(object sender, EventArgs e)
+        {
+            shareWeb.Source = new Uri("http://netvm-89:33526/sites/Technic/SitePages/Categories.aspx");
+        }
+
+
+        void openInBrowser(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(shareWeb.Source.AbsoluteUri);
+        }
+
+
         public void MakeMapVisible() {
             //pivotGridControl.Visible = false;
             //opportunitiesMapView1.Visible = true;

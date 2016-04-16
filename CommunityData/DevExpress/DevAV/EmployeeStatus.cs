@@ -1,20 +1,19 @@
-﻿namespace DevExpress.DevAV
-{
-    using System;
-    using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
+namespace DevExpress.DevAV
+{
     public enum EmployeeStatus
     {
-        [Display(Name="Commission")]
-        Commission = 1,
-        [Display(Name="Contract")]
-        Contract = 2,
-        [Display(Name="On Leave")]
-        OnLeave = 4,
-        [Display(Name="Salaried")]
-        Salaried = 0,
-        [Display(Name="Terminated")]
-        Terminated = 3
+        [Display(Name = "SilentBusters")]
+        SilentBusters = 0,
+        [Display(Name="TeamX")]
+        TeamX = 1,
+        [Display(Name="TeamY")]
+        TeamY = 2,
+        [Display(Name = "TeamZ")]
+        TeamZ = 3,
+        [Display(Name="TeamW")]
+        TeamW = 4,
     }
 }
 

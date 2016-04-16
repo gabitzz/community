@@ -24,7 +24,6 @@ namespace DevExpress.DevAV.Modules {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Teams));
@@ -53,7 +52,7 @@ namespace DevExpress.DevAV.Modules {
             this.colHomePhone = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colMobilePhone = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource();
             this.filterTileControl = new DevExpress.XtraEditors.TileControl();
             this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
             this.tileItemAll = new DevExpress.XtraEditors.TileItem();
@@ -117,31 +116,55 @@ namespace DevExpress.DevAV.Modules {
             ((System.ComponentModel.ISupportInitialize)(this.printEmployeeListItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // colPhoto
+            // 
             this.colPhoto.FieldName = "Photo";
             this.colPhoto.Name = "colPhoto";
             this.colPhoto.Visible = true;
             this.colPhoto.VisibleIndex = 18;
+            // 
+            // colFullName
+            // 
             this.colFullName.FieldName = "FullName";
             this.colFullName.Name = "colFullName";
             this.colFullName.Visible = true;
             this.colFullName.VisibleIndex = 8;
+            // 
+            // colAddress
+            // 
             this.colAddress.FieldName = "Address";
             this.colAddress.Name = "colAddress";
             this.colAddress.Visible = true;
             this.colAddress.VisibleIndex = 17;
+            // 
+            // colHomePhone
+            // 
             this.colHomePhone.FieldName = "HomePhone";
             this.colHomePhone.Name = "colHomePhone";
             this.colHomePhone.Visible = true;
             this.colHomePhone.VisibleIndex = 10;
+            // 
+            // colEmail
+            // 
             this.colEmail.FieldName = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.Visible = true;
             this.colEmail.VisibleIndex = 12;
+            // 
+            // colMobilePhone
+            // 
             this.colMobilePhone.FieldName = "MobilePhone";
             this.colMobilePhone.Name = "colMobilePhone";
             this.colMobilePhone.Visible = true;
             this.colMobilePhone.VisibleIndex = 11;
+            // 
+            // employeeBindingSource
+            // 
             this.employeeBindingSource.DataSource = typeof(DevExpress.DevAV.Employee);
+            // 
+            // filterTileControl
+            // 
             this.filterTileControl.AllowDrag = false;
             this.filterTileControl.AllowGlyphSkinning = true;
             this.filterTileControl.AllowSelectedItem = true;
@@ -175,12 +198,14 @@ namespace DevExpress.DevAV.Modules {
             this.filterTileControl.Name = "filterTileControl";
             this.filterTileControl.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.filterTileControl.Padding = new System.Windows.Forms.Padding(0);
-            this.filterTileControl.SelectedItem = this.tileItemAll;
             this.filterTileControl.Size = new System.Drawing.Size(204, 521);
             this.filterTileControl.TabIndex = 0;
             this.filterTileControl.Text = "tileControl1";
             this.filterTileControl.VerticalContentAlignment = DevExpress.Utils.VertAlignment.Top;
             this.filterTileControl.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.filterTileControl_ItemClick);
+            // 
+            // tileGroup2
+            // 
             this.tileGroup2.Items.Add(this.tileItemAll);
             this.tileGroup2.Items.Add(this.tileItemSalaried);
             this.tileGroup2.Items.Add(this.tileItemCommission);
@@ -189,6 +214,9 @@ namespace DevExpress.DevAV.Modules {
             this.tileGroup2.Items.Add(this.tileItemOnLeave);
             this.tileGroup2.Name = "tileGroup2";
             this.tileGroup2.Text = null;
+            // 
+            // tileItemAll
+            // 
             tileItemElement1.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement1.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement1.Appearance.Normal.Options.UseFont = true;
@@ -209,6 +237,9 @@ namespace DevExpress.DevAV.Modules {
             this.tileItemAll.Id = 0;
             this.tileItemAll.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemAll.Name = "tileItemAll";
+            // 
+            // tileItemSalaried
+            // 
             tileItemElement3.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement3.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement3.Appearance.Normal.Options.UseFont = true;
@@ -222,14 +253,17 @@ namespace DevExpress.DevAV.Modules {
             tileItemElement3.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
             tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement4.Text = "Salaried";
+            tileItemElement4.Text = "SilentBusters";
             tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemSalaried.Elements.Add(tileItemElement3);
             this.tileItemSalaried.Elements.Add(tileItemElement4);
             this.tileItemSalaried.Id = 1;
             this.tileItemSalaried.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemSalaried.Name = "tileItemSalaried";
-            this.tileItemSalaried.Tag = "Salaried";
+            this.tileItemSalaried.Tag = "SilentBusters";
+            // 
+            // tileItemCommission
+            // 
             tileItemElement5.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement5.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement5.Appearance.Normal.Options.UseFont = true;
@@ -243,14 +277,17 @@ namespace DevExpress.DevAV.Modules {
             tileItemElement5.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
             tileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement6.Text = "Commission";
+            tileItemElement6.Text = "TeamX";
             tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemCommission.Elements.Add(tileItemElement5);
             this.tileItemCommission.Elements.Add(tileItemElement6);
             this.tileItemCommission.Id = 2;
             this.tileItemCommission.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemCommission.Name = "tileItemCommission";
-            this.tileItemCommission.Tag = "Commission";
+            this.tileItemCommission.Tag = "TeamX";
+            // 
+            // tileItemContract
+            // 
             tileItemElement7.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement7.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement7.Appearance.Normal.Options.UseFont = true;
@@ -264,14 +301,17 @@ namespace DevExpress.DevAV.Modules {
             tileItemElement7.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
             tileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement8.Text = "Contract";
+            tileItemElement8.Text = "TeamY";
             tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemContract.Elements.Add(tileItemElement7);
             this.tileItemContract.Elements.Add(tileItemElement8);
             this.tileItemContract.Id = 3;
             this.tileItemContract.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemContract.Name = "tileItemContract";
-            this.tileItemContract.Tag = "Contract";
+            this.tileItemContract.Tag = "TeamY";
+            // 
+            // tileItemTerminated
+            // 
             tileItemElement9.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement9.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement9.Appearance.Normal.Options.UseFont = true;
@@ -285,14 +325,17 @@ namespace DevExpress.DevAV.Modules {
             tileItemElement9.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement10.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement10.Image")));
             tileItemElement10.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement10.Text = "Terminated";
+            tileItemElement10.Text = "TeamZ";
             tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemTerminated.Elements.Add(tileItemElement9);
             this.tileItemTerminated.Elements.Add(tileItemElement10);
             this.tileItemTerminated.Id = 4;
             this.tileItemTerminated.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemTerminated.Name = "tileItemTerminated";
-            this.tileItemTerminated.Tag = "Terminated";
+            this.tileItemTerminated.Tag = "TeamZ";
+            // 
+            // tileItemOnLeave
+            // 
             tileItemElement11.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement11.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement11.Appearance.Normal.Options.UseFont = true;
@@ -306,14 +349,17 @@ namespace DevExpress.DevAV.Modules {
             tileItemElement11.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement12.Image")));
             tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement12.Text = "On Leave";
+            tileItemElement12.Text = "TeamW";
             tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemOnLeave.Elements.Add(tileItemElement11);
             this.tileItemOnLeave.Elements.Add(tileItemElement12);
             this.tileItemOnLeave.Id = 5;
             this.tileItemOnLeave.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemOnLeave.Name = "tileItemOnLeave";
-            this.tileItemOnLeave.Tag = "OnLeave";
+            this.tileItemOnLeave.Tag = "TeamWTF";
+            // 
+            // layoutControl1
+            // 
             this.layoutControl1.AllowCustomization = false;
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.flyoutPanel1);
@@ -328,6 +374,9 @@ namespace DevExpress.DevAV.Modules {
             this.layoutControl1.Size = new System.Drawing.Size(948, 568);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // gridControl1
+            // 
             this.gridControl1.DataSource = this.employeeBindingSource;
             this.gridControl1.Location = new System.Drawing.Point(274, 45);
             this.gridControl1.MainView = this.tileView1;
@@ -337,6 +386,9 @@ namespace DevExpress.DevAV.Modules {
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tileView1});
             this.gridControl1.Load += new System.EventHandler(this.gridControl1_Load);
+            // 
+            // tileView1
+            // 
             this.tileView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colDepartment,
             this.colTitle,
@@ -373,7 +425,6 @@ namespace DevExpress.DevAV.Modules {
             this.tileView1.OptionsTiles.VerticalContentAlignment = DevExpress.Utils.VertAlignment.Top;
             tileViewItemElement1.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             tileViewItemElement1.Appearance.Normal.Options.UseBackColor = true;
-            tileViewItemElement1.Column = null;
             tileViewItemElement1.Height = 31;
             tileViewItemElement1.StretchHorizontal = true;
             tileViewItemElement1.Text = "";
@@ -393,7 +444,6 @@ namespace DevExpress.DevAV.Modules {
             tileViewItemElement4.AnchorIndent = 10;
             tileViewItemElement4.Appearance.Normal.ForeColor = System.Drawing.Color.Gray;
             tileViewItemElement4.Appearance.Normal.Options.UseForeColor = true;
-            tileViewItemElement4.Column = null;
             tileViewItemElement4.Text = "ADDRESS";
             tileViewItemElement5.AnchorElementIndex = 3;
             tileViewItemElement5.AnchorIndent = 0;
@@ -405,7 +455,6 @@ namespace DevExpress.DevAV.Modules {
             tileViewItemElement6.AnchorIndent = 10;
             tileViewItemElement6.Appearance.Normal.ForeColor = System.Drawing.Color.Gray;
             tileViewItemElement6.Appearance.Normal.Options.UseForeColor = true;
-            tileViewItemElement6.Column = null;
             tileViewItemElement6.Text = "PHONE";
             tileViewItemElement7.AnchorElementIndex = 5;
             tileViewItemElement7.AnchorIndent = 0;
@@ -414,7 +463,6 @@ namespace DevExpress.DevAV.Modules {
             tileViewItemElement8.AnchorElementIndex = 6;
             tileViewItemElement8.Appearance.Normal.ForeColor = System.Drawing.Color.Gray;
             tileViewItemElement8.Appearance.Normal.Options.UseForeColor = true;
-            tileViewItemElement8.Column = null;
             tileViewItemElement8.Text = "EMAIL";
             tileViewItemElement9.AnchorElementIndex = 7;
             tileViewItemElement9.AnchorIndent = 0;
@@ -429,71 +477,122 @@ namespace DevExpress.DevAV.Modules {
             this.tileView1.TileTemplate.Add(tileViewItemElement7);
             this.tileView1.TileTemplate.Add(tileViewItemElement8);
             this.tileView1.TileTemplate.Add(tileViewItemElement9);
+            // 
+            // colDepartment
+            // 
             this.colDepartment.FieldName = "Department";
             this.colDepartment.Name = "colDepartment";
             this.colDepartment.Visible = true;
             this.colDepartment.VisibleIndex = 0;
+            // 
+            // colTitle
+            // 
             this.colTitle.FieldName = "Title";
             this.colTitle.Name = "colTitle";
             this.colTitle.Visible = true;
             this.colTitle.VisibleIndex = 1;
+            // 
+            // colStatus
+            // 
             this.colStatus.FieldName = "Status";
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 2;
+            // 
+            // colHireDate
+            // 
             this.colHireDate.FieldName = "HireDate";
             this.colHireDate.Name = "colHireDate";
             this.colHireDate.Visible = true;
             this.colHireDate.VisibleIndex = 3;
+            // 
+            // colPersonalProfile
+            // 
             this.colPersonalProfile.FieldName = "PersonalProfile";
             this.colPersonalProfile.Name = "colPersonalProfile";
             this.colPersonalProfile.Visible = true;
             this.colPersonalProfile.VisibleIndex = 4;
+            // 
+            // colProbationReason
+            // 
             this.colProbationReason.FieldName = "ProbationReason";
             this.colProbationReason.Name = "colProbationReason";
             this.colProbationReason.Visible = true;
             this.colProbationReason.VisibleIndex = 5;
+            // 
+            // colFirstName
+            // 
             this.colFirstName.FieldName = "FirstName";
             this.colFirstName.Name = "colFirstName";
             this.colFirstName.Visible = true;
             this.colFirstName.VisibleIndex = 6;
+            // 
+            // colLastName
+            // 
             this.colLastName.FieldName = "LastName";
             this.colLastName.Name = "colLastName";
             this.colLastName.Visible = true;
             this.colLastName.VisibleIndex = 7;
+            // 
+            // colPrefix
+            // 
             this.colPrefix.FieldName = "Prefix";
             this.colPrefix.Name = "colPrefix";
             this.colPrefix.Visible = true;
             this.colPrefix.VisibleIndex = 9;
+            // 
+            // colSkype
+            // 
             this.colSkype.FieldName = "Skype";
             this.colSkype.Name = "colSkype";
             this.colSkype.Visible = true;
             this.colSkype.VisibleIndex = 13;
+            // 
+            // colBirthDate
+            // 
             this.colBirthDate.FieldName = "BirthDate";
             this.colBirthDate.Name = "colBirthDate";
             this.colBirthDate.Visible = true;
             this.colBirthDate.VisibleIndex = 14;
+            // 
+            // colPicture
+            // 
             this.colPicture.FieldName = "Picture";
             this.colPicture.Name = "colPicture";
             this.colPicture.Visible = true;
             this.colPicture.VisibleIndex = 15;
+            // 
+            // colPictureId
+            // 
             this.colPictureId.FieldName = "PictureId";
             this.colPictureId.Name = "colPictureId";
             this.colPictureId.Visible = true;
             this.colPictureId.VisibleIndex = 16;
+            // 
+            // colFullNameBindable
+            // 
             this.colFullNameBindable.FieldName = "FullNameBindable";
             this.colFullNameBindable.Name = "colFullNameBindable";
             this.colFullNameBindable.Visible = true;
             this.colFullNameBindable.VisibleIndex = 19;
+            // 
+            // colId
+            // 
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             this.colId.Visible = true;
             this.colId.VisibleIndex = 20;
+            // 
+            // flyoutPanel1
+            // 
             this.flyoutPanel1.Location = new System.Drawing.Point(1184, 95);
             this.flyoutPanel1.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.flyoutPanel1.Name = "flyoutPanel1";
             this.flyoutPanel1.Size = new System.Drawing.Size(241, 298);
             this.flyoutPanel1.TabIndex = 4;
+            // 
+            // layoutControlGroup1
+            // 
             this.layoutControlGroup1.CustomizationFormText = "Root";
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
@@ -507,6 +606,9 @@ namespace DevExpress.DevAV.Modules {
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 0);
             this.layoutControlGroup1.Size = new System.Drawing.Size(948, 568);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // tileControlLayoutItem
+            // 
             this.tileControlLayoutItem.Control = this.filterTileControl;
             this.tileControlLayoutItem.CustomizationFormText = "tileControlLayoutItem";
             this.tileControlLayoutItem.Location = new System.Drawing.Point(0, 45);
@@ -519,6 +621,9 @@ namespace DevExpress.DevAV.Modules {
             this.tileControlLayoutItem.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.tileControlLayoutItem.TextSize = new System.Drawing.Size(0, 0);
             this.tileControlLayoutItem.TextVisible = false;
+            // 
+            // buttonHide
+            // 
             this.buttonHide.AllowHotTrack = false;
             this.buttonHide.AppearanceItemCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.buttonHide.CustomizationFormText = " ";
@@ -533,6 +638,9 @@ namespace DevExpress.DevAV.Modules {
             this.buttonHide.Text = " ";
             this.buttonHide.TextSize = new System.Drawing.Size(148, 20);
             this.buttonHide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.simpleLabelItem1_MouseDown);
+            // 
+            // simpleLabelItem2
+            // 
             this.simpleLabelItem2.AllowHotTrack = false;
             this.simpleLabelItem2.AllowHtmlStringInCaption = true;
             this.simpleLabelItem2.AppearanceItemCaption.FontSizeDelta = 3;
@@ -548,6 +656,9 @@ namespace DevExpress.DevAV.Modules {
             this.simpleLabelItem2.Size = new System.Drawing.Size(868, 45);
             this.simpleLabelItem2.Text = "EMPLOYEE <color=47, 81, 165>Status";
             this.simpleLabelItem2.TextSize = new System.Drawing.Size(148, 25);
+            // 
+            // layoutControlItem1
+            // 
             this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(234, 45);
@@ -556,6 +667,9 @@ namespace DevExpress.DevAV.Modules {
             this.layoutControlItem1.Size = new System.Drawing.Size(634, 523);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControl2
+            // 
             this.layoutControl2.AutoScroll = false;
             this.layoutControl2.Controls.Add(this.printEmployeeListButton);
             this.layoutControl2.Controls.Add(this.printEmployeeDirectoryButton);
@@ -573,6 +687,9 @@ namespace DevExpress.DevAV.Modules {
             this.layoutControl2.Size = new System.Drawing.Size(215, 273);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // printEmployeeListButton
+            // 
             this.printEmployeeListButton.EditValue = ((object)(resources.GetObject("printEmployeeListButton.EditValue")));
             this.printEmployeeListButton.Location = new System.Drawing.Point(15, 185);
             this.printEmployeeListButton.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
@@ -583,6 +700,9 @@ namespace DevExpress.DevAV.Modules {
             this.printEmployeeListButton.StyleController = this.layoutControl2;
             this.printEmployeeListButton.TabIndex = 6;
             this.printEmployeeListButton.Click += new System.EventHandler(this.printEmployeeListItem_Click);
+            // 
+            // printEmployeeDirectoryButton
+            // 
             this.printEmployeeDirectoryButton.EditValue = ((object)(resources.GetObject("printEmployeeDirectoryButton.EditValue")));
             this.printEmployeeDirectoryButton.Location = new System.Drawing.Point(15, 100);
             this.printEmployeeDirectoryButton.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
@@ -593,6 +713,9 @@ namespace DevExpress.DevAV.Modules {
             this.printEmployeeDirectoryButton.StyleController = this.layoutControl2;
             this.printEmployeeDirectoryButton.TabIndex = 5;
             this.printEmployeeDirectoryButton.Click += new System.EventHandler(this.printEmployeeDirectoryItem_Click);
+            // 
+            // printEmployeeProfile
+            // 
             this.printEmployeeProfile.EditValue = ((object)(resources.GetObject("printEmployeeProfile.EditValue")));
             this.printEmployeeProfile.Location = new System.Drawing.Point(15, 15);
             this.printEmployeeProfile.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
@@ -603,6 +726,9 @@ namespace DevExpress.DevAV.Modules {
             this.printEmployeeProfile.StyleController = this.layoutControl2;
             this.printEmployeeProfile.TabIndex = 4;
             this.printEmployeeProfile.Click += new System.EventHandler(this.printEmployeeProfileItem_Click);
+            // 
+            // layoutControlGroup2
+            // 
             this.layoutControlGroup2.CustomizationFormText = "layoutControlGroup2";
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup2.GroupBordersVisible = false;
@@ -615,6 +741,9 @@ namespace DevExpress.DevAV.Modules {
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(221, 285);
             this.layoutControlGroup2.TextVisible = false;
+            // 
+            // printEmployeeProfileItem
+            // 
             this.printEmployeeProfileItem.Control = this.printEmployeeProfile;
             this.printEmployeeProfileItem.CustomizationFormText = "Employee Profile";
             this.printEmployeeProfileItem.Location = new System.Drawing.Point(0, 0);
@@ -625,6 +754,9 @@ namespace DevExpress.DevAV.Modules {
             this.printEmployeeProfileItem.TextLocation = DevExpress.Utils.Locations.Right;
             this.printEmployeeProfileItem.TextSize = new System.Drawing.Size(131, 20);
             this.printEmployeeProfileItem.Click += new System.EventHandler(this.printEmployeeProfileItem_Click);
+            // 
+            // printEmployeeDirectoryItem
+            // 
             this.printEmployeeDirectoryItem.Control = this.printEmployeeDirectoryButton;
             this.printEmployeeDirectoryItem.CustomizationFormText = "Employee Directory";
             this.printEmployeeDirectoryItem.Location = new System.Drawing.Point(0, 85);
@@ -635,6 +767,9 @@ namespace DevExpress.DevAV.Modules {
             this.printEmployeeDirectoryItem.TextLocation = DevExpress.Utils.Locations.Right;
             this.printEmployeeDirectoryItem.TextSize = new System.Drawing.Size(131, 20);
             this.printEmployeeDirectoryItem.Click += new System.EventHandler(this.printEmployeeDirectoryItem_Click);
+            // 
+            // printEmployeeListItem
+            // 
             this.printEmployeeListItem.Control = this.printEmployeeListButton;
             this.printEmployeeListItem.CustomizationFormText = "Employee List";
             this.printEmployeeListItem.Location = new System.Drawing.Point(0, 170);
@@ -645,12 +780,18 @@ namespace DevExpress.DevAV.Modules {
             this.printEmployeeListItem.TextLocation = DevExpress.Utils.Locations.Right;
             this.printEmployeeListItem.TextSize = new System.Drawing.Size(131, 20);
             this.printEmployeeListItem.Click += new System.EventHandler(this.printEmployeeListItem_Click);
+            // 
+            // emptySpaceItem1
+            // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 255);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(201, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // Teams
+            // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
