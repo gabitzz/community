@@ -536,6 +536,18 @@ namespace DevExpress.MailClient.Win {
             gridControl1.DoDragDrop(new DragSelection() { Rows = dragSelection }, DragDropEffects.Move);
         }
 
+        private void gridView1_RowStyle(object sender, RowStyleEventArgs e)
+        {
+            var row = gridView1.GetRow(e.RowHandle) as Message;
+            if(row != null)
+            {
+                if (!row.IsUnread)
+                {
+                    e.Appearance.Font = new Font(e.Appearance.Font.Name, 8.25F, FontStyle.Regular);
+                }
+            }
+        }
+
         internal void OnMoveEmails(ucMailTree tree, UCTreeDragDropEventArgs e) {
 
             List<Message> messages = new List<Message>();

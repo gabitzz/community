@@ -16,6 +16,7 @@ using DevExpress.XtraBars.Docking2010.Customization;
 using DevExpress.Utils.Menu;
 using DevExpress.Utils.Taskbar.Core;
 using DevExpress.Utils.Taskbar;
+using DevExpress.XtraSplashScreen;
 
 namespace DevExpress.DevAV {
     public partial class MainForm : XtraForm, IMainModule, ISwipeGestureClient {
@@ -35,7 +36,7 @@ namespace DevExpress.DevAV {
         }
 
         void ShowSplashScreen() {
-            DevExpress.XtraSplashScreen.SplashScreenManager.ShowDefaultSplashScreen(this, true, true, "Silent Busters", "We are the community");
+            SplashScreenManager.ShowForm(null, typeof(CommunitySplashScreen), true, true, false, 500);
         }
         void MainForm_Load(object sender, EventArgs e) {
             InitTileBar();

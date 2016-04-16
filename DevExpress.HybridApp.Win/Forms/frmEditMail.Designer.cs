@@ -25,9 +25,9 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditMail));
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling3 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling4 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraRichEdit.Model.BorderInfo borderInfo2 = new DevExpress.XtraRichEdit.Model.BorderInfo();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling1 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling2 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraRichEdit.Model.BorderInfo borderInfo1 = new DevExpress.XtraRichEdit.Model.BorderInfo();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.flyoutPanel1 = new DevExpress.Utils.FlyoutPanel();
             this.lblDescription = new DevExpress.XtraEditors.LabelControl();
@@ -499,6 +499,7 @@
             // changeFontNameItem1
             // 
             this.changeFontNameItem1.Edit = this.repositoryItemFontEdit1;
+            resources.ApplyResources(this.changeFontNameItem1, "changeFontNameItem1");
             this.changeFontNameItem1.Id = 21;
             this.changeFontNameItem1.Name = "changeFontNameItem1";
             // 
@@ -527,6 +528,7 @@
             // 
             this.richEditControl.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Draft;
             resources.ApplyResources(this.richEditControl, "richEditControl");
+            this.richEditControl.EnableToolTips = true;
             this.richEditControl.MenuManager = this.ribbonControl;
             this.richEditControl.Name = "richEditControl";
             this.richEditControl.Options.DocumentCapabilities.Bookmarks = DevExpress.XtraRichEdit.DocumentCapability.Disabled;
@@ -536,10 +538,12 @@
             this.richEditControl.Options.Export.Html.EmbedImages = true;
             this.richEditControl.Options.Export.Html.HtmlNumberingListExportFormat = DevExpress.XtraRichEdit.Export.Html.HtmlNumberingListExportFormat.PlainTextFormat;
             this.richEditControl.Options.Export.Mht.HtmlNumberingListExportFormat = DevExpress.XtraRichEdit.Export.Html.HtmlNumberingListExportFormat.PlainTextFormat;
+            this.richEditControl.Options.Export.PlainText.ExportFinalParagraphMark = DevExpress.XtraRichEdit.Export.PlainText.ExportFinalParagraphMark.Never;
+            this.richEditControl.Options.Fields.UpdateFieldsInTextBoxes = false;
             this.richEditControl.Options.HorizontalRuler.Visibility = DevExpress.XtraRichEdit.RichEditRulerVisibility.Hidden;
             this.richEditControl.Options.VerticalRuler.Visibility = DevExpress.XtraRichEdit.RichEditRulerVisibility.Hidden;
             this.richEditControl.SpellChecker = this.spellChecker1;
-            this.spellChecker1.SetSpellCheckerOptions(this.richEditControl, optionsSpelling3);
+            this.spellChecker1.SetSpellCheckerOptions(this.richEditControl, optionsSpelling1);
             this.richEditControl.SelectionChanged += new System.EventHandler(this.richEditControl_SelectionChanged);
             this.richEditControl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richEditControl_KeyDown);
             // 
@@ -555,7 +559,7 @@
             this.edtSubject.MenuManager = this.ribbonControl;
             this.edtSubject.Name = "edtSubject";
             this.spellChecker1.SetShowSpellCheckMenu(this.edtSubject, true);
-            this.spellChecker1.SetSpellCheckerOptions(this.edtSubject, optionsSpelling4);
+            this.spellChecker1.SetSpellCheckerOptions(this.edtSubject, optionsSpelling2);
             this.edtSubject.EditValueChanged += new System.EventHandler(this.edtSubject_EditValueChanged);
             // 
             // fontSizeIncreaseItem1
@@ -802,13 +806,13 @@
             // changeTableBorderLineStyleItem1
             // 
             this.changeTableBorderLineStyleItem1.Edit = this.repositoryItemBorderLineStyle1;
-            borderInfo2.Color = System.Drawing.Color.Black;
-            borderInfo2.Frame = false;
-            borderInfo2.Offset = 0;
-            borderInfo2.Shadow = false;
-            borderInfo2.Style = DevExpress.XtraRichEdit.Model.BorderLineStyle.Single;
-            borderInfo2.Width = 10;
-            this.changeTableBorderLineStyleItem1.EditValue = borderInfo2;
+            borderInfo1.Color = System.Drawing.Color.Black;
+            borderInfo1.Frame = false;
+            borderInfo1.Offset = 0;
+            borderInfo1.Shadow = false;
+            borderInfo1.Style = DevExpress.XtraRichEdit.Model.BorderLineStyle.Single;
+            borderInfo1.Width = 10;
+            this.changeTableBorderLineStyleItem1.EditValue = borderInfo1;
             resources.ApplyResources(this.changeTableBorderLineStyleItem1, "changeTableBorderLineStyleItem1");
             this.changeTableBorderLineStyleItem1.Id = 88;
             this.changeTableBorderLineStyleItem1.Name = "changeTableBorderLineStyleItem1";
@@ -1025,6 +1029,7 @@
             // 
             this.changeFloatingObjectOutlineWeightItem1.Edit = this.repositoryItemFloatingObjectOutlineWeight1;
             this.changeFloatingObjectOutlineWeightItem1.EditValue = 20;
+            resources.ApplyResources(this.changeFloatingObjectOutlineWeightItem1, "changeFloatingObjectOutlineWeightItem1");
             this.changeFloatingObjectOutlineWeightItem1.Id = 124;
             this.changeFloatingObjectOutlineWeightItem1.Name = "changeFloatingObjectOutlineWeightItem1";
             // 

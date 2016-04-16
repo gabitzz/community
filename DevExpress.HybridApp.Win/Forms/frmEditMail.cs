@@ -60,7 +60,6 @@ namespace DevExpress.MailClient.Win {
             this.messageFrom = message.From;
             if(!newMessage) {
                 splitContainerControl1.Collapsed = LayoutOption.MailCollapsed;
-                lblTo.Text = string.Format("{0}:", caption);
                 edtTo.Properties.ReadOnly = true;
                 edtSubject.Properties.ReadOnly = true;
                 richEditControl.ReadOnly = true;
@@ -233,8 +232,17 @@ namespace DevExpress.MailClient.Win {
                 message.To.Add(receivers);
                 message.Body = richEditControl.Text;
                 message.Subject = edtSubject.Text;
+                AddAttachementsTo(message);
             }
             return message;
+        }
+
+        private void AddAttachementsTo(MailMessage mailMessage)
+        {
+            foreach (TokenEditToken tokenEditAttachement in tokenEditAttachements.GetTokenList())
+            {
+                mailMessage.Attachments.Add(new Attachment(tokenEditAttachement.Value.ToString()));
+            }
         }
 
         private string GetEmailReceivers()
