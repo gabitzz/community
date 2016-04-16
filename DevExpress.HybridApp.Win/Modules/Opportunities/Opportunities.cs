@@ -56,8 +56,8 @@ namespace DevExpress.DevAV.Modules {
             var listBI = new List<ButtonInfo>();
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Refresh", Name = "1", Image = Properties.Resources.Refresh, mouseEventHandler = refreshPage });
             listBI.Add(new ButtonInfo());
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "LifeStyle", Name = "1", Image = Properties.Resources.Refresh, mouseEventHandler = openLifeStyle });
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Tehnic", Name = "1", Image = Properties.Resources.Refresh, mouseEventHandler = openTehnic });
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "LifeStyle", Name = "1", Image = Properties.Resources.lifestyle, mouseEventHandler = openLifeStyle });
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Tehnic", Name = "1", Image = Properties.Resources.tehnic, mouseEventHandler = openTehnic });
             listBI.Add(new ButtonInfo());
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Back", Name = "2", Image = Properties.Resources.ArrowLeft, mouseEventHandler = goToPreviousPage });
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Next", Name = "3", Image = Properties.Resources.ArrowRight, mouseEventHandler = goToNextPage });

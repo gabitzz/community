@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DevExpress.DevAV</RootNamespace>
     <AssemblyName>DevExpress.HybridApp.Win</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -279,6 +279,10 @@
       </HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="OpenPop, Version=2.0.6.1120, Culture=neutral, PublicKeyToken=6bdb97f144b7efc8, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenPop.NET.2.0.6.1120\lib\net40\OpenPop.dll</HintPath>
       <Private>True</Private>
@@ -299,6 +303,7 @@
     <Reference Include="System.Core">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.SQLite, Version=1.0.97.0, Culture=neutral, PublicKeyToken=4c3bc44151be4b47">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>
@@ -314,6 +319,9 @@
     <Reference Include="System.Management">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq">
       <Private>False</Private>
@@ -398,6 +406,12 @@
     <Compile Include="Controls\Messages\Helpers\Message.cs" />
     <Compile Include="Controls\Messages\Helpers\ObjectHelper.cs" />
     <Compile Include="Controls\Messages\Helpers\Rules\SubjectFilterRule.cs" />
+    <Compile Include="Forms\CommunitySplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommunitySplashScreen.Designer.cs">
+      <DependentUpon>CommunitySplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EmailRulesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -405,6 +419,7 @@
       <DependentUpon>EmailRulesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Messages\Helpers\Rules\MessageFilterEvaluator.cs" />
+    <Compile Include="Helpers\.cs" />
     <Compile Include="Helpers\TextHelper.cs" />
     <Compile Include="Controls\Messages\Helpers\TokenEditHelper.cs" />
     <Compile Include="Controls\Messages\MyTreeList.cs">
@@ -454,6 +469,7 @@
     <Compile Include="Helpers\ItemsSourceExtensions.cs" />
     <Compile Include="Helpers\LabelTabController.cs" />
     <Compile Include="Helpers\PinnedItem.cs" />
+    <Compile Include="Helpers\WebApiHelper.cs" />
     <Compile Include="Helpers\XmlElementExtensions.cs" />
     <Compile Include="Modules\BaseModule.cs">
       <SubType>UserControl</SubType>
@@ -722,6 +738,7 @@
     <Compile Include="ViewModels\Product\ProductCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Product\ProductViewModel.cs" />
     <Compile Include="ViewModels\Product\ProductViewModel.partial.cs" />
+    <Compile Include="ViewModels\ProviderMenuItem\MenuItemViewModel.cs" />
     <Compile Include="ViewModels\ProviderMenuItem\ProviderMenuItemModel.cs" />
     <Compile Include="ViewModels\ProviderMenuItem\ProviderMenuItemModel.partial.cs" />
     <Compile Include="ViewModels\Quote\QuoteCollectionViewModel.cs" />
@@ -738,6 +755,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ucMessageInfo.resx">
       <DependentUpon>ucMessageInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommunitySplashScreen.resx">
+      <DependentUpon>CommunitySplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmailRulesForm.resx">
       <DependentUpon>EmailRulesForm.cs</DependentUpon>
@@ -922,12 +942,16 @@
     </Content>
     <None Include="Resources\delete.png" />
     <None Include="Resources\forward.png" />
+    <None Include="Resources\communityLogo2.png" />
+    <None Include="Resources\communityLogo.bmp" />
+    <None Include="Resources\lifestyle.png" />
     <Content Include="Resources\Meal\fast-food.png" />
     <None Include="Resources\Meal\fast-food_25x25.png" />
     <None Include="Resources\Meal\meal_25x25.png" />
     <None Include="Resources\Meal\meal_32x32.png" />
     <None Include="Resources\reply.png" />
     <None Include="Resources\replyall.png" />
+    <None Include="Resources\tehnic.png" />
     <Content Include="Resources\Toolbar\Back.png" />
     <Content Include="Resources\Toolbar\Forward.png" />
     <EmbeddedResource Include="Resources\Toolbar\SortAZ.png" />
@@ -943,6 +967,7 @@
     </None>
     <Content Include="Data\Mail.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Icons\DevExpress.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -1054,7 +1079,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommunityData\CommunityData.csproj">
       <Project>{af8f8aeb-1177-4eb9-bdd0-7a71a026df51}</Project>

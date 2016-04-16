@@ -8,6 +8,7 @@ using DevExpress.DevAV.Controls.Messages.Helpers;
 using DevExpress.DevAV.Helpers;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraEditors.Mask;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
@@ -33,9 +34,22 @@ namespace DevExpress.DevAV.Forms
             gridControl1.DataSource = _xmlDataSet.Tables["EmailRule"];
 
             gridView1.Columns["To"].Visible = false;
-            gridView1.Columns["From"].Width = 130;
+           
+            SetFromEditor();
 
             SetMoveToEditor();
+
+        }
+
+        private void SetFromEditor()
+        {
+            var emailTextEdit = new RepositoryItemTextEdit();
+            emailTextEdit.Mask.MaskType = MaskType.RegEx;
+            emailTextEdit.Mask.EditMask = @"[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}";
+
+            gridView1.Columns["From"].ColumnEdit = emailTextEdit;
+            gridView1.Columns["From"].Width = 130;
+
         }
 
         private void SetMoveToEditor()

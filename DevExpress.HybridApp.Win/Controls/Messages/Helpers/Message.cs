@@ -30,12 +30,12 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
         public Message(DataRow row)
         {
             this.row = row;
-            this.date = ((DateTime)row["Date"]).Add(DateTime.Now - DataHelper.LastMailDate);
+            this.date = ((DateTime)row["Date"]);
             this.from = string.Format("{0}", row["From"]);
             this.subject = string.Format("{0}", row["Subject"]);
             this.isReply = (bool)row["IsReply"];
             this.hasAttachment = (bool)row["HasAttachment"];
-            this.read = Delay > TimeSpan.FromHours(6);
+            this.read = Delay > TimeSpan.FromHours(2);
             if (Delay > TimeSpan.FromHours(50) && Delay < TimeSpan.FromHours(100)) read = false;
             this.text = string.Format("{0}", row["Text"]);
             this.deleted = false;
@@ -47,6 +47,7 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
             mailType = MailType.Inbox;
             mailFolder = (int)GetFolder(row);
             DataTweaking();
+            Attachments = row["Attachments"].ToString();
         }
 
         public DateTime Date { get { return date; } set { date = value; } }
@@ -61,6 +62,8 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
         internal string Folder { get { return string.Format("{0}", mailFolder); } }
         public string Text { get { return text; } set { text = value; } }
         public string PlainText { get { return GetPlainText(); } }
+        // For the moment the file names will be comma delimited
+        public string Attachments { get; set; }
 
         string GetPlainText()
         {
@@ -125,6 +128,7 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
             row["HasAttachment"] = hasAttachment;
             row["Folder"] = MailFolder.ToString();
             row["IsReply"] = IsReply;
+            row["Attachments"] = Attachments;
         }
     }
 

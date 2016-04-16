@@ -17,27 +17,30 @@ using DevExpress.XtraBars.Docking2010.Customization;
 using System.Windows.Forms;
 using DevExpress.DevAV.Forms;
 using System.IO;
-using System.Xml.Serialization;
+using System.Threading.Tasks;
+using DevExpress.XtraLayout;
+using DevExpress.XtraCharts;
+using System.Drawing;
 
 namespace DevExpress.DevAV.Modules
 {
     public partial class Meal : BaseModuleControl
     {
+        private List<MenuItemViewModel> _menuItemsViewModel;
         //BaseItemCollection hideItemCollection = new BaseItemCollection();
         TileBar productTileBar;
-        //string currentFilter = null;
-        //private List<PinnedItem> pins;
-
-        //private PinnedItem currentPin;
-
-        //private List<ButtonInfo> listBI;
-        //private ButtonInfo pinBtn;
-        //private ButtonInfo unpinBtn;
-
+        public List<MenuItemViewModel> MenuItemsViewModel
+        {
+            get { return _menuItemsViewModel; }
+            set { _menuItemsViewModel = value; }
+        }
 
         public Meal()
             : base(CreateViewModel<ProductCollectionViewModel>) {
+            _menuItemsViewModel = new List<MenuItemViewModel>();
             InitializeComponent();
+            //LoadData();
+
             //((ITileControl)tileControl).Properties.LargeItemWidth = 200;
             //UpdateTileAndItems();
             ////viewProducts.DataController.Refreshed += DataController_Refreshed;
@@ -91,6 +94,7 @@ namespace DevExpress.DevAV.Modules
             base.OnTransitionCompleted();
             InitializeButtonPanel();
             LoadData();
+            BottomPanel.Visible = false;
         }
 
         void SubscribeTileBarProductsFilter()
@@ -144,10 +148,60 @@ namespace DevExpress.DevAV.Modules
         }
         void LoadData()
         {
-            //productsSource.SetItemsSource(ViewModel.Entities);
+            try
+            {
+                //productsSource.SetItemsSource(ViewModel.Entities);
 
-            string serializationFile = Path.Combine(Constants.BASE_DATA_PATH, "Pins.xml");
+                Task<List<ProviderMenuItem>> task = Task.Run(() => WebApiHelper.GetAllProducts());
+                task.Wait();
 
+                var list = task.Result;
+                if (list == null) return;
+                ChartControl[] chartsControl = { chartControl2, chartControl1, chartControl5, chartControl6, chartControl3, chartControl4 };
+                string paletteName = "paletteName";
+                PaletteEntry entry1 = new PaletteEntry(Color.Red, Color.Green);
+                Palette palette = new Palette(paletteName, new PaletteEntry[] { entry1 });
+                for (int i = 0; i < list.Count; i++)
+                {
+                    var item = list[i];
+                    //LayoutControlItem item2 = layoutControl2.Root.AddItem();
+                    // Set the item's Control and caption.
+                    //item2.Name = item.Code ?? string.Empty;
+                    //Control label = new LabelControl();
+                    //label.Name = string.Format("label{0}", item.Code);
+                    //label.Text = item.Name;
+                    //item2.Control = label;
+                    //item2.Text = item.Code;
+
+                    // Create a doughnut series.
+                    Series series1 = new Series("Doughnut Series 1", ViewType.Doughnut);
+                    series1.Label.TextPattern = "{V}";
+                    // Populate the series with points.
+                    var likeSeriesPoint = new SeriesPoint("Like", item.LikeCount);
+                    var dislikeSeriesPoint = new SeriesPoint("Dislike", item.DislikeCount);
+                    likeSeriesPoint.Color = Color.Green;
+                    dislikeSeriesPoint.Color = Color.Red;
+                    series1.Points.Add(likeSeriesPoint);
+                    series1.Points.Add(dislikeSeriesPoint);
+
+                    // Add the series to the chart.
+                    if (i < chartsControl.Length)
+                    {
+                        chartsControl[i].Titles.Clear();
+                        var title = new ChartTitle();
+                        title.Text = string.Format("{0}-{1}", item.Code.ToUpper(), item.Name);
+                        title.Font = new Font(FontFamily.GenericSansSerif, 18.0F, FontStyle.Bold);
+                        chartsControl[i].Titles.Add(title);
+                        chartsControl[i].Series.Clear();
+                        chartsControl[i].Series.Add(series1);
+                    }
+
+
+                }
+            }
+            catch (Exception)
+            {
+            }
             //XmlSerializer serializer = new XmlSerializer(typeof(List<PinnedItem>));
             //if (File.Exists(Path.Combine(Constants.BASE_DATA_PATH, "Pins.xml")))
             //{
@@ -310,89 +364,22 @@ namespace DevExpress.DevAV.Modules
 
         void UpdateTileFilter(TileItem tileItem)
         {
-            //string filter = (string)tileItem.Tag;
-            //if (filter == currentFilter) return;
-            //currentFilter = filter;
 
-            //ProductCategory category = ProductCategory.Automation;
-            //if (!Enum.TryParse<ProductCategory>(currentFilter, out category))
-            //{
-            //    currentFilter = null;
-            //}
-            ////viewProducts.ActiveFilter.Clear();
-            ////  if(currentFilter != null) viewProducts.ActiveFilter.Add(viewProducts.Columns["Category"], new ColumnFilterInfo(CriteriaOperator.Parse("Category == ?", category)));
-            ////tileItem.Text = viewProducts.RowCount.ToString();
         }
         private void tileControl_ItemClick(object sender, TileItemEventArgs e)
         {
             UpdateTileFilter(e.Item);
         }
-
-
-        //void hideButton_Click(object sender, EventArgs e)
-        ////{
-        ////    if (tileControlLCI.Visibility == XtraLayout.Utils.LayoutVisibility.Always)
-        ////    {
-        ////        ItemsHideHelper.Hide(hideItemCollection, hideButton);
-        ////        //productsSLI.Padding = new XtraLayout.Utils.Padding(hideButton.Width, 2, 10, 10);
-
-        ////        return;
-        ////    }
-        ////    if (tileControlLCI.Visibility == XtraLayout.Utils.LayoutVisibility.Never)
-        ////    {
-        ////        ItemsHideHelper.Expand(hideItemCollection, hideButton);
-        ////        //productsSLI.Padding = new XtraLayout.Utils.Padding(2, 2, 10, 10);
-        ////        return;
-        ////    }
-        //}
-
-        //private void viewProducts_FocusedRowObjectChanged(object sender, XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        //{
-        //    ViewModel.SelectedEntity = e.Row as Product;
-        //}
-
-        //private void portalWebBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        //{
-        //    updatePinButtons(portalWebBrowser.Url.AbsoluteUri);
-        //}
-
-        //private void updatePinButtons(string URL)
-        //{
-        //    bool isAlreadyPinned = PinExists(URL);
-        //    pinBtn.Button.Enabled = !isAlreadyPinned;
-        //    unpinBtn.Button.Enabled = isAlreadyPinned;
-        //}
-
-        //private bool PinExists(string currentURL)
-        //{
-        //    currentPin = null;
-        //    bool exists = false;
-        //    foreach (PinnedItem pin in pins)
-        //    {
-        //        if (pin.URL.Equals(currentURL))
-        //        {
-        //            exists = true;
-        //            currentPin = pin;
-        //            break;
-        //        }
-        //    }
-        //    return exists;
-        //}
-
+        
         protected override void OnDisposing()
         {
-            //string serializationFile = Path.Combine(Constants.BASE_DATA_PATH, "Pins.xml");
-            //XmlSerializer serializer = new XmlSerializer(typeof(List<PinnedItem>));
 
-            //using (Stream stream = File.Open(serializationFile, FileMode.Create))
-            //{
-            //    serializer.Serialize(stream, pins);
-            //}
         }
 
         private void chartControl4_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }

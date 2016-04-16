@@ -111,6 +111,26 @@ namespace DevExpress.DevAV.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap communityLogo {
+            get {
+                object obj = ResourceManager.GetObject("communityLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap communityLogo2 {
+            get {
+                object obj = ResourceManager.GetObject("communityLogo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon communityntr {
@@ -186,6 +206,16 @@ namespace DevExpress.DevAV.Properties {
         internal static System.Drawing.Bitmap HighPriority {
             get {
                 object obj = ResourceManager.GetObject("HighPriority", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lifestyle {
+            get {
+                object obj = ResourceManager.GetObject("lifestyle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +316,16 @@ namespace DevExpress.DevAV.Properties {
         internal static System.Drawing.Bitmap replyall {
             get {
                 object obj = ResourceManager.GetObject("replyall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tehnic {
+            get {
+                object obj = ResourceManager.GetObject("tehnic", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
