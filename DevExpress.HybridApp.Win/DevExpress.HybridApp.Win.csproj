@@ -319,12 +319,9 @@
     <Reference Include="System.Management">
       <Private>False</Private>
     </Reference>
-<<<<<<< Updated upstream
     <Reference Include="System.Printing" />
-=======
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http" />
->>>>>>> Stashed changes
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq">
       <Private>False</Private>

@@ -148,55 +148,60 @@ namespace DevExpress.DevAV.Modules
         }
         void LoadData()
         {
-            //productsSource.SetItemsSource(ViewModel.Entities);
-
-            Task<List<ProviderMenuItem>> task = Task.Run(() => WebApiHelper.GetAllProducts());
-            task.Wait();
-
-            var list = task.Result;
-            if (list == null) return;
-            ChartControl[] chartsControl = {chartControl2,chartControl1,chartControl5,chartControl6,chartControl3, chartControl4};
-            string paletteName = "paletteName";
-            PaletteEntry entry1 = new PaletteEntry(Color.Red, Color.Green);
-            Palette palette = new Palette(paletteName, new PaletteEntry[] { entry1 });
-            for (int i = 0; i < list.Count; i++)
+            try
             {
-                var item = list[i];
-                //LayoutControlItem item2 = layoutControl2.Root.AddItem();
-                // Set the item's Control and caption.
-                //item2.Name = item.Code ?? string.Empty;
-                //Control label = new LabelControl();
-                //label.Name = string.Format("label{0}", item.Code);
-                //label.Text = item.Name;
-                //item2.Control = label;
-                //item2.Text = item.Code;
+                //productsSource.SetItemsSource(ViewModel.Entities);
 
-                // Create a doughnut series.
-                Series series1 = new Series("Doughnut Series 1", ViewType.Doughnut);
-                series1.Label.TextPattern = "{V}";
-                // Populate the series with points.
-                var likeSeriesPoint = new SeriesPoint("Like", item.LikeCount);
-                var dislikeSeriesPoint = new SeriesPoint("Dislike", item.DislikeCount);
-                likeSeriesPoint.Color = Color.Green;
-                dislikeSeriesPoint.Color = Color.Red;
-                series1.Points.Add(likeSeriesPoint);
-                series1.Points.Add(dislikeSeriesPoint);
+                Task<List<ProviderMenuItem>> task = Task.Run(() => WebApiHelper.GetAllProducts());
+                task.Wait();
 
-                // Add the series to the chart.
-                if (i< chartsControl.Length)
+                var list = task.Result;
+                if (list == null) return;
+                ChartControl[] chartsControl = { chartControl2, chartControl1, chartControl5, chartControl6, chartControl3, chartControl4 };
+                string paletteName = "paletteName";
+                PaletteEntry entry1 = new PaletteEntry(Color.Red, Color.Green);
+                Palette palette = new Palette(paletteName, new PaletteEntry[] { entry1 });
+                for (int i = 0; i < list.Count; i++)
                 {
-                    chartsControl[i].Titles.Clear();
-                    var title = new ChartTitle();
-                    title.Text = string.Format("{0}-{1}",item.Code,item.Name);
-                    title.Font = new Font(FontFamily.GenericSansSerif, 10.0F, FontStyle.Bold);
-                    chartsControl[i].Titles.Add(title);
-                    chartsControl[i].Series.Clear();
-                    chartsControl[i].Series.Add(series1);
+                    var item = list[i];
+                    //LayoutControlItem item2 = layoutControl2.Root.AddItem();
+                    // Set the item's Control and caption.
+                    //item2.Name = item.Code ?? string.Empty;
+                    //Control label = new LabelControl();
+                    //label.Name = string.Format("label{0}", item.Code);
+                    //label.Text = item.Name;
+                    //item2.Control = label;
+                    //item2.Text = item.Code;
+
+                    // Create a doughnut series.
+                    Series series1 = new Series("Doughnut Series 1", ViewType.Doughnut);
+                    series1.Label.TextPattern = "{V}";
+                    // Populate the series with points.
+                    var likeSeriesPoint = new SeriesPoint("Like", item.LikeCount);
+                    var dislikeSeriesPoint = new SeriesPoint("Dislike", item.DislikeCount);
+                    likeSeriesPoint.Color = Color.Green;
+                    dislikeSeriesPoint.Color = Color.Red;
+                    series1.Points.Add(likeSeriesPoint);
+                    series1.Points.Add(dislikeSeriesPoint);
+
+                    // Add the series to the chart.
+                    if (i < chartsControl.Length)
+                    {
+                        chartsControl[i].Titles.Clear();
+                        var title = new ChartTitle();
+                        title.Text = string.Format("{0}-{1}", item.Code.ToUpper(), item.Name);
+                        title.Font = new Font(FontFamily.GenericSansSerif, 18.0F, FontStyle.Bold);
+                        chartsControl[i].Titles.Add(title);
+                        chartsControl[i].Series.Clear();
+                        chartsControl[i].Series.Add(series1);
+                    }
+
+
                 }
-                
-
             }
-
+            catch (Exception)
+            {
+            }
             //XmlSerializer serializer = new XmlSerializer(typeof(List<PinnedItem>));
             //if (File.Exists(Path.Combine(Constants.BASE_DATA_PATH, "Pins.xml")))
             //{
