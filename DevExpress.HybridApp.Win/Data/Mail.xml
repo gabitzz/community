@@ -5243,4 +5243,15 @@
     <Folder>1</Folder>
     <IsReply>false</IsReply>
   </Messages>
+  <Messages>
+    <Date>2016-04-16T17:07:51+03:00</Date>
+    <From>mihaita.vladut@gmail.com</From>
+    <Subject>Attachments</Subject>
+    <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+    <Attachments>C:\Attachments\3908d147-b734-4d94-87f8-87a5371e0b61\car1.jpg,C:\Attachments\3908d147-b734-4d94-87f8-87a5371e0b61\car2.jpg,C:\Attachments\3908d147-b734-4d94-87f8-87a5371e0b61\car3.jpg</Attachments>
+  </Messages>
 </NewDataSet>

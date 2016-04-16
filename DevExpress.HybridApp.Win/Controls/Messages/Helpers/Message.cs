@@ -47,6 +47,7 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
             mailType = MailType.Inbox;
             mailFolder = (int)GetFolder(row);
             DataTweaking();
+            Attachments = row["Attachments"].ToString();
         }
 
         public DateTime Date { get { return date; } set { date = value; } }
@@ -61,6 +62,8 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
         internal string Folder { get { return string.Format("{0}", mailFolder); } }
         public string Text { get { return text; } set { text = value; } }
         public string PlainText { get { return GetPlainText(); } }
+        // For the moment the file names will be comma delimited
+        public string Attachments { get; set; }
 
         string GetPlainText()
         {
@@ -125,6 +128,7 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
             row["HasAttachment"] = hasAttachment;
             row["Folder"] = MailFolder.ToString();
             row["IsReply"] = IsReply;
+            row["Attachments"] = Attachments;
         }
     }
 

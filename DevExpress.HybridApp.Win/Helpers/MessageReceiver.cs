@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Text;
 using DevExpress.DevAV.Controls.Messages;
 using DevExpress.DevAV.Controls.Messages.Helpers;
 using DevExpress.XtraEditors;
@@ -84,7 +86,7 @@ namespace DevExpress.DevAV.Helpers
                             MailType = MailType.Inbox,
                         };
                         new MessageFilterEvaluator(EmailRulesHelper.Instance.GetEmailRules()).ApplyRules(message);
-
+                        AddAttachements(msg, message);
                         DataHelper.AddMessage(message);
                     }
                 }
@@ -120,6 +122,27 @@ namespace DevExpress.DevAV.Helpers
                 XtraMessageBox.Show("Email receive error - invalid incoming/port settings");
                 throw ex;
             }
+        }
+
+        private static void AddAttachements(OpenPop.Mime.Message msg, Message message)
+        {
+            var attachments = new StringBuilder();
+            var attachementsFolder = Path.Combine(@"C:\Attachments", Guid.NewGuid().ToString());
+            if (!Directory.Exists(attachementsFolder))
+            {
+                Directory.CreateDirectory(attachementsFolder);
+            }
+            foreach (var attachment in msg.FindAllAttachments())
+            {
+
+                var filePath = Path.Combine(attachementsFolder, attachment.FileName);
+                attachments.Append(filePath).Append(",");
+                var stream = new FileStream(filePath, FileMode.Create);
+                var binaryWriter = new BinaryWriter(stream);
+                binaryWriter.Write(attachment.Body);
+                binaryWriter.Close();
+            }
+            message.Attachments = attachments.ToString().Substring(0, attachments.Length - 1);
         }
     }
 }

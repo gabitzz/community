@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -32,9 +33,16 @@ namespace DevExpress.MailClient.Win {
         public frmEditMail() {
             InitializeComponent();
             DialogResult = DialogResult.Cancel;
+
         }
+
+
+
         public frmEditMail(DevExpress.DevAV.Controls.Messages.Helpers.Message message, bool newMessage, string caption) {
             InitializeComponent();
+
+            tokenEditAttachements.Properties.TokenDoubleClick += Properties_TokenDoubleClick;
+
             //DictionaryHelper.InitDictionary(spellChecker1);
             this.newMessage = newMessage;
             DialogResult = DialogResult.Cancel;
@@ -56,8 +64,31 @@ namespace DevExpress.MailClient.Win {
                 edtTo.Properties.ReadOnly = true;
                 edtSubject.Properties.ReadOnly = true;
                 richEditControl.ReadOnly = true;
+                if (string.IsNullOrEmpty(message.Attachments))
+                {
+                    labelAttachements.Hide();
+                    tokenEditAttachements.Hide();
+                }
+                else
+                {
+                    AddTokenAttachements(message.Attachments.Split(','));
+                }
             }
         }
+
+        private void Properties_TokenDoubleClick(object sender, TokenEditTokenClickEventArgs e)
+        {
+            try
+            {
+                Process.Start(e.Value.ToString());
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
         protected override void OnLoad(EventArgs e) {
             base.OnLoad(e);
         }
@@ -232,30 +263,31 @@ namespace DevExpress.MailClient.Win {
 
             if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
-                var tokenAttachements = new StringBuilder();
-                var tokens = tokenEditAttachements.Properties.Tokens;
-                var valueFiles = new BindingList<string>();
-                foreach (TokenEditToken selectedToken in tokenEditAttachements.GetTokenList())
-                {
-                    valueFiles.Add(selectedToken.Value.ToString());
-                }
+                var attachments = openFileDialog.FileNames;
 
-                foreach (var fullFileName in openFileDialog.FileNames)
-                {
-                    var file = Path.GetFileName(fullFileName);
-                    var token = new TokenEditToken { Description = file, Value = fullFileName };
-                    if (tokens.FirstOrDefault(t => t.Description == token.Description) == null)
-                    {
-                        tokens.Add(token);
-                    }
-                    if (!valueFiles.Contains(fullFileName))
-                    {
-                        valueFiles.Add(fullFileName);
-                    }
-                }
-                tokenEditAttachements.EditValue = valueFiles;
+                AddTokenAttachements(attachments);
                 //tokenEditAttachements.EditValue = tokenEditAttachements.Properties.Tokens.Last().Description;
             }
+        }
+
+        private void AddTokenAttachements(string[] attachments)
+        {
+            var tokens = tokenEditAttachements.Properties.Tokens;
+            var attachedFiles = new BindingList<string>();
+            foreach (TokenEditToken selectedToken in tokenEditAttachements.GetTokenList())
+            {
+                attachedFiles.Add(selectedToken.Value.ToString());
+            }
+
+            foreach (var fullFileName in attachments)
+            {
+                var file = Path.GetFileName(fullFileName);
+                var token = new TokenEditToken {Description = file, Value = fullFileName};
+                if (tokens.FirstOrDefault(t => t.Description == token.Description) == null) tokens.Add(token);
+                if (!attachedFiles.Contains(fullFileName)) attachedFiles.Add(fullFileName);
+            }
+            tokenEditAttachements.EditValue = attachedFiles;
+
         }
     }
 }
