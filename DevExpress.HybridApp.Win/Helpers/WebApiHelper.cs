@@ -11,7 +11,7 @@ namespace DevExpress.DevAV.Helpers
 {
     public class WebApiHelper
     {
-        public const string ItemsFromToday = "http://192.168.0.101:8765/api/providermenuitem/today";
+        public const string ItemsFromToday = "http://192.168.192.201/MealAppWebApi/api/Providermenuitem/today";
         public static async Task<List<ProviderMenuItem>> GetAllProducts()
         {
             var client = new HttpClient();
