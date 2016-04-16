@@ -299,6 +299,7 @@
     <Reference Include="System.Core">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.SQLite, Version=1.0.97.0, Culture=neutral, PublicKeyToken=4c3bc44151be4b47">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>
@@ -314,6 +315,7 @@
     <Reference Include="System.Management">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Printing" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq">
       <Private>False</Private>
@@ -398,6 +400,12 @@
     <Compile Include="Controls\Messages\Helpers\Message.cs" />
     <Compile Include="Controls\Messages\Helpers\ObjectHelper.cs" />
     <Compile Include="Controls\Messages\Helpers\Rules\SubjectFilterRule.cs" />
+    <Compile Include="Forms\CommunitySplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommunitySplashScreen.Designer.cs">
+      <DependentUpon>CommunitySplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EmailRulesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -739,6 +747,9 @@
     <EmbeddedResource Include="Controls\ucMessageInfo.resx">
       <DependentUpon>ucMessageInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommunitySplashScreen.resx">
+      <DependentUpon>CommunitySplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmailRulesForm.resx">
       <DependentUpon>EmailRulesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -922,6 +933,8 @@
     </Content>
     <None Include="Resources\delete.png" />
     <None Include="Resources\forward.png" />
+    <None Include="Resources\communityLogo2.png" />
+    <None Include="Resources\communityLogo.bmp" />
     <Content Include="Resources\Meal\fast-food.png" />
     <None Include="Resources\Meal\fast-food_25x25.png" />
     <None Include="Resources\Meal\meal_25x25.png" />
@@ -943,6 +956,7 @@
     </None>
     <Content Include="Data\Mail.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Icons\DevExpress.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
