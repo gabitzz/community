@@ -23,7 +23,6 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Todos));
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
@@ -46,13 +45,11 @@
             this.Subject = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Priority = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
-            this.priorityImageList = new DevExpress.Utils.ImageCollection(this.components);
+            this.priorityImageList = new DevExpress.Utils.ImageCollection();
             this.DueDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Complete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemProgressBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemProgressBar();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.treeListLookUpEdit1 = new DevExpress.XtraEditors.TreeListLookUpEdit();
-            this.treeListLookUpEdit1TreeList = new DevExpress.XtraTreeList.TreeList();
             this.tileControl1 = new DevExpress.XtraEditors.TileControl();
             this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
             this.tileItemAll = new DevExpress.XtraEditors.TileItem();
@@ -62,13 +59,12 @@
             this.tileItemCompleted = new DevExpress.XtraEditors.TileItem();
             this.tileItemHighPriority = new DevExpress.XtraEditors.TileItem();
             this.tileItemUrgent = new DevExpress.XtraEditors.TileItem();
-            this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.taskBindingSource = new System.Windows.Forms.BindingSource();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tileControlLCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.buttonHide = new DevExpress.XtraLayout.SimpleLabelItem();
             this.tasksSLI = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
             this.simpleLabelItem2 = new DevExpress.XtraLayout.SimpleLabelItem();
             this.simpleLabelItem3 = new DevExpress.XtraLayout.SimpleLabelItem();
@@ -82,15 +78,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemProgressBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.treeListLookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeListLookUpEdit1TreeList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileControlLCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tasksSLI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem3)).BeginInit();
@@ -107,7 +100,7 @@
             this.tasksGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemProgressBar1,
             this.repositoryItemComboBox1});
-            this.tasksGridControl.Size = new System.Drawing.Size(1110, 498);
+            this.tasksGridControl.Size = new System.Drawing.Size(1110, 544);
             this.tasksGridControl.TabIndex = 1;
             this.tasksGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tasksGridView});
@@ -249,7 +242,6 @@
             // 
             this.dataLayoutControl1.AllowCustomization = false;
             this.dataLayoutControl1.BackColor = System.Drawing.Color.White;
-            this.dataLayoutControl1.Controls.Add(this.treeListLookUpEdit1);
             this.dataLayoutControl1.Controls.Add(this.tileControl1);
             this.dataLayoutControl1.Controls.Add(this.tasksGridControl);
             this.dataLayoutControl1.DataSource = this.taskBindingSource;
@@ -262,28 +254,6 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(1424, 589);
             this.dataLayoutControl1.TabIndex = 26;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
-            // 
-            // treeListLookUpEdit1
-            // 
-            this.treeListLookUpEdit1.Location = new System.Drawing.Point(173, 545);
-            this.treeListLookUpEdit1.Name = "treeListLookUpEdit1";
-            this.treeListLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.treeListLookUpEdit1.Properties.TreeList = this.treeListLookUpEdit1TreeList;
-            this.treeListLookUpEdit1.Size = new System.Drawing.Size(1209, 42);
-            this.treeListLookUpEdit1.StyleController = this.dataLayoutControl1;
-            this.treeListLookUpEdit1.TabIndex = 28;
-            // 
-            // treeListLookUpEdit1TreeList
-            // 
-            this.treeListLookUpEdit1TreeList.Location = new System.Drawing.Point(0, 0);
-            this.treeListLookUpEdit1TreeList.Name = "treeListLookUpEdit1TreeList";
-            this.treeListLookUpEdit1TreeList.OptionsBehavior.EnableFiltering = true;
-            this.treeListLookUpEdit1TreeList.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
-            this.treeListLookUpEdit1TreeList.OptionsClipboard.CopyNodeHierarchy = DevExpress.Utils.DefaultBoolean.True;
-            this.treeListLookUpEdit1TreeList.OptionsView.ShowIndentAsRowStyle = true;
-            this.treeListLookUpEdit1TreeList.Size = new System.Drawing.Size(400, 200);
-            this.treeListLookUpEdit1TreeList.TabIndex = 0;
             // 
             // tileControl1
             // 
@@ -321,7 +291,7 @@
             this.tileControl1.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.tileControl1.Padding = new System.Windows.Forms.Padding(0);
             this.tileControl1.SelectedItem = this.tileItemAll;
-            this.tileControl1.Size = new System.Drawing.Size(204, 496);
+            this.tileControl1.Size = new System.Drawing.Size(204, 542);
             this.tileControl1.TabIndex = 26;
             this.tileControl1.Text = "tileControl1";
             this.tileControl1.VerticalContentAlignment = DevExpress.Utils.VertAlignment.Top;
@@ -526,8 +496,7 @@
             this.layoutControlItem1,
             this.tileControlLCI,
             this.buttonHide,
-            this.tasksSLI,
-            this.layoutControlItem3});
+            this.tasksSLI});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 0);
@@ -541,7 +510,7 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(234, 45);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlItem1.Size = new System.Drawing.Size(1110, 498);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1110, 544);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -553,7 +522,7 @@
             this.tileControlLCI.Name = "tileControlLCI";
             this.tileControlLCI.OptionsPrint.AllowPrint = false;
             this.tileControlLCI.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 2, 0, 2);
-            this.tileControlLCI.Size = new System.Drawing.Size(206, 498);
+            this.tileControlLCI.Size = new System.Drawing.Size(206, 544);
             this.tileControlLCI.TextSize = new System.Drawing.Size(0, 0);
             this.tileControlLCI.TextVisible = false;
             // 
@@ -566,10 +535,10 @@
             this.buttonHide.MaxSize = new System.Drawing.Size(28, 0);
             this.buttonHide.MinSize = new System.Drawing.Size(28, 1);
             this.buttonHide.Name = "buttonHide";
-            this.buttonHide.Size = new System.Drawing.Size(28, 498);
+            this.buttonHide.Size = new System.Drawing.Size(28, 544);
             this.buttonHide.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.buttonHide.Text = " ";
-            this.buttonHide.TextSize = new System.Drawing.Size(128, 25);
+            this.buttonHide.TextSize = new System.Drawing.Size(53, 25);
             this.buttonHide.Click += new System.EventHandler(this.collapseButton_Click);
             // 
             // tasksSLI
@@ -586,15 +555,7 @@
             this.tasksSLI.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 10, 10);
             this.tasksSLI.Size = new System.Drawing.Size(1344, 45);
             this.tasksSLI.Text = "TASKS";
-            this.tasksSLI.TextSize = new System.Drawing.Size(128, 25);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.treeListLookUpEdit1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 543);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(1344, 46);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(128, 20);
+            this.tasksSLI.TextSize = new System.Drawing.Size(53, 25);
             // 
             // simpleLabelItem1
             // 
@@ -704,15 +665,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemProgressBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.treeListLookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeListLookUpEdit1TreeList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileControlLCI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonHide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tasksSLI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem3)).EndInit();
@@ -758,8 +716,5 @@
         private XtraLayout.SimpleLabelItem tasksSLI;
         private XtraEditors.TileItem tileItemHighPriority;
         private Utils.ImageCollection priorityImageList;
-        private XtraEditors.TreeListLookUpEdit treeListLookUpEdit1;
-        private XtraTreeList.TreeList treeListLookUpEdit1TreeList;
-        private XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

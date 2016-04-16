@@ -425,6 +425,7 @@ namespace DevExpress.DevAV.Modules {
             this.tileView1.OptionsTiles.VerticalContentAlignment = DevExpress.Utils.VertAlignment.Top;
             tileViewItemElement1.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             tileViewItemElement1.Appearance.Normal.Options.UseBackColor = true;
+            tileViewItemElement1.Column = null;
             tileViewItemElement1.Height = 31;
             tileViewItemElement1.StretchHorizontal = true;
             tileViewItemElement1.Text = "";
@@ -444,6 +445,7 @@ namespace DevExpress.DevAV.Modules {
             tileViewItemElement4.AnchorIndent = 10;
             tileViewItemElement4.Appearance.Normal.ForeColor = System.Drawing.Color.Gray;
             tileViewItemElement4.Appearance.Normal.Options.UseForeColor = true;
+            tileViewItemElement4.Column = null;
             tileViewItemElement4.Text = "ADDRESS";
             tileViewItemElement5.AnchorElementIndex = 3;
             tileViewItemElement5.AnchorIndent = 0;
@@ -455,6 +457,7 @@ namespace DevExpress.DevAV.Modules {
             tileViewItemElement6.AnchorIndent = 10;
             tileViewItemElement6.Appearance.Normal.ForeColor = System.Drawing.Color.Gray;
             tileViewItemElement6.Appearance.Normal.Options.UseForeColor = true;
+            tileViewItemElement6.Column = null;
             tileViewItemElement6.Text = "PHONE";
             tileViewItemElement7.AnchorElementIndex = 5;
             tileViewItemElement7.AnchorIndent = 0;
@@ -463,6 +466,7 @@ namespace DevExpress.DevAV.Modules {
             tileViewItemElement8.AnchorElementIndex = 6;
             tileViewItemElement8.Appearance.Normal.ForeColor = System.Drawing.Color.Gray;
             tileViewItemElement8.Appearance.Normal.Options.UseForeColor = true;
+            tileViewItemElement8.Column = null;
             tileViewItemElement8.Text = "EMAIL";
             tileViewItemElement9.AnchorElementIndex = 7;
             tileViewItemElement9.AnchorIndent = 0;
