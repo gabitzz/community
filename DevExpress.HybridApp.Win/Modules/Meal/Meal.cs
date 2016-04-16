@@ -190,7 +190,8 @@ namespace DevExpress.DevAV.Modules
                         chartsControl[i].Titles.Clear();
                         var title = new ChartTitle();
                         title.Text = string.Format("{0}-{1}", item.Code.ToUpper(), item.Name);
-                        title.Font = new Font(FontFamily.GenericSansSerif, 18.0F, FontStyle.Bold);
+                        title.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+                        title.TextColor = Color.Black;
                         chartsControl[i].Titles.Add(title);
                         chartsControl[i].Series.Clear();
                         chartsControl[i].Series.Add(series1);

@@ -102,6 +102,8 @@
             // 
             this.chartControl6.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl6.Location = new System.Drawing.Point(347, 223);
+            this.chartControl6.LookAndFeel.SkinName = "Office 2013";
+            this.chartControl6.LookAndFeel.UseDefaultLookAndFeel = false;
             this.chartControl6.Name = "chartControl6";
             this.chartControl6.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
             this.chartControl6.Size = new System.Drawing.Size(284, 180);
@@ -111,6 +113,8 @@
             // 
             this.chartControl5.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl5.Location = new System.Drawing.Point(12, 223);
+            this.chartControl5.LookAndFeel.SkinName = "Office 2013";
+            this.chartControl5.LookAndFeel.UseDefaultLookAndFeel = false;
             this.chartControl5.Name = "chartControl5";
             this.chartControl5.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
             this.chartControl5.Size = new System.Drawing.Size(331, 180);
@@ -120,6 +124,8 @@
             // 
             this.chartControl3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl3.Location = new System.Drawing.Point(635, 223);
+            this.chartControl3.LookAndFeel.SkinName = "Office 2013";
+            this.chartControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.chartControl3.Name = "chartControl3";
             this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
             this.chartControl3.Size = new System.Drawing.Size(297, 180);
@@ -130,6 +136,8 @@
             this.chartControl2.Legend.TextVisible = false;
             this.chartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl2.Location = new System.Drawing.Point(12, 12);
+            this.chartControl2.LookAndFeel.SkinName = "Office 2013";
+            this.chartControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.chartControl2.Name = "chartControl2";
             this.chartControl2.PaletteName = "Palette 1";
             this.chartControl2.PaletteRepository.Add("Palette 1", new DevExpress.XtraCharts.Palette("Palette 1", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
@@ -146,6 +154,8 @@
             // 
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.Location = new System.Drawing.Point(347, 12);
+            this.chartControl1.LookAndFeel.SkinName = "Office 2013";
+            this.chartControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
             this.chartControl1.Size = new System.Drawing.Size(284, 197);
@@ -156,6 +166,8 @@
             this.chartControl4.Legend.MarkerVisible = false;
             this.chartControl4.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl4.Location = new System.Drawing.Point(635, 12);
+            this.chartControl4.LookAndFeel.SkinName = "Office 2013";
+            this.chartControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.chartControl4.Name = "chartControl4";
             this.chartControl4.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
             this.chartControl4.Size = new System.Drawing.Size(297, 197);
