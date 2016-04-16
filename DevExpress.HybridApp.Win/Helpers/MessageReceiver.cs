@@ -82,6 +82,7 @@ namespace DevExpress.DevAV.Helpers
                             Subject = msg.Headers.Subject,
                             Text = msg.FindFirstHtmlVersion().GetBodyAsText(),
                             MailType = MailType.Inbox,
+                            
                         };
                         new MessageFilterEvaluator(EmailRulesHelper.Instance.GetEmailRules()).ApplyRules(message);
 

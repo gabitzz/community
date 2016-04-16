@@ -202,8 +202,17 @@ namespace DevExpress.MailClient.Win {
                 message.To.Add(receivers);
                 message.Body = richEditControl.Text;
                 message.Subject = edtSubject.Text;
+                AddAttachementsTo(message);
             }
             return message;
+        }
+
+        private void AddAttachementsTo(MailMessage mailMessage)
+        {
+            foreach (TokenEditToken tokenEditAttachement in tokenEditAttachements.GetTokenList())
+            {
+                mailMessage.Attachments.Add(new Attachment(tokenEditAttachement.Value.ToString()));
+            }
         }
 
         private string GetEmailReceivers()

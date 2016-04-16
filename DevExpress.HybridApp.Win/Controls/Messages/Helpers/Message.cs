@@ -30,12 +30,12 @@ namespace DevExpress.DevAV.Controls.Messages.Helpers
         public Message(DataRow row)
         {
             this.row = row;
-            this.date = ((DateTime)row["Date"]).Add(DateTime.Now - DataHelper.LastMailDate);
+            this.date = ((DateTime)row["Date"]);
             this.from = string.Format("{0}", row["From"]);
             this.subject = string.Format("{0}", row["Subject"]);
             this.isReply = (bool)row["IsReply"];
             this.hasAttachment = (bool)row["HasAttachment"];
-            this.read = Delay > TimeSpan.FromHours(6);
+            this.read = Delay > TimeSpan.FromHours(2);
             if (Delay > TimeSpan.FromHours(50) && Delay < TimeSpan.FromHours(100)) read = false;
             this.text = string.Format("{0}", row["Text"]);
             this.deleted = false;

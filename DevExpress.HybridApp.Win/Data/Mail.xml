@@ -5214,7 +5214,7 @@
     <IsReply>false</IsReply>
   </Messages>
   <Messages>
-    <Date>2016-04-14T01:48:06+03:00</Date>
+    <Date>2016-04-16T15:39:39+03:00</Date>
     <From>mihaita.vladut@gmail.com</From>
     <Subject>idetools</Subject>
     <Text>&lt;div dir="ltr"&gt;&lt;br&gt;&lt;/div&gt;
@@ -5238,6 +5238,16 @@
     <From>vio.slaniceanu@gmail.com</From>
     <Subject>round2</Subject>
     <Text>&lt;div dir="ltr"&gt;this has attached&lt;img src="cid:ii_in0rah0a1_15416866182f925c" width="300" height="299"&gt;&lt;br&gt;&lt;/div&gt;
+</Text>
+    <HasAttachment>false</HasAttachment>
+    <Folder>1</Folder>
+    <IsReply>false</IsReply>
+  </Messages>
+  <Messages>
+    <Date>2016-04-16T15:39:39+03:00</Date>
+    <From>vio69i@gmail.com</From>
+    <Subject>Test1</Subject>
+    <Text>&lt;div dir="ltr"&gt;abc&lt;/div&gt;
 </Text>
     <HasAttachment>false</HasAttachment>
     <Folder>1</Folder>
