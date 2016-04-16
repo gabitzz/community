@@ -52,7 +52,6 @@ namespace DevExpress.MailClient.Win {
             this.messageFrom = message.From;
             if(!newMessage) {
                 splitContainerControl1.Collapsed = LayoutOption.MailCollapsed;
-                lblTo.Text = string.Format("{0}:", caption);
                 edtTo.Properties.ReadOnly = true;
                 edtSubject.Properties.ReadOnly = true;
                 richEditControl.ReadOnly = true;
