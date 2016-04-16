@@ -149,10 +149,29 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Unknown_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gabi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\george.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mihaita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\raluca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vio.png" />
   </ItemGroup>
 </Project>

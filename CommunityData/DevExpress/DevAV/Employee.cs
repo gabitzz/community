@@ -12,6 +12,7 @@
     {
         private Image _photo;
         private bool unsetFullName;
+        private List<string> _users = new List<string>();
 
         public Employee()
         {
@@ -19,6 +20,13 @@
             this.OwnedTasks = new List<EmployeeTask>();
             this.Address = new DevExpress.DevAV.Address();
             this.AssignedEmployeeTasks = new List<EmployeeTask>();
+
+            _users.Add("19");
+            _users.Add("14");
+            _users.Add("3");
+            _users.Add("37");
+            _users.Add("22");
+            _users.Add("36");
         }
 
         private string GetFullName()
@@ -115,7 +123,14 @@
             {
                 if (this._photo == null)
                 {
-                    this._photo = this.Picture.CreateImage(null);
+                    if (_users.Contains(PictureId.ToString()))
+                    {
+                        this._photo = this.Picture.CreateImage(PictureId.ToString(), null);
+                    }
+                    else
+                    {
+                        this._photo = this.Picture.CreateImage(null);
+                    }
                 }
                 return this._photo;
             }
